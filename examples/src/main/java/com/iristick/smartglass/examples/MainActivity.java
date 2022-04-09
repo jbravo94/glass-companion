@@ -55,6 +55,7 @@ public class MainActivity extends BaseActivity {
     private final ListAdapter mAdapter = new BaseAdapter() {
         @Override
         public int getCount() {
+            // Show only Camera element which is second ENUM
             return 1;
         }
 

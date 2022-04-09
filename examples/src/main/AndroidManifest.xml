@@ -3,6 +3,7 @@
     package="com.iristick.smartglass.examples" >
 
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".ExampleApplication"
@@ -21,7 +22,8 @@
         </activity>
 
         <activity android:name=".camera.CameraActivity"
-            android:theme="@style/Theme.Iristick.NoActionBar"/>
+            android:theme="@style/Theme.Iristick.NoActionBar"
+            android:screenOrientation="landscape" />
 
         <activity android:name=".barcode.BarcodeActivity" />
 

@@ -4,9 +4,12 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
+import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.SurfaceTexture;
+import android.media.Image;
+import android.media.ImageReader;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -28,9 +31,12 @@ import com.iristick.smartglass.core.camera.CaptureSession;
 import com.iristick.smartglass.examples.R;
 import com.iristick.smartglass.support.app.IristickApp;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Fragment handling one camera.
@@ -58,6 +64,12 @@ public class CameraFragment extends Fragment {
     @Nullable private CameraDevice mCamera;
     @Nullable private CaptureSession mCaptureSession;
 
+    private ImageReader imageReader = ImageReader.newInstance(FRAME_WIDTH, FRAME_HEIGHT, ImageFormat.JPEG, 1);
+    private Surface imageReaderSurface = imageReader.getSurface();
+
+    private byte[] lastImage;
+    private ReentrantLock lock = new ReentrantLock();
+
     /* Camera characteristics */
     private int mAFMode;
     private float mMaxZoom;
@@ -74,6 +86,51 @@ public class CameraFragment extends Fragment {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CameraFragment);
         mCameraIndex = a.getInt(R.styleable.CameraFragment_camera_index, 0);
         a.recycle();
+    }
+
+    public byte[] getLastImage() {
+
+        byte[] image = null;
+
+        if (lastImage != null && lock.tryLock()) {
+            try {
+                image = lastImage.clone();
+                lastImage = null;
+            } finally {
+                lock.unlock();
+            }
+        }
+
+        return image;
+    }
+
+    private byte[] trimTrailingNullBytes(byte[] image) {
+        int lastIndex = image.length - 1;
+
+        for (int i = image.length - 1; i >= 0; i--) {
+            if (image[i] != 0) {
+                lastIndex = i;
+                break;
+            }
+        }
+
+        int imageLength = lastIndex + 1;
+
+        byte[] trimmedImage = new byte[imageLength];
+
+        System.arraycopy(image, 0, trimmedImage, 0, imageLength);
+
+        return trimmedImage;
+    }
+
+    private byte[] getImageAsByteArray(Image image) {
+        Image.Plane[] planes = image.getPlanes();
+
+        ByteBuffer buffer = planes[0].getBuffer();
+        byte[] bytes = new byte[buffer.remaining()];
+        buffer.get(bytes);
+
+        return trimTrailingNullBytes(bytes);
     }
 
     @Override
@@ -97,6 +154,22 @@ public class CameraFragment extends Fragment {
 
         mInfo = view.findViewById(R.id.info);
         mInfo.setOnClickListener(v -> resetSettings());
+
+        imageReader.setOnImageAvailableListener(reader -> {
+            Image image = reader.acquireLatestImage();
+
+            if (image != null) {
+
+                if (lastImage == null && lock.tryLock()) {
+                    try {
+                        lastImage = getImageAsByteArray(image);
+                    } finally {
+                        lock.unlock();
+                    }
+                }
+                image.close();
+            }
+        }, null);
 
         return view;
     }
@@ -192,7 +265,10 @@ public class CameraFragment extends Fragment {
         /* Create the capture session. */
         mCaptureSession = null;
         List<Surface> outputs = new ArrayList<>();
+
         outputs.add(mSurface);
+        outputs.add(imageReaderSurface);
+
         mCamera.createCaptureSession(outputs, mCaptureSessionListener, null);
     }
 
@@ -210,6 +286,7 @@ public class CameraFragment extends Fragment {
 
         /* Add target output. */
         builder.addTarget(Objects.requireNonNull(mSurface));
+        builder.addTarget(Objects.requireNonNull(imageReaderSurface));
 
         /* Set parameters. */
         builder.set(CaptureRequest.SCALER_ZOOM, mZoom);

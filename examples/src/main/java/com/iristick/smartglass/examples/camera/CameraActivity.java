@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import com.iristick.smartglass.core.VoiceCommandDispatcher;
 import com.iristick.smartglass.examples.BaseActivity;
 import com.iristick.smartglass.examples.R;
+import com.iristick.smartglass.examples.server.Server;
 import com.iristick.smartglass.support.app.IristickApp;
 
 /**
@@ -25,6 +26,8 @@ public class CameraActivity extends BaseActivity {
 
     /* Voice commands */
     private VoiceCommandDispatcher mVoiceCommandDispatcher;
+
+    private Thread server;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,9 @@ public class CameraActivity extends BaseActivity {
                 .add(R.string.camera_voice_zoom_in, () -> zoom(2.0f))
                 .add(R.string.camera_voice_zoom_out, () -> zoom(0.5f))
                 .build();
+
+        server = new Thread(new Server(getCameraFragment0(), getCameraFragment1()));
+        server.start();
     }
 
     @Override
@@ -67,6 +73,9 @@ public class CameraActivity extends BaseActivity {
         super.onResume();
         /* Start listening for voice commands. */
         IristickApp.startVoice(mVoiceCommandDispatcher);
+        /*if (server != null) {
+            server.start();
+        }*/
     }
 
     @Override
@@ -74,6 +83,9 @@ public class CameraActivity extends BaseActivity {
         /* Always stop voice commands in onPause. */
         IristickApp.stopVoice(mVoiceCommandDispatcher);
         super.onPause();
+        /*if (server != null) {
+            server.interrupt();
+        }*/
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,6 +93,14 @@ public class CameraActivity extends BaseActivity {
 
     private CameraFragment getCameraFragment() {
         return (CameraFragment) getSupportFragmentManager().findFragmentById(R.id.camera1);
+    }
+
+    private CameraFragment getCameraFragment1() {
+        return getCameraFragment();
+    }
+
+    private CameraFragment getCameraFragment0() {
+        return (CameraFragment) getSupportFragmentManager().findFragmentById(R.id.camera0);
     }
 
     private void triggerAF() {
