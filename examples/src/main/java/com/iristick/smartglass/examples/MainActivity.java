@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity {
     private final ListAdapter mAdapter = new BaseAdapter() {
         @Override
         public int getCount() {
-            return Example.values().length;
+            return 1;
         }
 
         @Override

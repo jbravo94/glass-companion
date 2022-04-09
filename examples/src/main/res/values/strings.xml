@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Iristick Examples</string>
+    <string name="app_name">Glass Companion</string>
 
     <string name="ok">OK</string>
 
@@ -10,7 +10,7 @@
     <string name="error_deprecated_sdk">Please upgrade this app or downgrade the Iristick Services.</string>
     <string name="error_other">An unknown error has occurred while connecting to the Iristick Services (code %d).</string>
 
-    <string name="camera_title">Camera Example</string>
+    <string name="camera_title">Camera</string>
     <string name="camera_description">Open both Iristick cameras and show the captured streams.</string>
     <string name="camera_permission_denied">Camera permission is required for the camera example.</string>
     <string name="camera_waiting_for_headset">Waiting for Iristick headset…</string>
