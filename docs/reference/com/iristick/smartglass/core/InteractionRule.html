@@ -1,0 +1,4010 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/core/InteractionRule.html">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>InteractionRule - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##InteractionRule" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              InteractionRule
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" >
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          InteractionRule
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="InteractionRule.html" class="md-nav__link md-nav__link--active">
+        InteractionRule
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE" class="md-nav__link">
+    FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_DEFAULT" class="md-nav__link">
+    FOCUSABLE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_NOT_FOCUSABLE" class="md-nav__link">
+    FOCUSABLE_NOT_FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_FOCUSABLE" class="md-nav__link">
+    FOCUSABLE_FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION" class="md-nav__link">
+    NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_DEFAULT" class="md-nav__link">
+    NAVIGATION_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_DISABLED" class="md-nav__link">
+    NAVIGATION_DISABLED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_CYCLIC" class="md-nav__link">
+    NAVIGATION_CYCLIC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC" class="md-nav__link">
+    NAVIGATION_NONCYCLIC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_FORWARD" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_FORWARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_BACKWARD" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_BACKWARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL" class="md-nav__link">
+    SCROLL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_DEFAULT" class="md-nav__link">
+    SCROLL_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_NAVIGATION" class="md-nav__link">
+    SCROLL_NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_PAGED" class="md-nav__link">
+    SCROLL_PAGED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_RESET_FOCUS" class="md-nav__link">
+    SCROLL_RESET_FOCUS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD" class="md-nav__link">
+    KEYBOARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_DEFAULT" class="md-nav__link">
+    KEYBOARD_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_DISABLED" class="md-nav__link">
+    KEYBOARD_DISABLED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE" class="md-nav__link">
+    KEYBOARD_VOICE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE_DEFAULT" class="md-nav__link">
+    KEYBOARD_VOICE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE_NO_INHIBIT" class="md-nav__link">
+    KEYBOARD_VOICE_NO_INHIBIT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE" class="md-nav__link">
+    HIGHLIGHT_STYLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_STYLE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_BRIGHT_DARK" class="md-nav__link">
+    HIGHLIGHT_STYLE_BRIGHT_DARK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_DARK_BRIGHT" class="md-nav__link">
+    HIGHLIGHT_STYLE_DARK_BRIGHT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_SINGLE_COLOR" class="md-nav__link">
+    HIGHLIGHT_STYLE_SINGLE_COLOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH_NONE" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH_NONE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_COLOR_PRIMARY" class="md-nav__link">
+    HIGHLIGHT_STROKE_COLOR_PRIMARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_COLOR_SECONDARY" class="md-nav__link">
+    HIGHLIGHT_STROKE_COLOR_SECONDARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_FILL_COLOR_PRIMARY" class="md-nav__link">
+    HIGHLIGHT_FILL_COLOR_PRIMARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_FILL_COLOR_SECONDARY" class="md-nav__link">
+    HIGHLIGHT_FILL_COLOR_SECONDARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_COLOR_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_COLOR_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_COLOR_NONE" class="md-nav__link">
+    HIGHLIGHT_COLOR_NONE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##InteractionRule--" class="md-nav__link">
+    InteractionRule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##create--" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-android.content.Context-int-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-android.view.View-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-java.lang.String-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##get-com.iristick.smartglass.core.InteractionRule.Key-" class="md-nav__link">
+    get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##set-com.iristick.smartglass.core.InteractionRule.Key-T-" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##containsKey-com.iristick.smartglass.core.InteractionRule.Key-" class="md-nav__link">
+    containsKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getKeys--" class="md-nav__link">
+    getKeys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##copy--" class="md-nav__link">
+    copy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE" class="md-nav__link">
+    FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_DEFAULT" class="md-nav__link">
+    FOCUSABLE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_NOT_FOCUSABLE" class="md-nav__link">
+    FOCUSABLE_NOT_FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##FOCUSABLE_FOCUSABLE" class="md-nav__link">
+    FOCUSABLE_FOCUSABLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION" class="md-nav__link">
+    NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_DEFAULT" class="md-nav__link">
+    NAVIGATION_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_DISABLED" class="md-nav__link">
+    NAVIGATION_DISABLED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_CYCLIC" class="md-nav__link">
+    NAVIGATION_CYCLIC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC" class="md-nav__link">
+    NAVIGATION_NONCYCLIC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_FORWARD" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_FORWARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_BACKWARD" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_BACKWARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL" class="md-nav__link">
+    NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL" class="md-nav__link">
+    SCROLL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_DEFAULT" class="md-nav__link">
+    SCROLL_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_NAVIGATION" class="md-nav__link">
+    SCROLL_NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_PAGED" class="md-nav__link">
+    SCROLL_PAGED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##SCROLL_RESET_FOCUS" class="md-nav__link">
+    SCROLL_RESET_FOCUS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD" class="md-nav__link">
+    KEYBOARD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_DEFAULT" class="md-nav__link">
+    KEYBOARD_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_DISABLED" class="md-nav__link">
+    KEYBOARD_DISABLED
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE" class="md-nav__link">
+    KEYBOARD_VOICE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE_DEFAULT" class="md-nav__link">
+    KEYBOARD_VOICE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##KEYBOARD_VOICE_NO_INHIBIT" class="md-nav__link">
+    KEYBOARD_VOICE_NO_INHIBIT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE" class="md-nav__link">
+    HIGHLIGHT_STYLE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_STYLE_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_BRIGHT_DARK" class="md-nav__link">
+    HIGHLIGHT_STYLE_BRIGHT_DARK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_DARK_BRIGHT" class="md-nav__link">
+    HIGHLIGHT_STYLE_DARK_BRIGHT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STYLE_SINGLE_COLOR" class="md-nav__link">
+    HIGHLIGHT_STYLE_SINGLE_COLOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_WIDTH_NONE" class="md-nav__link">
+    HIGHLIGHT_STROKE_WIDTH_NONE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_COLOR_PRIMARY" class="md-nav__link">
+    HIGHLIGHT_STROKE_COLOR_PRIMARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_STROKE_COLOR_SECONDARY" class="md-nav__link">
+    HIGHLIGHT_STROKE_COLOR_SECONDARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_FILL_COLOR_PRIMARY" class="md-nav__link">
+    HIGHLIGHT_FILL_COLOR_PRIMARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_FILL_COLOR_SECONDARY" class="md-nav__link">
+    HIGHLIGHT_FILL_COLOR_SECONDARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_COLOR_DEFAULT" class="md-nav__link">
+    HIGHLIGHT_COLOR_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##HIGHLIGHT_COLOR_NONE" class="md-nav__link">
+    HIGHLIGHT_COLOR_NONE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##InteractionRule--" class="md-nav__link">
+    InteractionRule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##create--" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-android.content.Context-int-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-android.view.View-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##match-java.lang.String-" class="md-nav__link">
+    match
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##get-com.iristick.smartglass.core.InteractionRule.Key-" class="md-nav__link">
+    get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##set-com.iristick.smartglass.core.InteractionRule.Key-T-" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##containsKey-com.iristick.smartglass.core.InteractionRule.Key-" class="md-nav__link">
+    containsKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getKeys--" class="md-nav__link">
+    getKeys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##copy--" class="md-nav__link">
+    copy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.core</div>
+<h1 id="InteractionRule">Class InteractionRule<a class="headerlink" href="#InteractionRule" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.iristick.smartglass.core.InteractionRule</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+
+
+<hr/>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Relying on the Iristick Accessibility Service is not recommended.
+             The accessibility service might be removed or become optional in a future release.</span></div>
+</div>
+<br/>
+<pre><a href="https://developer.android.com/reference/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public abstract class <span class="typeNameLabel">InteractionRule</span>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Rule to configure the interaction behavior of the Iristick Services on matching views.
+ A rule consists of a set of matching criteria and a set of configuration options.
+
+ <p>Matching criteria determine on which views the configuration options are to be applied.
+ There are two types of matching criteria:
+ <ul>
+<li><em>Exact view ID</em>: matches the resource ID of a view exactly;
+ <li><em>Regular expression</em>: matches the fully qualified resource name of a view to a regular
+      expression.
+ </li></li></ul>
+ The fully qualified resource name of a view is the string returned by
+ <a href="https://developer.android.com/reference/android/content/res/Resources.html?is-external=true#getResourceName-int-" title="class or interface in android.content.res"><code>Resources.getResourceName(int)</code></a>. It includes the package name and
+ the resource type.
+
+ <p>An ordered list of rules can be given to
+ <a href="../../../../com/iristick/smartglass/core/IristickBinding.html#setInteractionRules-java.util.List-"><code>IristickBinding.setInteractionRules()</code></a>
+ to configure the interaction behavior for this application.  For each view in this application,
+ the list of rules will be processed from first to last.  Configuration options set on matching
+ rules will be applied to the view, with options from later rules overriding options from earlier
+ ones.
+
+ <p> For example, the list of rules created by the following code:
+ <pre>
+ List&lt;InteractionRule&gt; rules = new ArrayList&lt;InteractionRule&gt;();
+ rules.add(InteractionRule.create()
+            .match(R.id.id_a)
+            .set(InteractionRule.FOCUSABLE, InteractionRule.FOCUSABLE_FOCUSABLE)
+            .set(InteractionRule.SCROLL, InteractionRule.SCROLL_RESET_FOCUS));
+ rules.add(InteractionRule.create()
+            .match(R.id.id_a)
+            .match(R.id.id_b)
+            .set(InteractionRule.NAVIGATION, InteractionRule.NAVIGATION_CYCLIC));
+ rules.add(InteractionRule.create()
+            .match(".*:id/id_[a-c]")
+            .set(InteractionRule.SCROLL, InteractionRule.SCROLL_DEFAULT));
+ rules.add(InteractionRule.create()
+            .match(R.id.id_b)
+            .set(InteractionRule.NAVIGATION, InteractionRule.NAVIGATION_NON_CYCLIC)
+            .set(InteractionRule.SCROLL, InteractionRule.SCROLL_PAGED));
+ </pre>
+ will result in the following combined options, where empty cells mean the field is unset:
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="">
+<tr>
+<th>key\view</th>
+<th>R.id_a</th>
+<th>R.id_b</th>
+<th>R.id_c</th>
+</tr>
+<tr>
+<th>FOCUSABLE</th>
+<td>FOCUSABLE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>NAVIGATION</th>
+<td>CYCLIC</td>
+<td>NON_CYCLIC</td>
+<td></td>
+</tr>
+<tr>
+<th>SCROLL</th>
+<td>DEFAULT</td>
+<td>PAGED</td>
+<td>DEFAULT</td>
+</tr>
+</table></div></div>
+<p>Objects of this class are created with the <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#create--"><code>create()</code></a> factory method.</p></p></p></p></div>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="nested.class.summary">Nested Class Summary<a class="headerlink" href="#nested.class.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Nested Class Summary table, listing nested classes, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="type parameter in InteractionRule.Key">T</a>&gt;</span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="field.summary">Field Summary<a class="headerlink" href="#field.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Field Summary table, listing fields, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE">FOCUSABLE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines whether matching views are focusable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_DEFAULT">FOCUSABLE_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting default focus behavior.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_FOCUSABLE">FOCUSABLE_FOCUSABLE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting that matching views must be focusable.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_NOT_FOCUSABLE">FOCUSABLE_NOT_FOCUSABLE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting that matching views shall not be focusable.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_DEFAULT">HIGHLIGHT_COLOR_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <code>HIGHLIGHT_*_COLOR_*</code> requesting the default color.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE">HIGHLIGHT_COLOR_NONE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <code>HIGHLIGHT_*_COLOR_*</code> requesting not to draw the specified stroke or fill.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_PRIMARY">HIGHLIGHT_FILL_COLOR_PRIMARY</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The primary fill color of the highlight, encoded as 0xaarrggbb.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_SECONDARY">HIGHLIGHT_FILL_COLOR_SECONDARY</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The secondary fill color of the highlight, encoded as 0xaarrggbb.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY">HIGHLIGHT_STROKE_COLOR_PRIMARY</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The primary stroke color of the highlight, encoded as 0xaarrggbb.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY">HIGHLIGHT_STROKE_COLOR_SECONDARY</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The secondary stroke color of the highlight, encoded as 0xaarrggbb.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH">HIGHLIGHT_STROKE_WIDTH</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The stroke width in pixels of the highlight in pixels.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static float</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH_DEFAULT">HIGHLIGHT_STROKE_WIDTH_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a> requesting the default stroke width.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static float</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH_NONE">HIGHLIGHT_STROKE_WIDTH_NONE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a> requesting no stroke is drawn.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE">HIGHLIGHT_STYLE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Overall style of the interaction highlight.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_BRIGHT_DARK">HIGHLIGHT_STYLE_BRIGHT_DARK</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a two-color stroke for
+ the highlight.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_DARK_BRIGHT">HIGHLIGHT_STYLE_DARK_BRIGHT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a two-color stroke for
+ the highlight.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_DEFAULT">HIGHLIGHT_STYLE_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting the default highlight style.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_SINGLE_COLOR">HIGHLIGHT_STYLE_SINGLE_COLOR</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a single-color stroke
+ for the highlight.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD">KEYBOARD</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Behavior when tapping on an editable text view.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_DEFAULT">KEYBOARD_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a> letting Iristick Services decide what to do.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_DISABLED">KEYBOARD_DISABLED</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a> requesting that no custom keyboard is shown.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE">KEYBOARD_VOICE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Voice control behavior for the keyboard.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE_DEFAULT">KEYBOARD_VOICE_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a> letting Iristick Services decide what to do.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE_NO_INHIBIT">KEYBOARD_VOICE_NO_INHIBIT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a> requesting not to inhibit the other voice commands when
+ the keyboard is shown for the matched view.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION">NAVIGATION</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines how to navigate between the children of matching views.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_CYCLIC">NAVIGATION_CYCLIC</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to cyclically navigate through all children.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_DEFAULT">NAVIGATION_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> letting Iristick Services decide which navigation strategy
+ to apply.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_DISABLED">NAVIGATION_DISABLED</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to ignore all children.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC">NAVIGATION_NONCYCLIC</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to non-cyclically navigate through all children.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BACKWARD">NAVIGATION_NONCYCLIC_EXIT_BACKWARD</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the first
+ child.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL">NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the first
+ or last child.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_FORWARD">NAVIGATION_NONCYCLIC_EXIT_FORWARD</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the last
+ child.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL">SCROLL</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Behavior of scrollable containers, whose children are not all visible.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_DEFAULT">SCROLL_DEFAULT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> letting Iristick Services decide which strategy to apply.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_NAVIGATION">SCROLL_NAVIGATION</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to scroll the container while navigating through its
+ children.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_PAGED">SCROLL_PAGED</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to first scroll the container before navigating through
+ its children.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_RESET_FOCUS">SCROLL_RESET_FOCUS</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to reset focus every time the container scrolls.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="constructor.summary">Constructor Summary<a class="headerlink" href="#constructor.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Constructor Summary table, listing constructors, and an explanation">
+
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#InteractionRule--">InteractionRule</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#containsKey-com.iristick.smartglass.core.InteractionRule.Key-">containsKey</a></span>(<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;?&gt;&nbsp;key)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines whether this rule has a value set for the given <code>key</code>.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#copy--">copy</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates and returns a copy of this object.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#create--">create</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new interaction rule object.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>abstract &lt;T&gt;&nbsp;T</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#get-com.iristick.smartglass.core.InteractionRule.Key-">get</a></span>(<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;T&gt;&nbsp;key)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets a configuration field value.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#getKeys--">getKeys</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Return a list of the configuration keys contained in this rule.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#match-android.content.Context-int-">match</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+     int&nbsp;id)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match views with this specific view ID.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#match-java.lang.String-">match</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regex)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match views whose fully qualified resource names match the given regular expression.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code><a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#match-android.view.View-">match</a></span>(<a href="https://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match the given view by its resource ID.</div>
+</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>abstract &lt;T&gt;&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#set-com.iristick.smartglass.core.InteractionRule.Key-T-">set</a></span>(<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;T&gt;&nbsp;key,
+   T&nbsp;value)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Sets an interaction configuration field value for the given <code>key</code>.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+<h2 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a><a class="headerlink" href="#methods.inherited.from.class.java.lang.Object" title="Permanent link">&para;</a></h2>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code>
+
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="field.detail">Field Detail<a class="headerlink" href="#field.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="FOCUSABLE">FOCUSABLE<a class="headerlink" href="#FOCUSABLE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; FOCUSABLE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines whether matching views are focusable.
+ Only focusable views will be highlighted when scrolling through the widgets of the app.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_DEFAULT"><code>FOCUSABLE_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_NOT_FOCUSABLE"><code>FOCUSABLE_NOT_FOCUSABLE</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_FOCUSABLE"><code>FOCUSABLE_FOCUSABLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="FOCUSABLE_DEFAULT">FOCUSABLE_DEFAULT<a class="headerlink" href="#FOCUSABLE_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int FOCUSABLE_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting default focus behavior.
+
+ <p>Take into account the <a href="https://developer.android.com/reference/android/view/View.html?is-external=true#getImportantForAccessibility--" title="class or interface in android.view"><code>importance for accessibility</code></a>
+ flag when determining whether matching views should be focusable.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="FOCUSABLE_NOT_FOCUSABLE">FOCUSABLE_NOT_FOCUSABLE<a class="headerlink" href="#FOCUSABLE_NOT_FOCUSABLE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int FOCUSABLE_NOT_FOCUSABLE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting that matching views shall not be focusable.
+
+ <p>The <a href="https://developer.android.com/reference/android/view/View.html?is-external=true#getImportantForAccessibility--" title="class or interface in android.view"><code>importance for accessibility</code></a> flag is
+ ignored for matching views.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="FOCUSABLE_FOCUSABLE">FOCUSABLE_FOCUSABLE<a class="headerlink" href="#FOCUSABLE_FOCUSABLE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int FOCUSABLE_FOCUSABLE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a> requesting that matching views must be focusable.
+
+ <p>The <a href="https://developer.android.com/reference/android/view/View.html?is-external=true#getImportantForAccessibility--" title="class or interface in android.view"><code>importance for accessibility</code></a> flag is
+ ignored for matching views.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE"><code>FOCUSABLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION">NAVIGATION<a class="headerlink" href="#NAVIGATION" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; NAVIGATION</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines how to navigate between the children of matching views.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_DEFAULT"><code>NAVIGATION_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_DISABLED"><code>NAVIGATION_DISABLED</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_CYCLIC"><code>NAVIGATION_CYCLIC</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC"><code>NAVIGATION_NONCYCLIC</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_FORWARD"><code>NAVIGATION_NONCYCLIC_EXIT_FORWARD</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BACKWARD"><code>NAVIGATION_NONCYCLIC_EXIT_BACKWARD</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL"><code>NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_DEFAULT">NAVIGATION_DEFAULT<a class="headerlink" href="#NAVIGATION_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> letting Iristick Services decide which navigation strategy
+ to apply.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_DISABLED">NAVIGATION_DISABLED<a class="headerlink" href="#NAVIGATION_DISABLED" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_DISABLED</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to ignore all children.
+
+ <p>Children of matching views will not be navigated through.
+ This is similar to setting <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#FOCUSABLE_NOT_FOCUSABLE"><code>FOCUSABLE_NOT_FOCUSABLE</code></a> for all descendant view of the
+ matching view.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_CYCLIC">NAVIGATION_CYCLIC<a class="headerlink" href="#NAVIGATION_CYCLIC" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_CYCLIC</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to cyclically navigate through all children.
+
+ <p>When the first child is selected and the user swipes backward, the focus is shifted
+ to the last child.  Similarly, when the last child is selected and the user swipes forward,
+ the focus is shifted to the first child.
+
+ <p>Scrollable widgets like <a href="https://developer.android.com/reference/android/widget/ScrollView.html?is-external=true" title="class or interface in android.widget"><code>ScrollView</code></a> and
+ <a href="https://developer.android.com/reference/android/widget/ListView.html?is-external=true" title="class or interface in android.widget"><code>ListView</code></a> will scroll accordingly.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_NONCYCLIC">NAVIGATION_NONCYCLIC<a class="headerlink" href="#NAVIGATION_NONCYCLIC" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_NONCYCLIC</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to non-cyclically navigate through all children.
+
+ <p>When the first child is selected and the user swipes backward, nothing happens and the
+ focus will still be on the first child.  Similarly, when the last child is selected and
+ the user swipes forward, the focus stays on the last child.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_NONCYCLIC_EXIT_FORWARD">NAVIGATION_NONCYCLIC_EXIT_FORWARD<a class="headerlink" href="#NAVIGATION_NONCYCLIC_EXIT_FORWARD" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_NONCYCLIC_EXIT_FORWARD</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the last
+ child.
+
+ <p>When the last child is selected and the user swipes forward, the focus will go up one
+ level, to the next sibling of the parent view.
+
+ <p>Unlike <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL"><code>NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL</code></a>, swiping backwards with the
+ focus on the first child does nothing.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_NONCYCLIC_EXIT_BACKWARD">NAVIGATION_NONCYCLIC_EXIT_BACKWARD<a class="headerlink" href="#NAVIGATION_NONCYCLIC_EXIT_BACKWARD" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_NONCYCLIC_EXIT_BACKWARD</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the first
+ child.
+
+ <p>When the first child is selected and the user swipes backwards, the focus will go up one
+ level, to the previous sibling of the parent view.
+
+ <p>Unlike <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL"><code>NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL</code></a>, swiping forward with the
+ focus on the last child does nothing.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL">NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL<a class="headerlink" href="#NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int NAVIGATION_NONCYCLIC_EXIT_BIDIRECTIONAL</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a> requesting to go up one level when navigating beyond the first
+ or last child.
+
+ <p>This option acts as a combination of <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_FORWARD"><code>NAVIGATION_NONCYCLIC_EXIT_FORWARD</code></a> and
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION_NONCYCLIC_EXIT_BACKWARD"><code>NAVIGATION_NONCYCLIC_EXIT_BACKWARD</code></a>.  When the last child is selected and the user
+ swipes forward, the focus will go up one level, to the next sibling of the parent view.
+ When the first child is selected and the user swipes backwards, the focus will go up one
+ level, to the previous sibling of the parent view.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#NAVIGATION"><code>NAVIGATION</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="SCROLL">SCROLL<a class="headerlink" href="#SCROLL" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; SCROLL</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Behavior of scrollable containers, whose children are not all visible.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_DEFAULT"><code>SCROLL_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_NAVIGATION"><code>SCROLL_NAVIGATION</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_PAGED"><code>SCROLL_PAGED</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_RESET_FOCUS"><code>SCROLL_RESET_FOCUS</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="SCROLL_DEFAULT">SCROLL_DEFAULT<a class="headerlink" href="#SCROLL_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int SCROLL_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> letting Iristick Services decide which strategy to apply.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="SCROLL_NAVIGATION">SCROLL_NAVIGATION<a class="headerlink" href="#SCROLL_NAVIGATION" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int SCROLL_NAVIGATION</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to scroll the container while navigating through its
+ children.
+
+ <p>When the last visible child is selected and the user swipes forward, the container will
+ scroll if possible to show more children.  Similarly the container will scroll backwards when
+ navigating beyond the first visible child.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="SCROLL_PAGED">SCROLL_PAGED<a class="headerlink" href="#SCROLL_PAGED" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int SCROLL_PAGED</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to first scroll the container before navigating through
+ its children.
+
+ <p>When a matching view is selected, a single tap allows scrolling the contents of the view.
+ Another tap allows navigating through the visible children without scrolling.
+ A swipe down while navigating through the children will start scrolling again.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="SCROLL_RESET_FOCUS">SCROLL_RESET_FOCUS<a class="headerlink" href="#SCROLL_RESET_FOCUS" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int SCROLL_RESET_FOCUS</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a> requesting to reset focus every time the container scrolls.
+
+ <p>This strategy is similar to <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_NAVIGATION"><code>SCROLL_NAVIGATION</code></a>, but the focused child is not
+ remembered when the container scrolls.  Instead the first (when scrolling forward) or last
+ (when scrolling backwards) of the newly visible children is focused.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL"><code>SCROLL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD">KEYBOARD<a class="headerlink" href="#KEYBOARD" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; KEYBOARD</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Behavior when tapping on an editable text view.
+
+ <p>This value is only relevant for editable text views such as <a href="https://developer.android.com/reference/android/widget/EditText.html?is-external=true" title="class or interface in android.widget"><code>EditText</code></a>.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_DEFAULT"><code>KEYBOARD_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_DISABLED"><code>KEYBOARD_DISABLED</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD_DEFAULT">KEYBOARD_DEFAULT<a class="headerlink" href="#KEYBOARD_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int KEYBOARD_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a> letting Iristick Services decide what to do.
+
+ <p>When the user taps the touchpad of the headset while in
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#INTERACTION_MODE_HUD"><code>HUD mode</code></a>, a small keyboard
+ is shown instead of the default input method.  The keyboard layout of this small keyboard is
+ derived from the <a href="https://developer.android.com/reference/android/widget/TextView.html?is-external=true#getInputType--" title="class or interface in android.widget"><code>input type</code></a> of the editable
+ text field.  If an <code>OnClickListener</code> was set for the view, its
+ <code>onClick()</code> method is <em>not</em> invoked.
+
+ <p>If the phone is not in <code>HUD mode</code>, matching views will operate as if the user had
+ tapped on them with the touchscreen of the display.  This will typically open the current
+ input method or invoke the <code>onClick()</code> method of the
+ <code>OnClickListener</code> if set.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD_DISABLED">KEYBOARD_DISABLED<a class="headerlink" href="#KEYBOARD_DISABLED" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int KEYBOARD_DISABLED</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a> requesting that no custom keyboard is shown.
+
+ <p>When the user taps the touchpad of the headset, matching views will operate as if the user
+ had tapped on it with the touchscreen of the display.  This will typically open the current
+ input method or invoke the <code>onClick()</code> method of the
+ <code>OnClickListener</code> if set.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD"><code>KEYBOARD</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD_VOICE">KEYBOARD_VOICE<a class="headerlink" href="#KEYBOARD_VOICE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; KEYBOARD_VOICE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Voice control behavior for the keyboard.
+
+ <p>This value is only relevant for editable text views such as <a href="https://developer.android.com/reference/android/widget/EditText.html?is-external=true" title="class or interface in android.widget"><code>EditText</code></a>.</p></div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.1</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE_DEFAULT"><code>KEYBOARD_VOICE_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE_NO_INHIBIT"><code>KEYBOARD_VOICE_NO_INHIBIT</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD_VOICE_DEFAULT">KEYBOARD_VOICE_DEFAULT<a class="headerlink" href="#KEYBOARD_VOICE_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int KEYBOARD_VOICE_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a> letting Iristick Services decide what to do.
+
+ <p>When the small keyboard is shown for the matched view, all voice commands registered with
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-"><code>Headset.registerVoiceCommands(String[], VoiceEvent.Callback, android.os.Handler)</code></a>
+ and any voice commands recognized by the interaction system are inhibited until the keyboard
+ is closed.</p></div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.1</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="KEYBOARD_VOICE_NO_INHIBIT">KEYBOARD_VOICE_NO_INHIBIT<a class="headerlink" href="#KEYBOARD_VOICE_NO_INHIBIT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int KEYBOARD_VOICE_NO_INHIBIT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a> requesting not to inhibit the other voice commands when
+ the keyboard is shown for the matched view.
+
+ <p>When the small keyboard is shown for the matched view, all voice commands registered with
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-"><code>Headset.registerVoiceCommands(String[], VoiceEvent.Callback, android.os.Handler)</code></a>
+ and any voice commands recognized by the interaction system are still available to the user.</p></div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.1</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#KEYBOARD_VOICE"><code>KEYBOARD_VOICE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STYLE">HIGHLIGHT_STYLE<a class="headerlink" href="#HIGHLIGHT_STYLE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; HIGHLIGHT_STYLE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Overall style of the interaction highlight.
+
+ <p>The interaction highlight is a visual indication of the currently focused view within
+ your app. By tapping and swiping, the user can interact with the focused view and navigate to
+ other views. Users should always be able to distinguish the highlight from the background.
+
+ <p>The style of the highlight dictates how the highlight is drawn. It may be further
+ customized by setting the stroke width and color and the fill color.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_DEFAULT"><code>HIGHLIGHT_STYLE_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_BRIGHT_DARK"><code>HIGHLIGHT_STYLE_BRIGHT_DARK</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_DARK_BRIGHT"><code>HIGHLIGHT_STYLE_DARK_BRIGHT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE_SINGLE_COLOR"><code>HIGHLIGHT_STYLE_SINGLE_COLOR</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STYLE_DEFAULT">HIGHLIGHT_STYLE_DEFAULT<a class="headerlink" href="#HIGHLIGHT_STYLE_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_STYLE_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting the default highlight style.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STYLE_BRIGHT_DARK">HIGHLIGHT_STYLE_BRIGHT_DARK<a class="headerlink" href="#HIGHLIGHT_STYLE_BRIGHT_DARK" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_STYLE_BRIGHT_DARK</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a two-color stroke for
+ the highlight.
+
+ <p>The stroke of the highlight will have a lower luminosity in the center and a higher
+ luminosity along the edges of the stroke.
+
+ <p>The base color of the stroke may be configured with <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY"><code>HIGHLIGHT_STROKE_COLOR_PRIMARY</code></a>
+ and <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY"><code>HIGHLIGHT_STROKE_COLOR_SECONDARY</code></a>.
+
+ <p>Highlights with a two-color stroke are more clearly visible with both dark and light
+ backgrounds.</p></p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STYLE_DARK_BRIGHT">HIGHLIGHT_STYLE_DARK_BRIGHT<a class="headerlink" href="#HIGHLIGHT_STYLE_DARK_BRIGHT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_STYLE_DARK_BRIGHT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a two-color stroke for
+ the highlight.
+
+ <p>The stroke of the highlight will have a lower luminosity on the edge and a higher
+ luminosity in the center.
+
+ <p>The base color of the stroke may be configured with <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY"><code>HIGHLIGHT_STROKE_COLOR_PRIMARY</code></a>
+ and <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY"><code>HIGHLIGHT_STROKE_COLOR_SECONDARY</code></a>.
+
+ <p>Highlights with a two-color stroke are more clearly visible with both dark and light
+ backgrounds.</p></p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STYLE_SINGLE_COLOR">HIGHLIGHT_STYLE_SINGLE_COLOR<a class="headerlink" href="#HIGHLIGHT_STYLE_SINGLE_COLOR" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_STYLE_SINGLE_COLOR</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a> requesting a rounded rectangle with a single-color stroke
+ for the highlight.
+
+ <p>The stroke of the highlight will have a uniform color.
+
+ <p>The color of the stroke may be configured with <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY"><code>HIGHLIGHT_STROKE_COLOR_PRIMARY</code></a>
+ and <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY"><code>HIGHLIGHT_STROKE_COLOR_SECONDARY</code></a>.
+
+ <p>Highlights with a single-color stroke can be harder to see with some background
+ colors.</p></p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STROKE_WIDTH">HIGHLIGHT_STROKE_WIDTH<a class="headerlink" href="#HIGHLIGHT_STROKE_WIDTH" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&gt; HIGHLIGHT_STROKE_WIDTH</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The stroke width in pixels of the highlight in pixels.
+
+ <p>When the stroke width is greater than <code>0.f</code> and the stroke color is not
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a>, a stroke is drawn around the highlight according to the style
+ given with <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STYLE"><code>HIGHLIGHT_STYLE</code></a>.
+
+ <p>Negative values are ignored.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH_DEFAULT"><code>HIGHLIGHT_STROKE_WIDTH_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH_NONE"><code>HIGHLIGHT_STROKE_WIDTH_NONE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STROKE_WIDTH_DEFAULT">HIGHLIGHT_STROKE_WIDTH_DEFAULT<a class="headerlink" href="#HIGHLIGHT_STROKE_WIDTH_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;float HIGHLIGHT_STROKE_WIDTH_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a> requesting the default stroke width.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STROKE_WIDTH_NONE">HIGHLIGHT_STROKE_WIDTH_NONE<a class="headerlink" href="#HIGHLIGHT_STROKE_WIDTH_NONE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;float HIGHLIGHT_STROKE_WIDTH_NONE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a> requesting no stroke is drawn.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_WIDTH"><code>HIGHLIGHT_STROKE_WIDTH</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STROKE_COLOR_PRIMARY">HIGHLIGHT_STROKE_COLOR_PRIMARY<a class="headerlink" href="#HIGHLIGHT_STROKE_COLOR_PRIMARY" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; HIGHLIGHT_STROKE_COLOR_PRIMARY</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The primary stroke color of the highlight, encoded as 0xaarrggbb.
+
+ <p>The primary color is used when swiping on the touchpad will navigate the focus to a
+ different view.
+
+ <p>Colors with 0 alpha channel are reserved and should not be used. Use
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a> to disable the stroke</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_DEFAULT"><code>HIGHLIGHT_COLOR_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_STROKE_COLOR_SECONDARY">HIGHLIGHT_STROKE_COLOR_SECONDARY<a class="headerlink" href="#HIGHLIGHT_STROKE_COLOR_SECONDARY" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; HIGHLIGHT_STROKE_COLOR_SECONDARY</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The secondary stroke color of the highlight, encoded as 0xaarrggbb.
+
+ <p>The secondary color is used when swiping on the touchpad will interact with the currently
+ focused view. Examples include adjusting the value of a <a href="https://developer.android.com/reference/android/widget/SeekBar.html?is-external=true" title="class or interface in android.widget"><code>SeekBar</code></a> or
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_PAGED"><code>paged scrolling</code></a> through a <a href="https://developer.android.com/reference/android/widget/ListView.html?is-external=true" title="class or interface in android.widget"><code>ListView</code></a>.
+
+ <p>Colors with 0 alpha channel are reserved and should not be used. Use
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a> to disable the stroke.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_DEFAULT"><code>HIGHLIGHT_COLOR_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_FILL_COLOR_PRIMARY">HIGHLIGHT_FILL_COLOR_PRIMARY<a class="headerlink" href="#HIGHLIGHT_FILL_COLOR_PRIMARY" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; HIGHLIGHT_FILL_COLOR_PRIMARY</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The primary fill color of the highlight, encoded as 0xaarrggbb.
+
+ <p>The primary color is used when swiping on the touchpad will navigate the focus to a
+ different view.
+
+ <p>Colors with 0 alpha channel are reserved and should not be used. Use
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a> to disable the fill.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_DEFAULT"><code>HIGHLIGHT_COLOR_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_FILL_COLOR_SECONDARY">HIGHLIGHT_FILL_COLOR_SECONDARY<a class="headerlink" href="#HIGHLIGHT_FILL_COLOR_SECONDARY" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt; HIGHLIGHT_FILL_COLOR_SECONDARY</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The secondary fill color of the highlight, encoded as 0xaarrggbb.
+
+ <p>The secondary color is used when swiping on the touchpad will interact with the currently
+ focused view. Examples include adjusting the value of a <a href="https://developer.android.com/reference/android/widget/SeekBar.html?is-external=true" title="class or interface in android.widget"><code>SeekBar</code></a> or
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#SCROLL_PAGED"><code>paged scrolling</code></a> through a <a href="https://developer.android.com/reference/android/widget/ListView.html?is-external=true" title="class or interface in android.widget"><code>ListView</code></a>.
+
+ <p>Colors with 0 alpha channel are reserved and should not be used. Use
+ <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a> to disable the fill.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_DEFAULT"><code>HIGHLIGHT_COLOR_DEFAULT</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_COLOR_NONE"><code>HIGHLIGHT_COLOR_NONE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_COLOR_DEFAULT">HIGHLIGHT_COLOR_DEFAULT<a class="headerlink" href="#HIGHLIGHT_COLOR_DEFAULT" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_COLOR_DEFAULT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <code>HIGHLIGHT_*_COLOR_*</code> requesting the default color.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY"><code>HIGHLIGHT_STROKE_COLOR_PRIMARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY"><code>HIGHLIGHT_STROKE_COLOR_SECONDARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_PRIMARY"><code>HIGHLIGHT_FILL_COLOR_PRIMARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_SECONDARY"><code>HIGHLIGHT_FILL_COLOR_SECONDARY</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="HIGHLIGHT_COLOR_NONE">HIGHLIGHT_COLOR_NONE<a class="headerlink" href="#HIGHLIGHT_COLOR_NONE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int HIGHLIGHT_COLOR_NONE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Value for <code>HIGHLIGHT_*_COLOR_*</code> requesting not to draw the specified stroke or fill.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_PRIMARY"><code>HIGHLIGHT_STROKE_COLOR_PRIMARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_STROKE_COLOR_SECONDARY"><code>HIGHLIGHT_STROKE_COLOR_SECONDARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_PRIMARY"><code>HIGHLIGHT_FILL_COLOR_PRIMARY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/InteractionRule.html#HIGHLIGHT_FILL_COLOR_SECONDARY"><code>HIGHLIGHT_FILL_COLOR_SECONDARY</code></a></dd>
+</dl>
+
+
+
+
+
+
+
+<h2 id="constructor.detail">Constructor Detail<a class="headerlink" href="#constructor.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="InteractionRule--">InteractionRule<a class="headerlink" href="#InteractionRule--" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;InteractionRule()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="create--">create<a class="headerlink" href="#create--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public static&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;create()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates a new interaction rule object.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A new <code>InteractionRule</code> instance.</dd>
+</dl>
+
+
+
+
+
+<h3 id="match-android.content.Context-int-">match<a class="headerlink" href="#match-android.content.Context-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;match(@NonNull
+                                               <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context,
+                                               @IdRes
+                                               int&nbsp;id)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match views with this specific view ID.
+
+ <p>Multiple view IDs and/or regular expressions may be added to a single rule.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - A context to map resource IDs to fully qualified names.</dd>
+<dd><code>id</code> - The resource ID to match.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This rule instance, for chaining method calls.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>Resources.NotFoundException</code> - if <code>id</code> is invalid or
+         does not have a fully qualified name.</dd>
+</dl>
+
+
+
+
+
+<h3 id="match-android.view.View-">match<a class="headerlink" href="#match-android.view.View-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public final&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;match(@NonNull
+                                            <a href="https://developer.android.com/reference/android/view/View.html?is-external=true" title="class or interface in android.view">View</a>&nbsp;view)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match the given view by its resource ID.
+ Views without any resource ID (e.g., views created programmatically) are ignored.
+
+ <p>Multiple view IDs and/or regular expressions may be added to a single rule.
+
+ <p>Calling this method is equivalent to calling
+ <pre>
+ match(view.getContext(), view.getId())
+ </pre></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>view</code> - The view to match.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This rule instance, for chaining method calls.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>Resources.NotFoundException</code> - if <code>view</code> does not have a resource ID or
+         the resource ID does not have a fully qualified name.</dd>
+</dl>
+
+
+
+
+
+<h3 id="match-java.lang.String-">match<a class="headerlink" href="#match-java.lang.String-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;match(@NonNull
+                                               <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;regex)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Match views whose fully qualified resource names match the given regular expression.
+
+ <p>The fully qualified resource name is the string returned by
+ <a href="https://developer.android.com/reference/android/content/res/Resources.html?is-external=true#getResourceName-int-" title="class or interface in android.content.res"><code>Resources.getResourceName(int)</code></a>. It includes the package name and
+ the resource type.
+
+ <p>Multiple view IDs and/or regular expressions may be added to a single rule.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>regex</code> - A regular expression used for matching view IDs.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This rule instance, for chaining method calls.</dd>
+</dl>
+
+
+
+
+
+<h3 id="get-com.iristick.smartglass.core.InteractionRule.Key-">get<a class="headerlink" href="#get-com.iristick.smartglass.core.InteractionRule.Key-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @Nullable
+public abstract&nbsp;&lt;T&gt;&nbsp;T&nbsp;get(@NonNull
+                                                  <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;T&gt;&nbsp;key)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Gets a configuration field value.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - The key type.</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - The field to read (keys are defined as constants in <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core"><code>InteractionRule</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The value of the key, or <code>null</code> if the field is not set.</dd>
+</dl>
+
+
+<a name="set-com.iristick.smartglass.core.InteractionRule.Key-java.lang.Object-">
+
+</a>
+
+
+<h3 id="set-com.iristick.smartglass.core.InteractionRule.Key-T-">set<a class="headerlink" href="#set-com.iristick.smartglass.core.InteractionRule.Key-T-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;&lt;T&gt;&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;set(@NonNull
+                                                 <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;T&gt;&nbsp;key,
+                                                 @Nullable
+                                                 T&nbsp;value)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Sets an interaction configuration field value for the given <code>key</code>.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - The key type.</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - The field to set (keys are defined as constants in <a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core"><code>InteractionRule</code></a>.</dd>
+<dd><code>value</code> - The value to set the field to. A value of <code>null</code> unsets the field.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This rule instance, for chaining method calls.</dd>
+</dl>
+
+
+
+
+
+<h3 id="containsKey-com.iristick.smartglass.core.InteractionRule.Key-">containsKey<a class="headerlink" href="#containsKey-com.iristick.smartglass.core.InteractionRule.Key-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+public abstract&nbsp;boolean&nbsp;containsKey(@NonNull
+                                                 <a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;?&gt;&nbsp;key)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determines whether this rule has a value set for the given <code>key</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - The field to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Whether this rule contains a value for key.</dd>
+</dl>
+
+
+
+
+
+<h3 id="getKeys--">getKeys<a class="headerlink" href="#getKeys--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/iristick/smartglass/core/InteractionRule.Key.html" title="class in com.iristick.smartglass.core">InteractionRule.Key</a>&lt;?&gt;&gt;&nbsp;getKeys()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Return a list of the configuration keys contained in this rule.
+
+ <p>The list returned is not modifiable, so any attempts to modify it will throw an
+ <a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang"><code>UnsupportedOperationException</code></a>.
+
+ <p>All values retrieved by a key from this list with <a href="../../../../com/iristick/smartglass/core/InteractionRule.html#get-com.iristick.smartglass.core.InteractionRule.Key-"><code>get(Key)</code></a> are guaranteed
+ to be non-<code>null</code>.
+ Each key is only listed once in the list.  The order of the keys is undefined.</p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A list of the keys contained in this interaction configuration for the given view id.</dd>
+</dl>
+
+
+
+
+
+<h3 id="copy--">copy<a class="headerlink" href="#copy--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/InteractionRule.html" title="class in com.iristick.smartglass.core">InteractionRule</a>&nbsp;copy()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Creates and returns a copy of this object.
+
+ <p>The copy will have the same semantics and values as the original rule.  Any modification
+ to the clone will not be reflected by the original instance and vice versa.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a copy of this rule.</dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="Intents.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intents
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="InteractionRule.Key.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                InteractionRule.Key
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

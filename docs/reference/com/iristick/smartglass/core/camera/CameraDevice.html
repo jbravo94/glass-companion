@@ -1,0 +1,2482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/core/camera/CameraDevice.html">
+      
+      <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>CameraDevice - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##CameraDevice" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              CameraDevice
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CameraDevice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="CameraDevice.html" class="md-nav__link md-nav__link--active">
+        CameraDevice
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_PREVIEW" class="md-nav__link">
+    TEMPLATE_PREVIEW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_STILL_CAPTURE" class="md-nav__link">
+    TEMPLATE_STILL_CAPTURE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_RECORD" class="md-nav__link">
+    TEMPLATE_RECORD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_BARCODE" class="md-nav__link">
+    TEMPLATE_BARCODE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##CameraDevice--" class="md-nav__link">
+    CameraDevice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getId--" class="md-nav__link">
+    getId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##close--" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureRequest-int-" class="md-nav__link">
+    createCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-" class="md-nav__link">
+    createCaptureSession
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_PREVIEW" class="md-nav__link">
+    TEMPLATE_PREVIEW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_STILL_CAPTURE" class="md-nav__link">
+    TEMPLATE_STILL_CAPTURE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_RECORD" class="md-nav__link">
+    TEMPLATE_RECORD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_BARCODE" class="md-nav__link">
+    TEMPLATE_BARCODE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##CameraDevice--" class="md-nav__link">
+    CameraDevice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getId--" class="md-nav__link">
+    getId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##close--" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureRequest-int-" class="md-nav__link">
+    createCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-" class="md-nav__link">
+    createCaptureSession
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.core.camera</div>
+<h1 id="CameraDevice">Class CameraDevice<a class="headerlink" href="#CameraDevice" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.iristick.smartglass.core.camera.CameraDevice</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+
+
+<hr/>
+
+<pre>public abstract class <span class="typeNameLabel">CameraDevice</span>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block"><p>This class represents a single camera of an Iristick headset, allowing for fine-grain control
+ of image capture.
+
+ <p>Opening a camera happens asynchronously by calling <a href="../../../../../com/iristick/smartglass/core/Headset.html#openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-"><code>Headset.openCamera(java.lang.String, com.iristick.smartglass.core.camera.CameraDevice.Listener, android.os.Handler)</code></a> and passing a
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html" title="interface in com.iristick.smartglass.core.camera"><code>CameraDevice.Listener</code></a> object.  When opened, the <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html#onOpened-com.iristick.smartglass.core.camera.CameraDevice-"><code>CameraDevice.Listener.onOpened(com.iristick.smartglass.core.camera.CameraDevice)</code></a> method will be called with
+ a ready-to-use <code>CameraDevice</code> object.</p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/Headset.html#openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-"><code>Headset.openCamera(java.lang.String, com.iristick.smartglass.core.camera.CameraDevice.Listener, android.os.Handler)</code></a></dd>
+</dl>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="nested.class.summary">Nested Class Summary<a class="headerlink" href="#nested.class.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Nested Class Summary table, listing nested classes, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html" title="interface in com.iristick.smartglass.core.camera">CameraDevice.Listener</a></span></code>
+<div class="block">Listener interface for receiving updates about the state of a camera device.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="field.summary">Field Summary<a class="headerlink" href="#field.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Field Summary table, listing fields, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_BARCODE">TEMPLATE_BARCODE</a></span></code>
+<div class="block">Creates a request suitable for scanning barcodes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_PREVIEW">TEMPLATE_PREVIEW</a></span></code>
+<div class="block">Creates a request suitable for a camera preview window.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_RECORD">TEMPLATE_RECORD</a></span></code>
+<div class="block">Creates a request suitable for video recording.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_STILL_CAPTURE">TEMPLATE_STILL_CAPTURE</a></span></code>
+<div class="block">Creates a request suitable for still image capture.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="constructor.summary">Constructor Summary<a class="headerlink" href="#constructor.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Constructor Summary table, listing constructors, and an explanation">
+
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#CameraDevice--">CameraDevice</a></span>()</code>&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#close--">close</a></span>()</code>
+<div class="block">Close the connection to this camera as quickly as possible.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract <a href="../../../../../com/iristick/smartglass/core/camera/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.core.camera">CaptureRequest.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureRequest-int-">createCaptureRequest</a></span>(int&nbsp;templateType)</code>
+<div class="block">Creates a <code>CaptureRequest</code> builder for new capture requests,
+ initialized with template for a target use case.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-">createCaptureSession</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                    <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html" title="interface in com.iristick.smartglass.core.camera">CaptureSession.Listener</a>&nbsp;listener,
+                    <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Create a new capture session by providing the target output set of Surfaces to the
+ camera device.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#getId--">getId</a></span>()</code>
+<div class="block">Gets the identifier of the camera.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+<h2 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a><a class="headerlink" href="#methods.inherited.from.class.java.lang.Object" title="Permanent link">&para;</a></h2>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code>
+
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="field.detail">Field Detail<a class="headerlink" href="#field.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="TEMPLATE_PREVIEW">TEMPLATE_PREVIEW<a class="headerlink" href="#TEMPLATE_PREVIEW" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TEMPLATE_PREVIEW</pre>
+<div class="block">Creates a request suitable for a camera preview window.  Specifically, this
+ means that high frame rate is given priority over the highest-quality
+ post-processing.  These requests would normally be used with the
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#setRepeatingRequest-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>setRepeatingRequest</code></a> method.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_STILL_CAPTURE">TEMPLATE_STILL_CAPTURE<a class="headerlink" href="#TEMPLATE_STILL_CAPTURE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TEMPLATE_STILL_CAPTURE</pre>
+<div class="block">Creates a request suitable for still image capture.  Specifically, this
+ means prioritizing image quality over frame rate.  These requests would
+ commonly be used with the <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#capture-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>capture</code></a> method.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_RECORD">TEMPLATE_RECORD<a class="headerlink" href="#TEMPLATE_RECORD" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TEMPLATE_RECORD</pre>
+<div class="block">Creates a request suitable for video recording.  Specifically, this means
+ that a stable frame rate is used, and post-processing is set for
+ recording quality.  These requests would commonly be used with the
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#setRepeatingRequest-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>setRepeatingRequest</code></a> method.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_BARCODE">TEMPLATE_BARCODE<a class="headerlink" href="#TEMPLATE_BARCODE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TEMPLATE_BARCODE</pre>
+<div class="block">Creates a request suitable for scanning barcodes.
+ These requests would commonly be used with the
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#setRepeatingRequest-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>setRepeatingRequest</code></a> method.</div>
+
+
+
+
+
+
+
+
+<h2 id="constructor.detail">Constructor Detail<a class="headerlink" href="#constructor.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="CameraDevice--">CameraDevice<a class="headerlink" href="#CameraDevice--" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;CameraDevice()</pre>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="getId--">getId<a class="headerlink" href="#getId--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getId()</pre>
+<div class="block"><p>Gets the identifier of the camera.
+
+ <p>This matches the ID given to <a href="../../../../../com/iristick/smartglass/core/Headset.html#openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-"><code>Headset.openCamera(java.lang.String, com.iristick.smartglass.core.camera.CameraDevice.Listener, android.os.Handler)</code></a>
+ to instantiate this camera session.
+
+ <div class="admonition attention"><p class="admonition-title">Attention</p><p> Camera identifiers are not part of the stable API.
+ They may vary across versions of the Iristick Services, device models or even <code>Headset</code>
+ objects.  You should always discover the camera identifiers of a connected headset using
+ <a href="../../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>Headset.findCamera(int)</code></a> or <a href="../../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>Headset.getCameraIdList()</code></a>.</p></div></p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The identifier for the camera.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>Headset.findCamera(int)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>Headset.getCameraIdList()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="close--">close<a class="headerlink" href="#close--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;close()</pre>
+<div class="block"><p>Close the connection to this camera as quickly as possible.
+
+ <p>Once the camera has fully shut down, the <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html#onClosed-com.iristick.smartglass.core.camera.CameraDevice-"><code>CameraDevice.Listener.onClosed(com.iristick.smartglass.core.camera.CameraDevice)</code></a> callback
+ will be called, and the camera is free to be re-opened.
+
+ <p>Immediately after this call, besides the final <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html#onClosed-com.iristick.smartglass.core.camera.CameraDevice-"><code>CameraDevice.Listener.onClosed(com.iristick.smartglass.core.camera.CameraDevice)</code></a> call,
+ no further callbacks from the device or the active session will occur,
+ and any remaining submitted capture requests will be discarded,
+ as if <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#abortCaptures--"><code>CaptureSession.abortCaptures()</code></a> had been called, except that no success or
+ failure callbacks will be invoked.</p></p></p></div>
+
+
+
+
+
+<h3 id="createCaptureRequest-int-">createCaptureRequest<a class="headerlink" href="#createCaptureRequest-int-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="../../../../../com/iristick/smartglass/core/camera/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.core.camera">CaptureRequest.Builder</a>&nbsp;createCaptureRequest(int&nbsp;templateType)</pre>
+<div class="block"><p>Creates a <code>CaptureRequest</code> builder for new capture requests,
+ initialized with template for a target use case.  The settings are chosen
+ to be the best options for the specific camera, so it is not
+ recommended to reuse the same request for a different camera;
+ create a builder specific for that camera and template and override the
+ settings as desired, instead.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>templateType</code> - An enumeration selecting the use case for this request;
+                     one of the <code>TEMPLATE_*</code> values. See the documentation for each
+                     template type for details.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A builder for a capture request, initialized with default settings for that template,
+         and no output streams.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the templateType is unknown or unsupported by this camera.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_PREVIEW"><code>TEMPLATE_PREVIEW</code></a>, 
+<a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_RECORD"><code>TEMPLATE_RECORD</code></a>, 
+<a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#TEMPLATE_STILL_CAPTURE"><code>TEMPLATE_STILL_CAPTURE</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-">createCaptureSession<a class="headerlink" href="#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;createCaptureSession(@NonNull
+                                          <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                                          @NonNull
+                                          <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html" title="interface in com.iristick.smartglass.core.camera">CaptureSession.Listener</a>&nbsp;listener,
+                                          @Nullable
+                                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Create a new capture session by providing the target output set of Surfaces to the
+ camera device.
+
+ <p>The active capture session determines the set of potential output Surfaces for
+ the camera device for each capture request.  A given request may use all
+ or only some of the outputs.  Once the CaptureSession is created, requests can be
+ submitted with <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#capture-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>capture</code></a>,
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>captureBurst</code></a>, or
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#setRepeatingRequest-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>setRepeatingRequest</code></a>.
+
+ <p>Surfaces suitable for inclusion as a camera output can be created for
+ various use cases and targets:
+
+ <ul>
+<li>For drawing to a <a href="https://developer.android.com/reference/android/view/SurfaceView.html?is-external=true" title="class or interface in android.view"><code>SurfaceView</code></a>: Once the SurfaceView's
+ Surface is <a href="https://developer.android.com/reference/android/view/SurfaceHolder.Callback.html?is-external=true#surfaceCreated-android.view.SurfaceHolder-" title="class or interface in android.view"><code>created</code></a>, set the size
+ of the Surface with <a href="https://developer.android.com/reference/android/view/SurfaceHolder.html?is-external=true#setFixedSize-int-int-" title="class or interface in android.view"><code>SurfaceHolder.setFixedSize(int, int)</code></a> to be one of the sizes
+ returned by <a href="../../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.StreamConfigurationMap.html#getSizes--"><code>CameraCharacteristics.StreamConfigurationMap.getSizes()</code></a>
+ and then obtain the Surface by calling <a href="https://developer.android.com/reference/android/view/SurfaceHolder.html?is-external=true#getSurface--" title="class or interface in android.view"><code>SurfaceHolder.getSurface()</code></a>.
+
+ <li>For accessing through an OpenGL texture via a <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true" title="class or interface in android.graphics"><code>SurfaceTexture</code></a>: Set the size of the SurfaceTexture with <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true#setDefaultBufferSize-int-int-" title="class or interface in android.graphics"><code>SurfaceTexture.setDefaultBufferSize(int, int)</code></a> to be one of the sizes returned by
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.StreamConfigurationMap.html#getSizes--"><code>CameraCharacteristics.StreamConfigurationMap.getSizes()</code></a>
+ before creating a Surface from the SurfaceTexture with <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true#Surface-android.graphics.SurfaceTexture-" title="class or interface in android.view"><code>Surface(android.graphics.SurfaceTexture)</code></a>.
+
+ <li>For recording with <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true" title="class or interface in android.media"><code>MediaCodec</code></a>: Call
+ <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true#createInputSurface--" title="class or interface in android.media"><code>MediaCodec.createInputSurface()</code></a> after configuring
+ the media codec to use one of the sizes returned by
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.StreamConfigurationMap.html#getSizes--"><code>CameraCharacteristics.StreamConfigurationMap.getSizes()</code></a>
+<li>For recording with <a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true" title="class or interface in android.media"><code>MediaRecorder</code></a>: Call
+ <a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true#getSurface--" title="class or interface in android.media"><code>MediaRecorder.getSurface()</code></a> after configuring the media recorder to use
+ one of the sizes returned by
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.StreamConfigurationMap.html#getSizes--"><code>CameraCharacteristics.StreamConfigurationMap.getSizes()</code></a>,
+ or configuring it to use one of the supported
+ <a href="https://developer.android.com/reference/android/media/CamcorderProfile.html?is-external=true" title="class or interface in android.media"><code>CamcorderProfiles</code></a>.
+
+ <li>For access to uncompressed YUV or compressed JPEG data in the application: Create an
+ <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a> object with format <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#YV12" title="class or interface in android.graphics"><code>ImageFormat.YV12</code></a> or
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#JPEG" title="class or interface in android.graphics"><code>ImageFormat.JPEG</code></a>, setting its size to one of the supported sizes
+ returned by <a href="../../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.StreamConfigurationMap.html#getSizes--"><code>CameraCharacteristics.StreamConfigurationMap.getSizes()</code></a>.  Then obtain a
+ <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> from it with <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true#getSurface--" title="class or interface in android.media"><code>ImageReader.getSurface()</code></a>.
+ </li></li></li></li></li></ul>
+<p>The camera device will query each Surface's size and formats upon this
+ call, so they must be set to a valid setting at this time.  If the size of an output is
+ changed, a new capture session must be created for the new size to become effective.
+
+ <p>It can take several hundred milliseconds for the session's configuration to complete,
+ since camera hardware may need to be powered on or reconfigured.  Once the configuration is
+ complete and the session is ready to actually capture data, the provided
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html" title="interface in com.iristick.smartglass.core.camera"><code>CaptureSession.Listener</code></a>'s
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigured-com.iristick.smartglass.core.camera.CaptureSession-"><code>CaptureSession.Listener.onConfigured(com.iristick.smartglass.core.camera.CaptureSession)</code></a> callback will be called.
+
+ <p>If a prior CaptureSession already exists when this method is called, the previous
+ session will no longer be able to accept new capture requests and will be closed.  Any
+ in-progress capture requests made on the prior session will be completed before it's closed.
+ Once the new session is <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigured-com.iristick.smartglass.core.camera.CaptureSession-"><code>configured</code></a>,
+ it is able to start capturing its own requests.  To minimize the transition time,
+ the <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#abortCaptures--"><code>CaptureSession.abortCaptures()</code></a> call can be used to discard the remaining
+ requests for the prior capture session before a new one is created.  Note that once the new
+ session is created, the old one can no longer have its captures aborted.
+
+ <p>Using larger resolution outputs, or more outputs, can result in slower
+ output rate from the device.</p></p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>outputs</code> - The new set of Surfaces that should be made available as
+                targets for captured image data.</dd>
+<dd><code>listener</code> - The callback to notify about the status of the new capture session.</dd>
+<dd><code>handler</code> - The handler on which the callback should be invoked, or <code>null</code> to use
+                the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the set of output Surfaces do not meet the requirements,
+                                  or the handler is null but the current thread has no looper.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>listener</code> is <code>null</code>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera"><code>CaptureSession</code></a></dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="CameraCharacteristics.StreamConfigurationMap.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CameraCharacteristics.StreamConfigurationMap
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="CameraDevice.Listener.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CameraDevice.Listener
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

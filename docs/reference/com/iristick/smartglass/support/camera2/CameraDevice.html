@@ -1,0 +1,3165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/support/camera2/CameraDevice.html">
+      
+      <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>CameraDevice - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##CameraDevice" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              CameraDevice
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" >
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/camera/CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CameraDevice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="CameraDevice.html" class="md-nav__link md-nav__link--active">
+        CameraDevice
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_PREVIEW" class="md-nav__link">
+    TEMPLATE_PREVIEW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_STILL_CAPTURE" class="md-nav__link">
+    TEMPLATE_STILL_CAPTURE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_RECORD" class="md-nav__link">
+    TEMPLATE_RECORD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_VIDEO_SNAPSHOT" class="md-nav__link">
+    TEMPLATE_VIDEO_SNAPSHOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_ZERO_SHUTTER_LAG" class="md-nav__link">
+    TEMPLATE_ZERO_SHUTTER_LAG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_MANUAL" class="md-nav__link">
+    TEMPLATE_MANUAL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getId--" class="md-nav__link">
+    getId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSessionByOutputConfigurations-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createCaptureSessionByOutputConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createReprocessableCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessableCaptureSessionByConfigurations-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createReprocessableCaptureSessionByConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createConstrainedHighSpeedCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureRequest-int-" class="md-nav__link">
+    createCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-" class="md-nav__link">
+    createReprocessCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##close--" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_PREVIEW" class="md-nav__link">
+    TEMPLATE_PREVIEW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_STILL_CAPTURE" class="md-nav__link">
+    TEMPLATE_STILL_CAPTURE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_RECORD" class="md-nav__link">
+    TEMPLATE_RECORD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_VIDEO_SNAPSHOT" class="md-nav__link">
+    TEMPLATE_VIDEO_SNAPSHOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_ZERO_SHUTTER_LAG" class="md-nav__link">
+    TEMPLATE_ZERO_SHUTTER_LAG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TEMPLATE_MANUAL" class="md-nav__link">
+    TEMPLATE_MANUAL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getId--" class="md-nav__link">
+    getId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureSessionByOutputConfigurations-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createCaptureSessionByOutputConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createReprocessableCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessableCaptureSessionByConfigurations-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createReprocessableCaptureSessionByConfigurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" class="md-nav__link">
+    createConstrainedHighSpeedCaptureSession
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createCaptureRequest-int-" class="md-nav__link">
+    createCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-" class="md-nav__link">
+    createReprocessCaptureRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##close--" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.support.camera2</div>
+<h1 id="CameraDevice">Interface CameraDevice<a class="headerlink" href="#CameraDevice" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<div class="description">
+
+
+<dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="https://developer.android.com/reference/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></dd>
+</dl>
+<hr/>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Not maintained anymore.  Please use the <code>com.iristick.smartglass.core.camera</code>
+             package instead.</span></div>
+</div>
+<br/>
+<pre><a href="https://developer.android.com/reference/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public interface <span class="typeNameLabel">CameraDevice</span>
+extends <a href="https://developer.android.com/reference/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></pre>
+<div class="block"><p>The CameraDevice class is a representation of a single camera connected to an
+ Android device, allowing for fine-grain control of image capture and
+ post-processing at high frame rates.
+
+ <p>Your application must declare the
+ <a href="https://developer.android.com/reference/android/Manifest.permission.html?is-external=true#CAMERA" title="class or interface in android"><code>Camera</code></a> permission in its manifest
+ in order to access camera devices.
+
+ <p>A given camera device may provide support at one of two levels: limited or
+ full. If a device only supports the limited level, then Camera2 exposes a
+ feature set that is roughly equivalent to the older
+ <a href="https://developer.android.com/reference/android/hardware/Camera.html?is-external=true" title="class or interface in android.hardware"><code>Camera</code></a> API, although with a cleaner and more
+ efficient interface.  Devices that implement the full level of support
+ provide substantially improved capabilities over the older camera
+ API. Applications that target the limited level devices will run unchanged on
+ the full-level devices; if your application requires a full-level device for
+ proper operation, declare the "android.hardware.camera.level.full" feature in your
+ manifest.</p></p></p></div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 21</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraManager.html#openCamera-java.lang.String-com.iristick.smartglass.support.camera2.CameraDevice.StateCallback-android.os.Handler-"><code>CameraManager.openCamera(java.lang.String, com.iristick.smartglass.support.camera2.CameraDevice.StateCallback, android.os.Handler)</code></a>, 
+<a href="https://developer.android.com/reference/android/Manifest.permission.html?is-external=true#CAMERA" title="class or interface in android"><code>Manifest.permission.CAMERA</code></a></dd>
+</dl>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="nested.class.summary">Nested Class Summary<a class="headerlink" href="#nested.class.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Nested Class Summary table, listing nested classes, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraDevice.StateCallback</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">A callback objects for receiving updates about the state of a camera device.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="field.summary">Field Summary<a class="headerlink" href="#field.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Field Summary table, listing fields, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_MANUAL">TEMPLATE_MANUAL</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">A basic template for direct application control of capture
+ parameters.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_PREVIEW">TEMPLATE_PREVIEW</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for a camera preview window.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_RECORD">TEMPLATE_RECORD</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for video recording.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_STILL_CAPTURE">TEMPLATE_STILL_CAPTURE</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for still image capture.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_VIDEO_SNAPSHOT">TEMPLATE_VIDEO_SNAPSHOT</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for still image capture while recording
+ video.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_ZERO_SHUTTER_LAG">TEMPLATE_ZERO_SHUTTER_LAG</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for zero shutter lag still capture.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#close--">close</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Close the connection to this camera device as quickly as possible.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code><a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2">CaptureRequest.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-">createCaptureRequest</a></span>(int&nbsp;templateType)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest.Builder</code></a> for new capture requests,
+ initialized with template for a target use case.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createCaptureSession</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                    <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                    <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new camera capture session by providing the target output set of Surfaces to the
+ camera device.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSessionByOutputConfigurations-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createCaptureSessionByOutputConfigurations</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">OutputConfiguration</a>&gt;&nbsp;outputConfigurations,
+                                          <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new camera capture session by providing the target output set of Surfaces and
+ its corresponding surface configuration to the camera device.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createConstrainedHighSpeedCaptureSession</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                                        <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                        <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new constrained high speed capture session.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createReprocessableCaptureSession</a></span>(<a href="../../../../../com/iristick/smartglass/support/camera2/params/InputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">InputConfiguration</a>&nbsp;inputConfig,
+                                 <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                                 <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                 <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new reprocessable camera capture session by providing the desired reprocessing
+ input Surface configuration and the target output set of Surfaces to the camera device.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessableCaptureSessionByConfigurations-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createReprocessableCaptureSessionByConfigurations</a></span>(<a href="../../../../../com/iristick/smartglass/support/camera2/params/InputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">InputConfiguration</a>&nbsp;inputConfig,
+                                                 <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">OutputConfiguration</a>&gt;&nbsp;outputs,
+                                                 <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                                 <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new reprocessable camera capture session by providing the desired reprocessing
+ input configuration and output <a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params"><code>OutputConfiguration</code></a>
+ to the camera device.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code><a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2">CaptureRequest.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-">createReprocessCaptureRequest</a></span>(<a href="../../../../../com/iristick/smartglass/support/camera2/TotalCaptureResult.html" title="class in com.iristick.smartglass.support.camera2">TotalCaptureResult</a>&nbsp;inputResult)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest.Builder</code></a> for a new reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> from a
+ <a href="../../../../../com/iristick/smartglass/support/camera2/TotalCaptureResult.html" title="class in com.iristick.smartglass.support.camera2"><code>TotalCaptureResult</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#getId--">getId</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the ID of this camera device.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="field.detail">Field Detail<a class="headerlink" href="#field.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="TEMPLATE_PREVIEW">TEMPLATE_PREVIEW<a class="headerlink" href="#TEMPLATE_PREVIEW" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_PREVIEW</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for a camera preview window. Specifically, this
+ means that high frame rate is given priority over the highest-quality
+ post-processing. These requests would normally be used with the
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingRequest-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.setRepeatingRequest(com.iristick.smartglass.support.camera2.CaptureRequest, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a> method.
+ This template is guaranteed to be supported on all camera devices.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_STILL_CAPTURE">TEMPLATE_STILL_CAPTURE<a class="headerlink" href="#TEMPLATE_STILL_CAPTURE" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_STILL_CAPTURE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for still image capture. Specifically, this
+ means prioritizing image quality over frame rate. These requests would
+ commonly be used with the <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#capture-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.capture(com.iristick.smartglass.support.camera2.CaptureRequest, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a> method.
+ This template is guaranteed to be supported on all camera devices.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_RECORD">TEMPLATE_RECORD<a class="headerlink" href="#TEMPLATE_RECORD" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_RECORD</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for video recording. Specifically, this means
+ that a stable frame rate is used, and post-processing is set for
+ recording quality. These requests would commonly be used with the
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingRequest-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.setRepeatingRequest(com.iristick.smartglass.support.camera2.CaptureRequest, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a> method.
+ This template is guaranteed to be supported on all camera devices.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_VIDEO_SNAPSHOT">TEMPLATE_VIDEO_SNAPSHOT<a class="headerlink" href="#TEMPLATE_VIDEO_SNAPSHOT" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_VIDEO_SNAPSHOT</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for still image capture while recording
+ video. Specifically, this means maximizing image quality without
+ disrupting the ongoing recording. These requests would commonly be used
+ with the <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#capture-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.capture(com.iristick.smartglass.support.camera2.CaptureRequest, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a> method while a request based on
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_RECORD"><code>TEMPLATE_RECORD</code></a> is is in use with <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingRequest-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.setRepeatingRequest(com.iristick.smartglass.support.camera2.CaptureRequest, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a>.
+ This template is guaranteed to be supported on all camera devices except
+ legacy devices (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY"><code>LEGACY</code></a>)</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_ZERO_SHUTTER_LAG">TEMPLATE_ZERO_SHUTTER_LAG<a class="headerlink" href="#TEMPLATE_ZERO_SHUTTER_LAG" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_ZERO_SHUTTER_LAG</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a request suitable for zero shutter lag still capture. This means
+ means maximizing image quality without compromising preview frame rate.
+ AE/AWB/AF should be on auto mode. This is intended for application-operated ZSL. For
+ device-operated ZSL, use <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_ENABLE_ZSL"><code>CaptureRequest.CONTROL_ENABLE_ZSL</code></a> if available.
+ This template is guaranteed to be supported on camera devices that support the
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_PRIVATE_REPROCESSING"><code>PRIVATE_REPROCESSING</code></a>
+ capability or the
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_YUV_REPROCESSING"><code>YUV_REPROCESSING</code></a>
+ capability.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_ENABLE_ZSL"><code>CaptureRequest.CONTROL_ENABLE_ZSL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="TEMPLATE_MANUAL">TEMPLATE_MANUAL<a class="headerlink" href="#TEMPLATE_MANUAL" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int TEMPLATE_MANUAL</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">A basic template for direct application control of capture
+ parameters. All automatic control is disabled (auto-exposure, auto-white
+ balance, auto-focus), and post-processing parameters are set to preview
+ quality. The manual capture parameters (exposure, sensitivity, and so on)
+ are set to reasonable defaults, but should be overriden by the
+ application depending on the intended use case.
+ This template is guaranteed to be supported on camera devices that support the
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR"><code>MANUAL_SENSOR</code></a>
+ capability.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest(int)</code></a></dd>
+</dl>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="getId--">getId<a class="headerlink" href="#getId--" title="Permanent link">&para;</a></h3>
+<pre><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getId()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the ID of this camera device.
+
+ <p>This matches the ID given to <a href="../../../../../com/iristick/smartglass/support/camera2/CameraManager.html#openCamera-java.lang.String-com.iristick.smartglass.support.camera2.CameraDevice.StateCallback-android.os.Handler-"><code>CameraManager.openCamera(java.lang.String, com.iristick.smartglass.support.camera2.CameraDevice.StateCallback, android.os.Handler)</code></a> to instantiate this
+ this camera device.
+
+ <p>This ID can be used to query the camera device's <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html" title="class in com.iristick.smartglass.support.camera2"><code>fixed properties</code></a> with <a href="../../../../../com/iristick/smartglass/support/camera2/CameraManager.html#getCameraCharacteristics-java.lang.String-"><code>CameraManager.getCameraCharacteristics(java.lang.String)</code></a>.
+
+ <p>This method can be called even if the device has been closed or has encountered
+ a serious error.</p></p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the ID for this camera device</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraManager.html#getCameraCharacteristics-java.lang.String-"><code>CameraManager.getCameraCharacteristics(java.lang.String)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraManager.html#getCameraIdList--"><code>CameraManager.getCameraIdList()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createCaptureSession<a class="headerlink" href="#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;createCaptureSession(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                          <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)
+                   throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Create a new camera capture session by providing the target output set of Surfaces to the
+ camera device.
+
+ <p>The active capture session determines the set of potential output Surfaces for
+ the camera device for each capture request. A given request may use all
+ or only some of the outputs. Once the CameraCaptureSession is created, requests can be
+ submitted with <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#capture-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>capture</code></a>,
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>captureBurst</code></a>,
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingRequest-com.iristick.smartglass.support.camera2.CaptureRequest-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>setRepeatingRequest</code></a>, or
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>setRepeatingBurst</code></a>.
+
+ <p>Surfaces suitable for inclusion as a camera output can be created for
+ various use cases and targets:
+
+ <ul>
+<li>For drawing to a <a href="https://developer.android.com/reference/android/view/SurfaceView.html?is-external=true" title="class or interface in android.view"><code>SurfaceView</code></a>: Once the SurfaceView's
+   Surface is <a href="https://developer.android.com/reference/android/view/SurfaceHolder.Callback.html?is-external=true#surfaceCreated-android.view.SurfaceHolder-" title="class or interface in android.view"><code>created</code></a>, set the size
+   of the Surface with <a href="https://developer.android.com/reference/android/view/SurfaceHolder.html?is-external=true#setFixedSize-int-int-" title="class or interface in android.view"><code>SurfaceHolder.setFixedSize(int, int)</code></a> to be one of the sizes
+   returned by <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(SurfaceHolder.class)</code></a> and then obtain the Surface by calling <a href="https://developer.android.com/reference/android/view/SurfaceHolder.html?is-external=true#getSurface--" title="class or interface in android.view"><code>SurfaceHolder.getSurface()</code></a>. If the size is not set by the application, it will
+   be rounded to the nearest supported size less than 1080p, by the camera device.</li>
+<li>For accessing through an OpenGL texture via a <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true" title="class or interface in android.graphics"><code>SurfaceTexture</code></a>: Set the size of the SurfaceTexture with <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true#setDefaultBufferSize-int-int-" title="class or interface in android.graphics"><code>SurfaceTexture.setDefaultBufferSize(int, int)</code></a> to be one of the sizes returned by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(SurfaceTexture.class)</code></a>
+   before creating a Surface from the SurfaceTexture with <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true#Surface-android.graphics.SurfaceTexture-" title="class or interface in android.view"><code>Surface(android.graphics.SurfaceTexture)</code></a>. If the size
+   is not set by the application, it will be set to be the smallest supported size less than
+   1080p, by the camera device.</li>
+<li>For recording with <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true" title="class or interface in android.media"><code>MediaCodec</code></a>: Call
+   <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true#createInputSurface--" title="class or interface in android.media"><code>MediaCodec.createInputSurface()</code></a> after configuring
+   the media codec to use one of the sizes returned by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(MediaCodec.class)</code></a>
+</li>
+<li>For recording with <a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true" title="class or interface in android.media"><code>MediaRecorder</code></a>: Call
+   <a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true#getSurface--" title="class or interface in android.media"><code>MediaRecorder.getSurface()</code></a> after configuring the media recorder to use
+   one of the sizes returned by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(MediaRecorder.class)</code></a>,
+   or configuring it to use one of the supported
+   <a href="https://developer.android.com/reference/android/media/CamcorderProfile.html?is-external=true" title="class or interface in android.media"><code>CamcorderProfiles</code></a>.</li>
+<li>For efficient YUV processing with <a href="https://developer.android.com/reference/android/renderscript/package-summary.html?is-external=true"><code>android.renderscript</code></a>:
+   Create a RenderScript
+   <a href="https://developer.android.com/reference/android/renderscript/Allocation.html?is-external=true" title="class or interface in android.renderscript"><code>Allocation</code></a> with a supported YUV
+   type, the IO_INPUT flag, and one of the sizes returned by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(Allocation.class)</code></a>,
+   Then obtain the Surface with
+   <a href="https://developer.android.com/reference/android/renderscript/Allocation.html?is-external=true#getSurface--" title="class or interface in android.renderscript"><code>Allocation.getSurface()</code></a>.</li>
+<li>For access to RAW, uncompressed YUV, or compressed JPEG data in the application: Create an
+   <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a> object with one of the supported output formats given by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>StreamConfigurationMap.getOutputFormats()</code></a>,
+   setting its size to one of the corresponding supported sizes by passing the chosen output
+   format into
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>StreamConfigurationMap.getOutputSizes(int)</code></a>.
+   Then obtain a
+   <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> from it with <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true#getSurface--" title="class or interface in android.media"><code>ImageReader.getSurface()</code></a>.
+   If the ImageReader size is not set to a supported size, it will be rounded to a supported
+   size less than 1080p by the camera device.
+   </li>
+</ul>
+<p>The camera device will query each Surface's size and formats upon this
+ call, so they must be set to a valid setting at this time.
+
+ <p>It can take several hundred milliseconds for the session's configuration to complete,
+ since camera hardware may need to be powered on or reconfigured. Once the configuration is
+ complete and the session is ready to actually capture data, the provided
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraCaptureSession.StateCallback</code></a>'s
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html#onConfigured-com.iristick.smartglass.support.camera2.CameraCaptureSession-"><code>CameraCaptureSession.StateCallback.onConfigured(com.iristick.smartglass.support.camera2.CameraCaptureSession)</code></a> callback will be called.
+
+ <p>If a prior CameraCaptureSession already exists when this method is called, the previous
+ session will no longer be able to accept new capture requests and will be closed. Any
+ in-progress capture requests made on the prior session will be completed before it's closed.
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html#onConfigured-com.iristick.smartglass.support.camera2.CameraCaptureSession-"><code>CameraCaptureSession.StateCallback.onConfigured(com.iristick.smartglass.support.camera2.CameraCaptureSession)</code></a> for the new session may be invoked
+ before <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html#onClosed-com.iristick.smartglass.support.camera2.CameraCaptureSession-"><code>CameraCaptureSession.StateCallback.onClosed(com.iristick.smartglass.support.camera2.CameraCaptureSession)</code></a> is invoked for the prior
+ session. Once the new session is <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html#onConfigured-com.iristick.smartglass.support.camera2.CameraCaptureSession-"><code>configured</code></a>, it is able to start capturing its own requests. To minimize the transition time,
+ the <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#abortCaptures--"><code>CameraCaptureSession.abortCaptures()</code></a> call can be used to discard the remaining
+ requests for the prior capture session before a new one is created. Note that once the new
+ session is created, the old one can no longer have its captures aborted.
+
+ <p>Using larger resolution outputs, or more outputs, can result in slower
+ output rate from the device.
+
+ <p>Configuring a session with an empty or null list will close the current session, if
+ any. This can be used to release the current session's target surfaces for another use.
+
+ <p>While any of the sizes from 
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>
+ can be used when a single output stream is configured, a given camera device may not be able
+ to support all combination of sizes, formats, and targets when multiple outputs are
+ configured at once. The tables below list the maximum guaranteed resolutions for combinations
+ of streams and targets, given the capabilities of the camera device.
+
+ <p>If an application tries to create a session using a set of targets that exceed the limits
+ described in the below tables, one of three possibilities may occur. First, the session may
+ be successfully created and work normally. Second, the session may be successfully created,
+ but the camera device won't meet the frame rate guarantees as described in
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputMinFrameDuration-int-android.util.Size-"><code>StreamConfigurationMap.getOutputMinFrameDuration(int, android.util.Size)</code></a>.
+ Or third, if the output set cannot be used at all, session creation will fail entirely, with
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html#onConfigureFailed-com.iristick.smartglass.support.camera2.CameraCaptureSession-"><code>CameraCaptureSession.StateCallback.onConfigureFailed(com.iristick.smartglass.support.camera2.CameraCaptureSession)</code></a> being invoked.
+
+ <p>For the type column, <code>PRIV</code> refers to any target whose available sizes are found
+ using <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(Class)</code></a>
+ with no direct application-visible format, <code>YUV</code> refers to a target Surface using the
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#YUV_420_888" title="class or interface in android.graphics"><code>ImageFormat.YUV_420_888</code></a> format, <code>JPEG</code> refers to the
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#JPEG" title="class or interface in android.graphics"><code>ImageFormat.JPEG</code></a> format, and <code>RAW</code> refers to the
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#RAW_SENSOR" title="class or interface in android.graphics"><code>ImageFormat.RAW_SENSOR</code></a> format.
+
+ <p>For the maximum size column, <code>PREVIEW</code> refers to the best size match to the
+ device's screen resolution, or to 1080p (<code>1920x1080</code>), whichever is
+ smaller. <code>RECORD</code> refers to the camera device's maximum supported recording resolution,
+ as determined by <a href="https://developer.android.com/reference/android/media/CamcorderProfile.html?is-external=true" title="class or interface in android.media"><code>CamcorderProfile</code></a>. And <code>MAXIMUM</code> refers to the
+ camera device's maximum output resolution for that format or target from
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>.
+
+ <p>To use these tables, determine the number and the formats/targets of outputs needed, and
+ find the row(s) of the table with those targets. The sizes indicate the maximum set of sizes
+ that can be used; it is guaranteed that for those targets, the listed sizes and anything
+ smaller from the list given by
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>
+ can be successfully used to create a session.  For example, if a row indicates that a 8
+ megapixel (MP) YUV_420_888 output can be used together with a 2 MP <code>PRIV</code> output, then
+ a session can be created with targets <code>[8 MP YUV, 2 MP PRIV]</code> or targets
+ <code>[2 MP YUV, 2 MP PRIV]</code>; but a session with targets <code>[8 MP YUV, 4 MP PRIV]</code>,
+ targets <code>[4 MP YUV, 4 MP PRIV]</code>, or targets <code>[8 MP PRIV, 2 MP YUV]</code> would not be
+ guaranteed to work, unless some other row of the table lists such a combination.
+
+ <p>Legacy devices (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY"><code>LEGACY</code></a>) support at
+ least the following stream combinations:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="LEGACY-level guaranteed configurations">
+<tr><th colspan="7">LEGACY-level guaranteed configurations</th></tr>
+<tr> <th colspan="2">Target 1</th> <th colspan="2">Target 2</th> <th colspan="2">Target 3</th> <th rowspan="2">Sample use case(s)</th> </tr>
+<tr> <th>Type</th><th>Max size</th> <th>Type</th><th>Max size</th> <th>Type</th><th>Max size</th></tr>
+<tr> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td colspan="2"></td> <td>Simple preview, GPU video processing, or no-preview video recording.</td> </tr>
+<tr> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td colspan="2"></td> <td>No-viewfinder still image capture.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td colspan="2"></td> <td>In-application video/image processing.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>Standard still imaging.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>In-app processing plus still capture.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td colspan="2"></td> <td>Standard recording.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td colspan="2"></td> <td>Preview plus in-app processing.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td>Still capture plus in-app processing.</td> </tr>
+</table></div></div><br/>
+<p>Limited-level (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a>) devices
+ support at least the following stream combinations in addition to those for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY"><code>LEGACY</code></a> devices:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="LIMITED-level additional guaranteed configurations">
+<tr><th colspan="7">LIMITED-level additional guaranteed configurations</th></tr>
+<tr><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th> <th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th></tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>RECORD </code></td> <td colspan="2"></td> <td>High-resolution video recording with preview.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>RECORD </code></td> <td colspan="2"></td> <td>High-resolution in-app video processing with preview.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>RECORD </code></td> <td colspan="2"></td> <td>Two-input in-app video processing.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>RECORD </code></td> <td><code>JPEG</code></td><td><code>RECORD </code></td> <td>High-resolution recording with video snapshot.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>RECORD </code></td> <td><code>JPEG</code></td><td><code>RECORD </code></td> <td>High-resolution in-app processing with video snapshot.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td>Two-input in-app processing with still capture.</td> </tr>
+</table></div></div><br/>
+<p>FULL-level (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a>) devices
+ support at least the following stream combinations in addition to those for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="FULL-level additional guaranteed configurations">
+<tr><th colspan="7">FULL-level additional guaranteed configurations</th></tr>
+<tr><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th> <th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>Maximum-resolution GPU processing with preview.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>Maximum-resolution in-app processing with preview.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>Maximum-resolution two-input in-app processsing.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td>Video recording with maximum-size video snapshot</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>640x480</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td>Standard video recording plus maximum-resolution in-app processing.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>640x480</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td>Preview plus two-input maximum-resolution in-app processing.</td> </tr>
+</table></div></div><br/>
+<p>RAW-capability (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a> includes
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_RAW"><code>RAW</code></a>) devices additionally support
+ at least the following stream combinations on both
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a> and
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="RAW-capability additional guaranteed configurations">
+<tr><th colspan="7">RAW-capability additional guaranteed configurations</th></tr>
+<tr><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th> <th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th> </tr>
+<tr> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td colspan="2"></td> <td>No-preview DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>Standard DNG capture.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td colspan="2"></td> <td>In-app processing plus DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td>Video recording with DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td>Preview with in-app processing and DNG capture.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td>Two-input in-app processing plus DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td>Still capture with simultaneous JPEG and DNG.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td><code>RAW </code></td><td><code>MAXIMUM</code></td> <td>In-app processing with simultaneous JPEG and DNG.</td> </tr>
+</table></div></div><br/>
+<p>BURST-capability (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a> includes
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_BURST_CAPTURE"><code>BURST_CAPTURE</code></a>) devices
+ support at least the below stream combinations in addition to those for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices. Note that all
+ FULL-level devices support the BURST capability, and the below list is a strict subset of the
+ list for FULL-level devices, so this table is only relevant for LIMITED-level devices that
+ support the BURST_CAPTURE capability.
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="BURST-capability additional guaranteed configurations">
+<tr><th colspan="5">BURST-capability additional guaranteed configurations</th></tr>
+<tr><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td>Maximum-resolution GPU processing with preview.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td>Maximum-resolution in-app processing with preview.</td> </tr>
+<tr> <td><code>YUV </code></td><td><code>PREVIEW</code></td> <td><code>YUV </code></td><td><code>MAXIMUM</code></td> <td>Maximum-resolution two-input in-app processsing.</td> </tr>
+</table></div></div><br/>
+<p>LEVEL-3 (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_3"><code>LEVEL_3</code></a>)
+ support at least the following stream combinations in addition to the combinations for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a> and for
+ RAW capability (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a> includes
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_RAW"><code>RAW</code></a>):
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="LEVEL-3 additional guaranteed configurations">
+<tr><th colspan="11">LEVEL-3 additional guaranteed configurations</th></tr>
+<tr><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th><th colspan="2">Target 4</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>640x480</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>In-app viewfinder analysis with dynamic selection of output format.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>640x480</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>In-app viewfinder analysis with dynamic selection of output format.</td> </tr>
+</table></div></div><br/>
+<p>Since the capabilities of camera devices vary greatly, a given camera device may support
+ target combinations with sizes outside of these guarantees, but this can only be tested for
+ by attempting to create a session with such targets.</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>outputs</code> - The new set of Surfaces that should be made available as
+                targets for captured image data.</dd>
+<dd><code>callback</code> - The callback to notify about the status of the new capture session.</dd>
+<dd><code>handler</code> - The handler on which the callback should be invoked, or <code>null</code> to use
+                the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the set of output Surfaces do not meet the requirements,
+                                  the callback is null, or the handler is null but the current
+                                  thread has no looper.</dd>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - if the camera device is no longer connected or has
+                               encountered a fatal error</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the camera device has been closed</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraCaptureSession</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>StreamConfigurationMap.getOutputFormats()</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>StreamConfigurationMap.getOutputSizes(int)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(Class)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createCaptureSessionByOutputConfigurations-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createCaptureSessionByOutputConfigurations<a class="headerlink" href="#createCaptureSessionByOutputConfigurations-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;createCaptureSessionByOutputConfigurations(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">OutputConfiguration</a>&gt;&nbsp;outputConfigurations,
+                                                <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                                <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)
+                                         throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Create a new camera capture session by providing the target output set of Surfaces and
+ its corresponding surface configuration to the camera device.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>outputConfigurations</code> - List of output configurations.</dd>
+<dd><code>callback</code> - Capture session callback.</dd>
+<dd><code>handler</code> - Handler on which callback methods are called.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - on error.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 24</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params"><code>OutputConfiguration</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createReprocessableCaptureSession<a class="headerlink" href="#createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;createReprocessableCaptureSession(<a href="../../../../../com/iristick/smartglass/support/camera2/params/InputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">InputConfiguration</a>&nbsp;inputConfig,
+                                       <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                                       <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                       <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)
+                                throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new reprocessable camera capture session by providing the desired reprocessing
+ input Surface configuration and the target output set of Surfaces to the camera device.
+
+ <p>If a camera device supports YUV reprocessing
+ (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_YUV_REPROCESSING"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_YUV_REPROCESSING</code></a>) or PRIVATE
+ reprocessing
+ (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_PRIVATE_REPROCESSING"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_PRIVATE_REPROCESSING</code></a>), besides
+ the capture session created via <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>, the
+ application can also create a reprocessable capture session to submit reprocess capture
+ requests in addition to regular capture requests. A reprocess capture request takes the next
+ available buffer from the session's input Surface, and sends it through the camera device's
+ processing pipeline again, to produce buffers for the request's target output Surfaces. No
+ new image data is captured for a reprocess request. However the input buffer provided by
+ the application must be captured previously by the same camera device in the same session
+ directly (e.g. for Zero-Shutter-Lag use case) or indirectly (e.g. combining multiple output
+ images).
+
+ <p>The active reprocessable capture session determines an input <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> and the set
+ of potential output Surfaces for the camera devices for each capture request. The application
+ can use <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureRequest-int-"><code>createCaptureRequest</code></a> to create regular capture requests
+ to capture new images from the camera device, and use <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-"><code>createReprocessCaptureRequest</code></a> to create reprocess capture requests to process buffers from
+ the input <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a>. Some combinations of output Surfaces in a session may not be used
+ in a request simultaneously. The guaranteed combinations of output Surfaces that can be used
+ in a request simultaneously are listed in the tables under <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>. All the output Surfaces in one capture request will come from the
+ same source, either from a new capture by the camera device, or from the input Surface
+ depending on if the request is a reprocess capture request.
+
+ <p>Input formats and sizes supported by the camera device can be queried via
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputFormats--"><code>StreamConfigurationMap.getInputFormats()</code></a> and
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputSizes-int-"><code>StreamConfigurationMap.getInputSizes(int)</code></a>.
+ For each supported input format, the camera device supports a set of output formats and sizes
+ for reprocessing that can be queried via
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getValidOutputFormatsForInput-int-"><code>StreamConfigurationMap.getValidOutputFormatsForInput(int)</code></a> and
+ <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>.
+ While output Surfaces with formats that aren't valid reprocess output targets for the input
+ configuration can be part of a session, they cannot be used as targets for a reprocessing
+ request.
+
+ <p>Since the application cannot access <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a> images
+ directly, an output Surface created by <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true#newInstance-int-int-int-int-" title="class or interface in android.media"><code>ImageReader.newInstance(int, int, int, int)</code></a> with
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a> as the format will be considered as intended to
+ be used for reprocessing input and thus the <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a> size must
+ match one of the supported input sizes for <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>
+ format. Otherwise, creating a reprocessable capture session will fail.
+
+ <p>The guaranteed stream configurations listed in
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a> are also guaranteed to work for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createReprocessableCaptureSession</code></a>. In addition,
+ the configurations in the tables below are also guaranteed for creating a reprocessable
+ capture session if the camera device supports YUV reprocessing or PRIVATE reprocessing.
+ However, not all output targets used to create a reprocessable session may be used in a
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> simultaneously. For devices that support only 1 output target in a
+ reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a>, submitting a reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> with multiple
+ output targets will result in a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureFailure.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureFailure</code></a>. For devices that support multiple
+ output targets in a reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a>, the guaranteed output targets that can
+ be included in a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> simultaneously are listed in the tables under
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>. For example, with a FULL-capability
+ (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a> <code>== </code>
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a>) device that supports PRIVATE
+ reprocessing, an application can create a reprocessable capture session with 1 input,
+ (<code>PRIV</code>, <code>MAXIMUM</code>), and 3 outputs, (<code>PRIV</code>, <code>MAXIMUM</code>),
+ (<code>PRIV</code>, <code>PREVIEW</code>), and (<code>YUV</code>, <code>MAXIMUM</code>). However, it's not
+ guaranteed that an application can submit a regular or reprocess capture with (<code>PRIV</code>,
+ <code>MAXIMUM</code>) and (<code>YUV</code>, <code>MAXIMUM</code>) outputs based on the table listed under
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>. In other words, use the tables below to
+ determine the guaranteed stream configurations for creating a reprocessable capture session,
+ and use the tables under <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a> to determine the
+ guaranteed output targets that can be submitted in a regular or reprocess
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> simultaneously.
+
+ <p>LIMITED-level (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a>) devices
+ support at least the following stream combinations for creating a reprocessable capture
+ session in addition to those listed in <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a> for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="LIMITED-level additional guaranteed configurations for creating a reprocessable capture session">
+<tr><th colspan="11">LIMITED-level additional guaranteed configurations for creating a reprocessable capture session<br/>(<code>PRIV</code> input is guaranteed only if PRIVATE reprocessing is supported. <code>YUV</code> input is guaranteed only if YUV reprocessing is supported)</th></tr>
+<tr><th colspan="2">Input</th><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th><th colspan="2">Target 4</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th></tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td></td><td></td> <td>No-viewfinder still image reprocessing.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>ZSL(Zero-Shutter-Lag) still imaging.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>ZSL still and in-app processing imaging.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td>ZSL in-app processing with still capture.</td> </tr>
+</table></div></div><br/>
+<p>FULL-level (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a>) devices
+ support at least the following stream combinations for creating a reprocessable capture
+ session in addition to those for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices:
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="FULL-level additional guaranteed configurations for creating a reprocessable capture session">
+<tr><th colspan="11">FULL-level additional guaranteed configurations for creating a reprocessable capture session<br/>(<code>PRIV</code> input is guaranteed only if PRIVATE reprocessing is supported. <code>YUV</code> input is guaranteed only if YUV reprocessing is supported)</th></tr>
+<tr><th colspan="2">Input</th><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th><th colspan="2">Target 4</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th></tr>
+<tr> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td></td><td></td> <td></td><td></td> <td>Maximum-resolution multi-frame image fusion in-app processing with regular preview.</td> </tr>
+<tr> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td></td><td></td> <td></td><td></td> <td>Maximum-resolution multi-frame image fusion two-input in-app processing.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>RECORD</code></td> <td></td><td></td> <td>High-resolution ZSL in-app video processing with regular preview.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>Maximum-resolution ZSL in-app processing with regular preview.</td> </tr>
+<tr> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>Maximum-resolution two-input ZSL in-app processing.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td>ZSL still capture and in-app processing.</td> </tr>
+</table></div></div><br/>
+<p>RAW-capability (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a> includes
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_RAW"><code>RAW</code></a>) devices additionally support
+ at least the following stream combinations for creating a reprocessable capture session
+ on both <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a> and
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED"><code>LIMITED</code></a> devices
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="RAW-capability additional guaranteed configurations for creating a reprocessable capture session">
+<tr><th colspan="11">RAW-capability additional guaranteed configurations for creating a reprocessable capture session<br/>(<code>PRIV</code> input is guaranteed only if PRIVATE reprocessing is supported. <code>YUV</code> input is guaranteed only if YUV reprocessing is supported)</th></tr>
+<tr><th colspan="2">Input</th><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th><th colspan="2">Target 4</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th></tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>Mutually exclusive ZSL in-app processing and DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>Mutually exclusive ZSL in-app processing and preview with DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>Mutually exclusive ZSL two-input in-app processing and DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>Mutually exclusive ZSL still capture and preview with DNG capture.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>PREVIEW</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td>Mutually exclusive ZSL in-app processing with still capture and DNG capture.</td> </tr>
+</table></div></div><br/>
+<p>LEVEL-3 (<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#INFO_SUPPORTED_HARDWARE_LEVEL"><code>CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL</code></a>
+<code>== </code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_3"><code>LEVEL_3</code></a>) devices
+ support at least the following stream combinations for creating a reprocessable capture
+ session in addition to those for
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#INFO_SUPPORTED_HARDWARE_LEVEL_FULL"><code>FULL</code></a> devices. Note that while
+ the second configuration allows for configuring <code>MAXIMUM</code> <code>YUV</code> and <code>JPEG</code>
+ outputs at the same time, that configuration is not listed for regular capture sessions, and
+ therefore simultaneous output to both targets is not allowed.
+
+ <div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="LEVEL-3 additional guaranteed configurations for creating a reprocessable capture session">
+<tr><th colspan="13">LEVEL-3 additional guaranteed configurations for creating a reprocessable capture session<br/>(<code>PRIV</code> input is guaranteed only if PRIVATE reprocessing is supported. <code>YUV</code> input is always guaranteed.</th></tr>
+<tr><th colspan="2">Input</th><th colspan="2">Target 1</th><th colspan="2">Target 2</th><th colspan="2">Target 3</th><th colspan="2">Target 4</th><th colspan="2">Target 5</th><th rowspan="2">Sample use case(s)</th> </tr>
+<tr><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th><th>Type</th><th>Max size</th></tr>
+<tr> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>YUV</code></td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>640x480</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td></td><td></td> <td>In-app viewfinder analysis with ZSL and RAW.</td> </tr>
+<tr> <td><code>PRIV</code>/<code>YUV</code></td><td><code>MAXIMUM</code></td> <td>Same as input</td><td><code>MAXIMUM</code></td> <td><code>PRIV</code></td><td><code>PREVIEW</code></td> <td><code>PRIV</code></td><td><code>640x480</code></td> <td><code>RAW</code></td><td><code>MAXIMUM</code></td> <td><code>JPEG</code></td><td><code>MAXIMUM</code></td><td>In-app viewfinder analysis with ZSL, RAW, and JPEG reprocessing output.</td> </tr>
+</table></div></div><br/></p></p></p></p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputConfig</code> - The configuration for the input <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a></dd>
+<dd><code>outputs</code> - The new set of Surfaces that should be made available as
+                targets for captured image data.</dd>
+<dd><code>callback</code> - The callback to notify about the status of the new capture session.</dd>
+<dd><code>handler</code> - The handler on which the callback should be invoked, or <code>null</code> to use
+                the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the input configuration is null or not supported, the set
+                                  of output Surfaces do not meet the requirements, the
+                                  callback is null, or the handler is null but the current
+                                  thread has no looper.</dd>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - if the camera device is no longer connected or has
+                               encountered a fatal error</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the camera device has been closed</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraCaptureSession</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputFormats--"><code>StreamConfigurationMap.getInputFormats()</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputSizes-int-"><code>StreamConfigurationMap.getInputSizes(int)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getValidOutputFormatsForInput-int-"><code>StreamConfigurationMap.getValidOutputFormatsForInput(int)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>StreamConfigurationMap.getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>, 
+<a href="https://developer.android.com/reference/android/media/ImageWriter.html?is-external=true" title="class or interface in android.media"><code>ImageWriter</code></a>, 
+<a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createReprocessableCaptureSessionByConfigurations-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createReprocessableCaptureSessionByConfigurations<a class="headerlink" href="#createReprocessableCaptureSessionByConfigurations-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;createReprocessableCaptureSessionByConfigurations(<a href="../../../../../com/iristick/smartglass/support/camera2/params/InputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">InputConfiguration</a>&nbsp;inputConfig,
+                                                       <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params">OutputConfiguration</a>&gt;&nbsp;outputs,
+                                                       <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                                       <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)
+                                                throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Create a new reprocessable camera capture session by providing the desired reprocessing
+ input configuration and output <a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params"><code>OutputConfiguration</code></a>
+ to the camera device.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputConfig</code> - The input configuration.</dd>
+<dd><code>outputs</code> - List of output configurations.</dd>
+<dd><code>callback</code> - Capture session callback.</dd>
+<dd><code>handler</code> - The handler on which callback methods are called.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - on error.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 24</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createReprocessableCaptureSession(com.iristick.smartglass.support.camera2.params.InputConfiguration, java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/OutputConfiguration.html" title="class in com.iristick.smartglass.support.camera2.params"><code>OutputConfiguration</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-">createConstrainedHighSpeedCaptureSession<a class="headerlink" href="#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;createConstrainedHighSpeedCaptureSession(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&gt;&nbsp;outputs,
+                                              <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.StateCallback.html" title="class in com.iristick.smartglass.support.camera2">CameraCaptureSession.StateCallback</a>&nbsp;callback,
+                                              <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)
+                                       throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Create a new constrained high speed capture session.
+
+ <p>The application can use normal capture session (created via <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>)
+ for high speed capture if the desired high speed FPS ranges are advertised by
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES"><code>CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES</code></a>, in which case all API
+ semantics associated with normal capture sessions applies.
+
+ <p>The method creates a specialized capture session that is only targeted at high speed
+ video recording (&ge;120fps) use case if the camera device supports high speed video
+ capability (i.e., <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a> contains
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a>).
+ Therefore, it has special characteristics compared with a normal capture session:
+
+ <ul>
+<li>In addition to the output target Surface requirements specified by the
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a> method, an active high speed capture session will support up
+   to 2 output Surfaces, though the application might choose to configure just one Surface
+   (e.g., preview only). All Surfaces must be either video encoder surfaces (acquired by
+   <a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true#getSurface--" title="class or interface in android.media"><code>MediaRecorder.getSurface()</code></a> or
+   <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true#createInputSurface--" title="class or interface in android.media"><code>MediaCodec.createInputSurface()</code></a>) or preview surfaces (obtained from
+   <a href="https://developer.android.com/reference/android/view/SurfaceView.html?is-external=true" title="class or interface in android.view"><code>SurfaceView</code></a>, <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true" title="class or interface in android.graphics"><code>SurfaceTexture</code></a> via
+   <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true#Surface-android.graphics.SurfaceTexture-" title="class or interface in android.view"><code>Surface(android.graphics.SurfaceTexture)</code></a>). The Surface sizes
+   must be one of the sizes reported by
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--"><code>StreamConfigurationMap.getHighSpeedVideoSizes()</code></a>.
+   When multiple Surfaces are configured, their size must be same.</li>
+<li>An active high speed capture session only accepts request lists created via
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a>, and the
+   request list can only be submitted to this session via
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>captureBurst</code></a>, or
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>setRepeatingBurst</code></a>.</li>
+<li>The FPS ranges being requested to this session must be selected from
+   <a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>StreamConfigurationMap.getHighSpeedVideoFpsRangesFor(android.util.Size)</code></a>.
+   The application can still use <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_AE_TARGET_FPS_RANGE"><code>CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE</code></a> to control
+   the desired FPS range. Switching to an FPS range that has different
+   <a href="https://developer.android.com/reference/android/util/Range.html?is-external=true#getUpper--" title="class or interface in android.util"><code>maximum FPS</code></a> may trigger some camera device
+   reconfigurations, which may introduce extra latency. It is recommended that the
+   application avoids unnecessary maximum target FPS changes as much as possible during high
+   speed streaming.</li>
+<li>For the request lists submitted to this session, the camera device will override the
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_MODE"><code>control mode</code></a>, auto-exposure (AE), auto-white balance
+   (AWB) and auto-focus (AF) to <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#CONTROL_MODE_AUTO"><code>CameraMetadata.CONTROL_MODE_AUTO</code></a>,
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#CONTROL_AE_MODE_ON"><code>CameraMetadata.CONTROL_AE_MODE_ON</code></a>, <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#CONTROL_AWB_MODE_AUTO"><code>CameraMetadata.CONTROL_AWB_MODE_AUTO</code></a>
+   and <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#CONTROL_AF_MODE_CONTINUOUS_VIDEO"><code>CameraMetadata.CONTROL_AF_MODE_CONTINUOUS_VIDEO</code></a>, respectively. All
+   post-processing block mode controls will be overridden to be FAST. Therefore, no manual
+   control of capture and post-processing parameters is possible. Beside these, only a subset
+   of controls will work, see
+   <a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a> for
+   more details.</li>
+</ul></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>outputs</code> - The new set of Surfaces that should be made available as
+                targets for captured high speed image data.</dd>
+<dd><code>callback</code> - The callback to notify about the status of the new capture session.</dd>
+<dd><code>handler</code> - The handler on which the callback should be invoked, or <code>null</code> to use
+                the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the set of output Surfaces do not meet the requirements,
+                                  the callback is null, or the handler is null but the current
+                                  thread has no looper, or the camera device doesn't support
+                                  high speed video capability.</dd>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - if the camera device is no longer connected or has
+                               encountered a fatal error</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the camera device has been closed</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_AE_TARGET_FPS_RANGE"><code>CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--"><code>StreamConfigurationMap.getHighSpeedVideoSizes()</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>StreamConfigurationMap.getHighSpeedVideoFpsRangesFor(android.util.Size)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.captureBurst(java.util.List&lt;com.iristick.smartglass.support.camera2.CaptureRequest&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#setRepeatingBurst-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback-android.os.Handler-"><code>CameraCaptureSession.setRepeatingBurst(java.util.List&lt;com.iristick.smartglass.support.camera2.CaptureRequest&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.CaptureCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createCaptureRequest-int-">createCaptureRequest<a class="headerlink" href="#createCaptureRequest-int-" title="Permanent link">&para;</a></h3>
+<pre><a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2">CaptureRequest.Builder</a>&nbsp;createCaptureRequest(int&nbsp;templateType)
+                                     throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Create a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest.Builder</code></a> for new capture requests,
+ initialized with template for a target use case. The settings are chosen
+ to be the best options for the specific camera device, so it is not
+ recommended to reuse the same request for a different camera device;
+ create a builder specific for that device and template and override the
+ settings as desired, instead.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>templateType</code> - An enumeration selecting the use case for this request. Not all template
+ types are supported on every device. See the documentation for each template type for
+ details.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a builder for a capture request, initialized with default
+ settings for that template, and no output streams</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the templateType is not supported by
+ this device.</dd>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - if the camera device is no longer connected or has
+                               encountered a fatal error</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the camera device has been closed</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_PREVIEW"><code>TEMPLATE_PREVIEW</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_RECORD"><code>TEMPLATE_RECORD</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_STILL_CAPTURE"><code>TEMPLATE_STILL_CAPTURE</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_VIDEO_SNAPSHOT"><code>TEMPLATE_VIDEO_SNAPSHOT</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#TEMPLATE_MANUAL"><code>TEMPLATE_MANUAL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-">createReprocessCaptureRequest<a class="headerlink" href="#createReprocessCaptureRequest-com.iristick.smartglass.support.camera2.TotalCaptureResult-" title="Permanent link">&para;</a></h3>
+<pre><a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2">CaptureRequest.Builder</a>&nbsp;createReprocessCaptureRequest(<a href="../../../../../com/iristick/smartglass/support/camera2/TotalCaptureResult.html" title="class in com.iristick.smartglass.support.camera2">TotalCaptureResult</a>&nbsp;inputResult)
+                                              throws <a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Create a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest.Builder</code></a> for a new reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> from a
+ <a href="../../../../../com/iristick/smartglass/support/camera2/TotalCaptureResult.html" title="class in com.iristick.smartglass.support.camera2"><code>TotalCaptureResult</code></a>.
+
+ <p>Each reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> processes one buffer from
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraCaptureSession</code></a>'s input <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> to all output <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surfaces</code></a>
+ included in the reprocess capture request. The reprocess input images must be generated from
+ one or multiple output images captured from the same camera device. The application can
+ provide input images to camera device via <a href="https://developer.android.com/reference/android/media/ImageWriter.html?is-external=true#queueInputImage-android.media.Image-" title="class or interface in android.media"><code>ImageWriter.queueInputImage(android.media.Image)</code></a>.
+ The application must use the capture result of one of those output images to create a
+ reprocess capture request so that the camera device can use the information to achieve
+ optimal reprocess image quality. For camera devices that support only 1 output
+ <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a>, submitting a reprocess <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> with multiple
+ output targets will result in a <a href="../../../../../com/iristick/smartglass/support/camera2/CaptureFailure.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureFailure</code></a>.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputResult</code> - The capture result of the output image or one of the output images used
+                       to generate the reprocess input image for this capture request.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A capture request builder.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if inputResult is null.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the total capture result and the camera device
+                                  are not backed by the same camera implementation</dd>
+<dd><code><a href="../../../../../com/iristick/smartglass/support/camera2/CameraAccessException.html" title="class in com.iristick.smartglass.support.camera2">CameraAccessException</a></code> - if the camera device is no longer connected or has
+                               encountered a fatal error</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the camera device has been closed</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.Builder.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest.Builder</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/TotalCaptureResult.html" title="class in com.iristick.smartglass.support.camera2"><code>TotalCaptureResult</code></a>, 
+<a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createReprocessableCaptureSession-com.iristick.smartglass.support.camera2.params.InputConfiguration-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createReprocessableCaptureSession(com.iristick.smartglass.support.camera2.params.InputConfiguration, java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="https://developer.android.com/reference/android/media/ImageWriter.html?is-external=true" title="class or interface in android.media"><code>ImageWriter</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="close--">close<a class="headerlink" href="#close--" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;close()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Close the connection to this camera device as quickly as possible.
+
+ <p>Immediately after this call, all calls to the camera device or active session interface
+ will throw a <a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang"><code>IllegalStateException</code></a>, except for calls to close(). Once the device has
+ fully shut down, the <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.StateCallback.html#onClosed-com.iristick.smartglass.support.camera2.CameraDevice-"><code>CameraDevice.StateCallback.onClosed(com.iristick.smartglass.support.camera2.CameraDevice)</code></a> callback will be called, and the camera
+ is free to be re-opened.
+
+ <p>Immediately after this call, besides the final <a href="../../../../../com/iristick/smartglass/support/camera2/CameraDevice.StateCallback.html#onClosed-com.iristick.smartglass.support.camera2.CameraDevice-"><code>CameraDevice.StateCallback.onClosed(com.iristick.smartglass.support.camera2.CameraDevice)</code></a> calls, no
+ further callbacks from the device or the active session will occur, and any remaining
+ submitted capture requests will be discarded, as if
+ <a href="../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html#abortCaptures--"><code>CameraCaptureSession.abortCaptures()</code></a> had been called, except that no success or failure
+ callbacks will be invoked.</p></p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/AutoCloseable.html?is-external=true#close--" title="class or interface in java.lang">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://developer.android.com/reference/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="CameraConstrainedHighSpeedCaptureSession.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CameraConstrainedHighSpeedCaptureSession
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="CameraDevice.StateCallback.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CameraDevice.StateCallback
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

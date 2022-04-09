@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The notouch variant is applied when the interaction mode is set to HUD.
+  HUD interaction mode is entered when:
+  - the headset's touchpad is used, or
+  - a voice command has been recognized, or
+  - the phone is put in the pouch.
+-->
+<resources>
+    <style name="Theme.Iristick" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="actionBarSize">36dp</item>
+
+        <item name="android:textAppearanceButton">@style/TextAppearance.Iristick.Widget.Button</item>
+        <item name="textAppearanceListItem">@style/TextAppearance.Iristick.Subhead</item>
+        <item name="textAppearanceListItemSmall">@style/TextAppearance.Iristick.Subhead</item>
+        <item name="textAppearanceListItemSecondary">@style/TextAppearance.Iristick.Body1</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Iristick.Small</item>
+    </style>
+
+    <style name="Theme.Iristick.NoActionBar" parent="Theme.Iristick">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextAppearance.Iristick.Widget.Button" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Iristick.Subhead" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Iristick.Body1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Iristick.Body2" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.Iristick.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

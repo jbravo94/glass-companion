@@ -1,0 +1,3222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html">
+      
+      <link rel="shortcut icon" href="../../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>StreamConfigurationMap - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##StreamConfigurationMap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              StreamConfigurationMap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" >
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/camera/CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core/VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          StreamConfigurationMap
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="StreamConfigurationMap.html" class="md-nav__link md-nav__link--active">
+        StreamConfigurationMap
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##StreamConfigurationMap--" class="md-nav__link">
+    StreamConfigurationMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getOutputFormats--" class="md-nav__link">
+    getOutputFormats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getValidOutputFormatsForInput-int-" class="md-nav__link">
+    getValidOutputFormatsForInput
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInputFormats--" class="md-nav__link">
+    getInputFormats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInputSizes-int-" class="md-nav__link">
+    getInputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-int-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-java.lang.Class-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-android.view.Surface-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputSizes-java.lang.Class-" class="md-nav__link">
+    getOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputSizes-int-" class="md-nav__link">
+    getOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoSizes--" class="md-nav__link">
+    getHighSpeedVideoSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoFpsRangesFor-android.util.Size-" class="md-nav__link">
+    getHighSpeedVideoFpsRangesFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoFpsRanges--" class="md-nav__link">
+    getHighSpeedVideoFpsRanges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoSizesFor-android.util.Range-" class="md-nav__link">
+    getHighSpeedVideoSizesFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighResolutionOutputSizes-int-" class="md-nav__link">
+    getHighResolutionOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputMinFrameDuration-int-android.util.Size-" class="md-nav__link">
+    getOutputMinFrameDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputMinFrameDuration-java.lang.Class-android.util.Size-" class="md-nav__link">
+    getOutputMinFrameDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputStallDuration-int-android.util.Size-" class="md-nav__link">
+    getOutputStallDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputStallDuration-java.lang.Class-android.util.Size-" class="md-nav__link">
+    getOutputStallDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##equals-java.lang.Object-" class="md-nav__link">
+    equals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##toString--" class="md-nav__link">
+    toString
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##StreamConfigurationMap--" class="md-nav__link">
+    StreamConfigurationMap
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getOutputFormats--" class="md-nav__link">
+    getOutputFormats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getValidOutputFormatsForInput-int-" class="md-nav__link">
+    getValidOutputFormatsForInput
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInputFormats--" class="md-nav__link">
+    getInputFormats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInputSizes-int-" class="md-nav__link">
+    getInputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-int-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-java.lang.Class-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##isOutputSupportedFor-android.view.Surface-" class="md-nav__link">
+    isOutputSupportedFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputSizes-java.lang.Class-" class="md-nav__link">
+    getOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputSizes-int-" class="md-nav__link">
+    getOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoSizes--" class="md-nav__link">
+    getHighSpeedVideoSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoFpsRangesFor-android.util.Size-" class="md-nav__link">
+    getHighSpeedVideoFpsRangesFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoFpsRanges--" class="md-nav__link">
+    getHighSpeedVideoFpsRanges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighSpeedVideoSizesFor-android.util.Range-" class="md-nav__link">
+    getHighSpeedVideoSizesFor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getHighResolutionOutputSizes-int-" class="md-nav__link">
+    getHighResolutionOutputSizes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputMinFrameDuration-int-android.util.Size-" class="md-nav__link">
+    getOutputMinFrameDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputMinFrameDuration-java.lang.Class-android.util.Size-" class="md-nav__link">
+    getOutputMinFrameDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputStallDuration-int-android.util.Size-" class="md-nav__link">
+    getOutputStallDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getOutputStallDuration-java.lang.Class-android.util.Size-" class="md-nav__link">
+    getOutputStallDuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##equals-java.lang.Object-" class="md-nav__link">
+    equals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##toString--" class="md-nav__link">
+    toString
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.support.camera2.params</div>
+<h1 id="StreamConfigurationMap">Class StreamConfigurationMap<a class="headerlink" href="#StreamConfigurationMap" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.iristick.smartglass.support.camera2.params.StreamConfigurationMap</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+
+
+<hr/>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Not maintained anymore.  Please use the <code>com.iristick.smartglass.core.camera</code>
+             package instead.</span></div>
+</div>
+<br/>
+<pre><a href="https://developer.android.com/reference/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public abstract class <span class="typeNameLabel">StreamConfigurationMap</span>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block"><p>Immutable class to store the available stream
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#SCALER_STREAM_CONFIGURATION_MAP"><code>configurations</code></a> to set up
+ <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surfaces</code></a> for creating a
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCaptureSession.html" title="interface in com.iristick.smartglass.support.camera2"><code>capture session</code></a> with
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>.
+
+ <p>This is the authoritative list for all output formats (and sizes respectively for that format)
+ that are supported by a camera device.
+
+ <p>This also contains the minimum frame durations and stall durations for each format/size
+ combination that can be used to calculate effective frame rate when submitting multiple captures.
+
+ <p>An instance of this object is available from <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraCharacteristics</code></a> using the
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#SCALER_STREAM_CONFIGURATION_MAP"><code>CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP</code></a> key and the
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#get-com.iristick.smartglass.support.camera2.CameraCharacteristics.Key-"><code>CameraCharacteristics.get(com.iristick.smartglass.support.camera2.CameraCharacteristics.Key&lt;TE, TIA, TII&gt;)</code></a> method.</p></p></p></p></div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 21</dd>
+</dl>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="constructor.summary">Constructor Summary<a class="headerlink" href="#constructor.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Constructor Summary table, listing constructors, and an explanation">
+
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#StreamConfigurationMap--">StreamConfigurationMap</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#equals-java.lang.Object-">equals</a></span>(<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Check if this <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a> is equal to another
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighResolutionOutputSizes-int-">getHighResolutionOutputSizes</a></span>(int&nbsp;format)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high resolution sizes, which cannot operate at full BURST_CAPTURE
+ rate.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--">getHighSpeedVideoFpsRanges</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high speed video recording FPS ranges.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-">getHighSpeedVideoFpsRangesFor</a></span>(<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the frame per second ranges (fpsMin, fpsMax) for input high speed video size.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--">getHighSpeedVideoSizes</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high speed video recording sizes.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizesFor-android.util.Range-">getHighSpeedVideoSizesFor</a></span>(<a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;fpsRange)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the supported video sizes for an input high speed FPS range.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>abstract int[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputFormats--">getInputFormats</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> input formats in this stream configuration.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputSizes-int-">getInputSizes</a></span>(int&nbsp;format)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the supported input sizes for this input format.</div>
+</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>abstract int[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--">getOutputFormats</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> output formats in this stream configuration.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>abstract &lt;T&gt;&nbsp;long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputMinFrameDuration-java.lang.Class-android.util.Size-">getOutputMinFrameDuration</a></span>(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass,
+                         <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the minimum <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>frame duration</code></a>
+ for the class/size combination (in nanoseconds).</div>
+</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputMinFrameDuration-int-android.util.Size-">getOutputMinFrameDuration</a></span>(int&nbsp;format,
+                         <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the minimum <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>frame duration</code></a>
+ for the format/size combination (in nanoseconds).</div>
+</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>abstract &lt;T&gt;&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-">getOutputSizes</a></span>(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of sizes compatible with <code>klass</code> to use as an output.</div>
+</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-">getOutputSizes</a></span>(int&nbsp;format)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of sizes compatible with the requested image <code>format</code>.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>abstract &lt;T&gt;&nbsp;long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputStallDuration-java.lang.Class-android.util.Size-">getOutputStallDuration</a></span>(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass,
+                      <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the stall duration for the class/size combination (in nanoseconds).</div>
+</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputStallDuration-int-android.util.Size-">getOutputStallDuration</a></span>(int&nbsp;format,
+                      <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the stall duration for the format/size combination (in nanoseconds).</div>
+</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>abstract int[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getValidOutputFormatsForInput-int-">getValidOutputFormatsForInput</a></span>(int&nbsp;inputFormat)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> output formats for a reprocessing input format.</div>
+</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>static &lt;T&gt;&nbsp;boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-">isOutputSupportedFor</a></span>(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not output streams can be configured with a particular class
+ as a consumer.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-int-">isOutputSupportedFor</a></span>(int&nbsp;format)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not output surfaces with a particular user-defined format can be passed
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-android.view.Surface-">isOutputSupportedFor</a></span>(<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&nbsp;surface)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not the <code>surface</code> in its current state is suitable to be included
+ in a <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>capture session</code></a> as an output.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#toString--">toString</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Return this <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a> as a string representation.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+<h2 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a><a class="headerlink" href="#methods.inherited.from.class.java.lang.Object" title="Permanent link">&para;</a></h2>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code>
+
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="constructor.detail">Constructor Detail<a class="headerlink" href="#constructor.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="StreamConfigurationMap--">StreamConfigurationMap<a class="headerlink" href="#StreamConfigurationMap--" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;StreamConfigurationMap()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="getOutputFormats--">getOutputFormats<a class="headerlink" href="#getOutputFormats--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;int[]&nbsp;getOutputFormats()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> output formats in this stream configuration.
+
+ <p>All image formats returned by this function will be defined in either <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>,
+ <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a> (and there is no possibility of collision).
+
+ <p>Formats listed in this array are guaranteed to return true if queried with
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-int-"><code>isOutputSupportedFor(int)</code></a>.</p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of integer format</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getValidOutputFormatsForInput-int-">getValidOutputFormatsForInput<a class="headerlink" href="#getValidOutputFormatsForInput-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;int[]&nbsp;getValidOutputFormatsForInput(int&nbsp;inputFormat)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> output formats for a reprocessing input format.
+
+ <p>When submitting a <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> with an input Surface of a given format,
+ the only allowed target outputs of the <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html" title="class in com.iristick.smartglass.support.camera2"><code>CaptureRequest</code></a> are the ones with a format
+ listed in the return value of this method. Including any other output Surface as a target
+ will throw an IllegalArgumentException. If no output format is supported given the input
+ format, an empty int[] will be returned.
+
+ <p>All image formats returned by this function will be defined in either <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>,
+ <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a> (and there is no possibility of collision).
+
+ <p>Formats listed in this array are guaranteed to return true if queried with
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-int-"><code>isOutputSupportedFor(int)</code></a>.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inputFormat</code> - An <code>ImageFormat</code>, <code>PixelFormat</code> or <code>CameraFormat</code> code.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of integer format</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getInputFormats--">getInputFormats<a class="headerlink" href="#getInputFormats--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;int[]&nbsp;getInputFormats()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the image <code>format</code> input formats in this stream configuration.
+
+ <p>All image formats returned by this function will be defined in either <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>,
+ <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a> (and there is no possibility of collision).</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of integer format</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getInputSizes-int-">getInputSizes<a class="headerlink" href="#getInputSizes-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getInputSizes(int&nbsp;format)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the supported input sizes for this input format.
+
+ <p>The format must have come from <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputFormats--"><code>getInputFormats()</code></a>; otherwise
+ <code>null</code> is returned.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - a format from <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getInputFormats--"><code>getInputFormats()</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a non-empty array of sizes, or <code>null</code> if the format was not available.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+</dl>
+
+
+
+
+
+<h3 id="isOutputSupportedFor-int-">isOutputSupportedFor<a class="headerlink" href="#isOutputSupportedFor-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;boolean&nbsp;isOutputSupportedFor(int&nbsp;format)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not output surfaces with a particular user-defined format can be passed
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>createCaptureSession</code></a>.
+
+ <p>This method determines that the output <code>format</code> is supported by the camera device;
+ each output <code>surface</code> target may or may not itself support that <code>format</code>.
+ Refer to the class which provides the surface for additional documentation.
+
+ <p>Formats for which this returns <code>true</code> are guaranteed to exist in the result
+ returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - an image format from either <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or
+               <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> iff using a <code>surface</code> with this <code>format</code> will be
+          supported with <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a></dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the image format was not a defined named constant
+          from either <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="isOutputSupportedFor-java.lang.Class-">isOutputSupportedFor<a class="headerlink" href="#isOutputSupportedFor-java.lang.Class-" title="Permanent link">&para;</a></h3>
+<pre>public static&nbsp;&lt;T&gt;&nbsp;boolean&nbsp;isOutputSupportedFor(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not output streams can be configured with a particular class
+ as a consumer.
+
+ <p>The following list is generally usable for outputs:
+ <ul>
+<li><a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a> -
+ Recommended for image processing or streaming to external resources (such as a file or
+ network)
+ <li><a href="https://developer.android.com/reference/android/media/MediaRecorder.html?is-external=true" title="class or interface in android.media"><code>MediaRecorder</code></a> -
+ Recommended for recording video (simple to use)
+ <li><a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true" title="class or interface in android.media"><code>MediaCodec</code></a> -
+ Recommended for recording video (more complicated to use, with more flexibility)
+ <li><a href="https://developer.android.com/reference/android/renderscript/Allocation.html?is-external=true" title="class or interface in android.renderscript"><code>Allocation</code></a> -
+ Recommended for image processing with <a href="https://developer.android.com/reference/android/renderscript/package-summary.html?is-external=true"><code>RenderScript</code></a>
+<li><a href="https://developer.android.com/reference/android/view/SurfaceHolder.html?is-external=true" title="class or interface in android.view"><code>SurfaceHolder</code></a> -
+ Recommended for low-power camera preview with <a href="https://developer.android.com/reference/android/view/SurfaceView.html?is-external=true" title="class or interface in android.view"><code>SurfaceView</code></a>
+<li><a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.html?is-external=true" title="class or interface in android.graphics"><code>SurfaceTexture</code></a> -
+ Recommended for OpenGL-accelerated preview processing or compositing with
+ <a href="https://developer.android.com/reference/android/view/TextureView.html?is-external=true" title="class or interface in android.view"><code>TextureView</code></a>
+</li></li></li></li></li></li></ul>
+<p>Generally speaking this means that creating a <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> from that class <i>may</i>
+ provide a producer endpoint that is suitable to be used with
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>.
+
+ <p>Since not all of the above classes support output of all format and size combinations,
+ the particular combination should be queried with <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-android.view.Surface-"><code>isOutputSupportedFor(Surface)</code></a>.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - Class type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>klass</code> - a non-<code>null</code> <a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a> object reference</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if this class is supported as an output, <code>false</code> otherwise</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>klass</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-android.view.Surface-"><code>isOutputSupportedFor(Surface)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="isOutputSupportedFor-android.view.Surface-">isOutputSupportedFor<a class="headerlink" href="#isOutputSupportedFor-android.view.Surface-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;boolean&nbsp;isOutputSupportedFor(<a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view">Surface</a>&nbsp;surface)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Determine whether or not the <code>surface</code> in its current state is suitable to be included
+ in a <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>capture session</code></a> as an output.
+
+ <p>Not all surfaces are usable with the <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraDevice</code></a>, and not all configurations
+ of that <code>surface</code> are compatible. Some classes that provide the <code>surface</code> are
+ compatible with the <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraDevice</code></a> in general
+ (see <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a>, but it is the caller's responsibility to put the
+ <code>surface</code> into a state that will be compatible with the <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html" title="interface in com.iristick.smartglass.support.camera2"><code>CameraDevice</code></a>.
+
+ <p>Reasons for a <code>surface</code> being specifically incompatible might be:
+ <ul>
+<li>Using a format that's not listed by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>getOutputFormats()</code></a>
+<li>Using a format/size combination that's not listed by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(java.lang.Class&lt;T&gt;)</code></a>
+<li>The <code>surface</code> itself is not in a state where it can service a new producer.
+ </li>
+</li></li></ul>
+<p>Surfaces from flexible sources will return true even if the exact size of the Surface does
+ not match a camera-supported size, as long as the format (or class) is supported and the
+ camera device supports a size that is equal to or less than 1080p in that format. If such as
+ Surface is used to create a capture session, it will have its size rounded to the nearest
+ supported size, below or equal to 1080p. Flexible sources include SurfaceView, SurfaceTexture,
+ and ImageReader.
+
+ <p>This is not an exhaustive list; see the particular class's documentation for further
+ possible reasons of incompatibility.</p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>surface</code> - a non-<code>null</code> <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> object reference</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if this is supported, <code>false</code> otherwise</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>surface</code> was <code>null</code></dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the Surface endpoint is no longer valid</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputSizes-java.lang.Class-">getOutputSizes<a class="headerlink" href="#getOutputSizes-java.lang.Class-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;&lt;T&gt;&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getOutputSizes(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of sizes compatible with <code>klass</code> to use as an output.
+
+ <p>Some of the supported classes may support additional formats beyond
+ <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>; this function only returns
+ sizes for <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>. For example, <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a>
+ supports <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#YUV_420_888" title="class or interface in android.graphics"><code>ImageFormat.YUV_420_888</code></a> and <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>, this method will
+ only return the sizes for <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a> for <a href="https://developer.android.com/reference/android/media/ImageReader.html?is-external=true" title="class or interface in android.media"><code>ImageReader</code></a>
+ class.
+
+ <p>If a well-defined format such as <code>NV21</code> is required, use
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>getOutputSizes(int)</code></a> instead.
+
+ <p>The <code>klass</code> should be a supported output, that querying
+ <code>#isOutputSupportedFor(Class)</code> should return <code>true</code>.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - Class type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>klass</code> - a non-<code>null</code> <a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a> object reference</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported sizes for <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a> format,
+          or <code>null</code> iff the <code>klass</code> is not a supported output.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>klass</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputSizes-int-">getOutputSizes<a class="headerlink" href="#getOutputSizes-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getOutputSizes(int&nbsp;format)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of sizes compatible with the requested image <code>format</code>.
+
+ <p>The <code>format</code> should be a supported format (one of the formats returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>getOutputFormats()</code></a>).
+
+ As of API level 23, the <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighResolutionOutputSizes-int-"><code>getHighResolutionOutputSizes(int)</code></a> method can be used on devices
+ that support the
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_BURST_CAPTURE"><code>BURST_CAPTURE</code></a>
+ capability to get a list of high-resolution output sizes that cannot operate at the preferred
+ 20fps rate. This means that for some supported formats, this method will return an empty
+ list, if all the supported resolutions operate at below 20fps.  For devices that do not
+ support the BURST_CAPTURE capability, all output resolutions are listed through this method.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - an image format from <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or
+               <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported sizes,
+          or <code>null</code> if the <code>format</code> is not a supported output</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>getOutputFormats()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getHighSpeedVideoSizes--">getHighSpeedVideoSizes<a class="headerlink" href="#getHighSpeedVideoSizes--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getHighSpeedVideoSizes()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high speed video recording sizes.
+ <p>
+ When <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a> is
+ supported in <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a>, this method will
+ list the supported high speed video size configurations. All the sizes listed will be a
+ subset of the sizes reported by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(java.lang.Class&lt;T&gt;)</code></a> for processed non-stalling formats
+ (typically <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a> <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#YUV_420_888" title="class or interface in android.graphics"><code>ImageFormat.YUV_420_888</code></a>, etc.)
+
+ <p>
+ To enable high speed video recording, application must create a constrained create high speed
+ capture session via <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createConstrainedHighSpeedCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, and submit
+ a CaptureRequest list created by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a>
+ to this session. The application must select the video size from this method and
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_AE_TARGET_FPS_RANGE"><code>FPS range</code></a> from
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>getHighSpeedVideoFpsRangesFor(android.util.Size)</code></a> to configure the constrained high speed session and
+ generate the high speed request list. For example, if the application intends to do high
+ speed recording, it can select the maximum size reported by this method to create high speed
+ capture session. Note that for the use case of multiple output streams, application must
+ select one unique size from this method to use (e.g., preview and recording streams must have
+ the same size). Otherwise, the high speed session creation will fail. Once the size is
+ selected, application can get the supported FPS ranges by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>getHighSpeedVideoFpsRangesFor(android.util.Size)</code></a>, and use these FPS ranges to setup the recording
+ request lists via
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a>.</p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported high speed video recording sizes</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>getHighSpeedVideoFpsRangesFor(Size)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createConstrainedHighSpeedCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getHighSpeedVideoFpsRangesFor-android.util.Size-">getHighSpeedVideoFpsRangesFor<a class="headerlink" href="#getHighSpeedVideoFpsRangesFor-android.util.Size-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;[]&nbsp;getHighSpeedVideoFpsRangesFor(<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the frame per second ranges (fpsMin, fpsMax) for input high speed video size.
+ <p>
+ See <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--"><code>getHighSpeedVideoFpsRanges()</code></a> for how to enable high speed recording.
+
+ <p>
+ The <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_AE_TARGET_FPS_RANGE"><code>FPS ranges</code></a>
+ reported in this method must not be used to setup capture requests that are submitted to
+ unconstrained capture sessions, or it will result in
+ <a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentExceptions</code></a>.
+
+ <p>
+ See <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--"><code>getHighSpeedVideoFpsRanges()</code></a> for the characteristics of the returned FPS ranges.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>size</code> - one of the sizes returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--"><code>getHighSpeedVideoSizes()</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported high speed video recording FPS ranges The upper bound of
+         returned ranges is guaranteed to be greater than or equal to 120.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if input size does not exist in the return value of
+             getHighSpeedVideoSizes</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--"><code>getHighSpeedVideoSizes()</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--"><code>getHighSpeedVideoFpsRanges()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getHighSpeedVideoFpsRanges--">getHighSpeedVideoFpsRanges<a class="headerlink" href="#getHighSpeedVideoFpsRanges--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;[]&nbsp;getHighSpeedVideoFpsRanges()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high speed video recording FPS ranges.
+
+ <p> When
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a>
+ is supported in
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES</code></a>,
+ this method will list the supported high speed video FPS range configurations.
+ Application can then use <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizesFor-android.util.Range-"><code>getHighSpeedVideoSizesFor(android.util.Range&lt;java.lang.Integer&gt;)</code></a> to query available sizes for one
+ of returned FPS range.
+
+ <p>
+ To enable high speed video recording, application must create a constrained create high speed
+ capture session via
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createConstrainedHighSpeedCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>,
+ and submit a CaptureRequest list created by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a>
+ to this session. The application must select the video size from this method and
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#CONTROL_AE_TARGET_FPS_RANGE"><code>FPS range</code></a>
+ from <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRangesFor-android.util.Size-"><code>getHighSpeedVideoFpsRangesFor(android.util.Size)</code></a> to configure the constrained high speed session and
+ generate the high speed request list. For example, if the application intends to do high
+ speed recording, it can select one FPS range reported by this method, query the video sizes
+ corresponding to this FPS range by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizesFor-android.util.Range-"><code>getHighSpeedVideoSizesFor(android.util.Range&lt;java.lang.Integer&gt;)</code></a> and use one of reported
+ sizes to create a high speed capture session. Note that for the use case of multiple output
+ streams, application must select one unique size from this method to use (e.g., preview and
+ recording streams must have the same size). Otherwise, the high speed session creation will
+ fail. Once the high speed capture session is created, the application can set the FPS range
+ in the recording request lists via
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a>.
+
+ <p>
+ The FPS ranges reported by this method will have below characteristics:
+ <ul>
+<li>The fpsMin and fpsMax will be a multiple 30fps.</li>
+<li>The fpsMin will be no less than 30fps, the fpsMax will be no less than 120fps.</li>
+<li>At least one range will be a fixed FPS range where fpsMin == fpsMax.</li>
+<li>For each fixed FPS range, there will be one corresponding variable FPS range [30,
+ fps_max]. These kinds of FPS ranges are suitable for preview-only use cases where the
+ application doesn't want the camera device always produce higher frame rate than the display
+ refresh rate.</li>
+</ul></p></p></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported high speed video recording FPS ranges The upper bound of
+         returned ranges is guaranteed to be larger or equal to 120.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizesFor-android.util.Range-"><code>getHighSpeedVideoSizesFor(android.util.Range&lt;java.lang.Integer&gt;)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_CONSTRAINED_HIGH_SPEED_VIDEO</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraDevice.html#createConstrainedHighSpeedCaptureSession-java.util.List-com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback-android.os.Handler-"><code>CameraDevice.createConstrainedHighSpeedCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.support.camera2.CameraCaptureSession.StateCallback, android.os.Handler)</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraConstrainedHighSpeedCaptureSession.html#createHighSpeedRequestList-com.iristick.smartglass.support.camera2.CaptureRequest-"><code>CameraConstrainedHighSpeedCaptureSession.createHighSpeedRequestList(com.iristick.smartglass.support.camera2.CaptureRequest)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getHighSpeedVideoSizesFor-android.util.Range-">getHighSpeedVideoSizesFor<a class="headerlink" href="#getHighSpeedVideoSizesFor-android.util.Range-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getHighSpeedVideoSizesFor(<a href="https://developer.android.com/reference/android/util/Range.html?is-external=true" title="class or interface in android.util">Range</a>&lt;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;fpsRange)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the supported video sizes for an input high speed FPS range.
+
+ <p> See <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoSizes--"><code>getHighSpeedVideoSizes()</code></a> for how to enable high speed recording.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fpsRange</code> - one of the FPS range returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--"><code>getHighSpeedVideoFpsRanges()</code></a></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>An array of video sizes to create high speed capture sessions for high speed streaming
+         use cases.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if input FPS range does not exist in the return value of
+         getHighSpeedVideoFpsRanges</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getHighSpeedVideoFpsRanges--"><code>getHighSpeedVideoFpsRanges()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getHighResolutionOutputSizes-int-">getHighResolutionOutputSizes<a class="headerlink" href="#getHighResolutionOutputSizes-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>[]&nbsp;getHighResolutionOutputSizes(int&nbsp;format)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get a list of supported high resolution sizes, which cannot operate at full BURST_CAPTURE
+ rate.
+
+ <p>This includes all output sizes that cannot meet the 20 fps frame rate requirements for the
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_BURST_CAPTURE"><code>BURST_CAPTURE</code></a>
+ capability.  This does not include the stall duration, so for example, a JPEG or RAW16 output
+ resolution with a large stall duration but a minimum frame duration that's above 20 fps will
+ still be listed in the regular <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(java.lang.Class&lt;T&gt;)</code></a> list. All the sizes on this list are
+ still guaranteed to operate at a rate of at least 10 fps, not including stall duration.
+
+ <p>For a device that does not support the BURST_CAPTURE capability, this list will be
+ <code>null</code>, since resolutions in the <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(java.lang.Class&lt;T&gt;)</code></a> list are already not
+ guaranteed to meet &gt;= 20 fps rate requirements. For a device that does support the
+ BURST_CAPTURE capability, this list may be empty, if all supported resolutions meet the 20
+ fps requirement.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - A format code.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an array of supported slower high-resolution sizes, or <code>null</code> if the
+         BURST_CAPTURE capability is not supported</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 23</dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputMinFrameDuration-int-android.util.Size-">getOutputMinFrameDuration<a class="headerlink" href="#getOutputMinFrameDuration-int-android.util.Size-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;long&nbsp;getOutputMinFrameDuration(int&nbsp;format,
+                                               <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the minimum <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>frame duration</code></a>
+ for the format/size combination (in nanoseconds).
+
+ <p><code>format</code> should be one of the ones returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>getOutputFormats()</code></a>.
+ <p><code>size</code> should be one of the ones returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>getOutputSizes(int)</code></a>.
+
+ <p>This should correspond to the frame duration when only that stream is active, with all
+ processing (typically in <code>android.*.mode</code>) set to either <code>OFF</code> or <code>FAST</code>.
+
+
+ <p>When multiple streams are used in a request, the minimum frame duration will be
+ <code>max(individual stream min durations)</code>.
+
+ <p>For devices that do not support manual sensor control
+ (<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR</code></a>),
+ this function may return 0.</p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - an image format from <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or
+               <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+<dd><code>size</code> - an output-compatible size</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a minimum frame duration <code>&gt;</code> 0 in nanoseconds, or
+          0 if the minimum frame duration is not available.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>format</code> or <code>size</code> was not supported</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>size</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>CaptureRequest.SENSOR_FRAME_DURATION</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputStallDuration-int-android.util.Size-"><code>getOutputStallDuration(int, Size)</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputMinFrameDuration-java.lang.Class-android.util.Size-">getOutputMinFrameDuration<a class="headerlink" href="#getOutputMinFrameDuration-java.lang.Class-android.util.Size-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;&lt;T&gt;&nbsp;long&nbsp;getOutputMinFrameDuration(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass,
+                                                   <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the minimum <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>frame duration</code></a>
+ for the class/size combination (in nanoseconds).
+
+ <p>This assumes a the <code>klass</code> is set up to use <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>.
+ For user-defined formats, use <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputMinFrameDuration-int-android.util.Size-"><code>getOutputMinFrameDuration(int, Size)</code></a>.
+
+ <p><code>klass</code> should be one of the ones which is supported by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a>.
+
+ <p><code>size</code> should be one of the ones returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>getOutputSizes(int)</code></a>.
+
+ <p>This should correspond to the frame duration when only that stream is active, with all
+ processing (typically in <code>android.*.mode</code>) set to either <code>OFF</code> or <code>FAST</code>.
+
+
+ <p>When multiple streams are used in a request, the minimum frame duration will be
+ <code>max(individual stream min durations)</code>.
+
+ <p>For devices that do not support manual sensor control
+ (<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraMetadata.html#REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR"><code>CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR</code></a>),
+ this function may return 0.</p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - Class type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>klass</code> - a class which is supported by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a> and has a
+          non-empty array returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(Class)</code></a></dd>
+<dd><code>size</code> - an output-compatible size</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a minimum frame duration <code>&gt;</code> 0 in nanoseconds, or
+          0 if the minimum frame duration is not available.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>klass</code> or <code>size</code> was not supported</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>size</code> or <code>klass</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>CaptureRequest.SENSOR_FRAME_DURATION</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputStallDuration-int-android.util.Size-">getOutputStallDuration<a class="headerlink" href="#getOutputStallDuration-int-android.util.Size-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;long&nbsp;getOutputStallDuration(int&nbsp;format,
+                                            <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the stall duration for the format/size combination (in nanoseconds).
+
+ <p><code>format</code> should be one of the ones returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputFormats--"><code>getOutputFormats()</code></a>.
+ <p><code>size</code> should be one of the ones returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-int-"><code>getOutputSizes(int)</code></a>.
+
+ <p>
+ A stall duration is how much extra time would get added to the normal minimum frame duration
+ for a repeating request that has streams with non-zero stall.
+
+ <p>For example, consider JPEG captures which have the following characteristics:
+
+ <ul>
+<li>JPEG streams act like processed YUV streams in requests for which they are not included;
+ in requests in which they are directly referenced, they act as JPEG streams.
+ This is because supporting a JPEG stream requires the underlying YUV data to always be ready
+ for use by a JPEG encoder, but the encoder will only be used (and impact frame duration) on
+ requests that actually reference a JPEG stream.
+ <li>The JPEG processor can run concurrently to the rest of the camera pipeline, but cannot
+ process more than 1 capture at a time.
+ </li></li></ul>
+<p>In other words, using a repeating YUV request would result in a steady frame rate
+ (let's say it's 30 FPS). If a single JPEG request is submitted periodically,
+ the frame rate will stay at 30 FPS (as long as we wait for the previous JPEG to return each
+ time). If we try to submit a repeating YUV + JPEG request, then the frame rate will drop from
+ 30 FPS.
+
+ <p>In general, submitting a new request with a non-0 stall time stream will <em>not</em> cause a
+ frame rate drop unless there are still outstanding buffers for that stream from previous
+ requests.
+
+ <p>Submitting a repeating request with streams (call this <code>S</code>) is the same as setting
+ the minimum frame duration from the normal minimum frame duration corresponding to <code>S</code>,
+ added with the maximum stall duration for <code>S</code>.
+
+ <p>If interleaving requests with and without a stall duration, a request will stall by the
+ maximum of the remaining times for each can-stall stream with outstanding buffers.
+
+ <p>This means that a stalling request will not have an exposure start until the stall has
+ completed.
+
+ <p>This should correspond to the stall duration when only that stream is active, with all
+ processing (typically in <code>android.*.mode</code>) set to <code>FAST</code> or <code>OFF</code>.
+ Setting any of the processing modes to <code>HIGH_QUALITY</code> effectively results in an
+ indeterminate stall duration for all streams in a request (the regular stall calculation
+ rules are ignored).
+
+ <p>The following formats may always have a stall duration:
+ <ul>
+<li><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#JPEG" title="class or interface in android.graphics"><code>JPEG</code></a>
+<li><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#RAW_SENSOR" title="class or interface in android.graphics"><code>RAW16</code></a>
+<li><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#RAW_PRIVATE" title="class or interface in android.graphics"><code>RAW_PRIVATE</code></a>
+</li></li></li></ul>
+<p>The following formats will never have a stall duration:
+ <ul>
+<li><a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#YUV_420_888" title="class or interface in android.graphics"><code>YUV_420_888</code></a>
+<li><a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>Implementation-Defined</code></a>
+</li></li></ul>
+<p>
+ All other formats may or may not have an allowed stall duration on a per-capability basis;
+ refer to <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraCharacteristics.html#REQUEST_AVAILABLE_CAPABILITIES"><code>android.request.availableCapabilities</code></a> for more details.
+
+
+ <p>See <a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>android.sensor.frameDuration</code></a>
+ for more information about calculating the max frame rate (absent stalls).</p></p></p></p></p></p></p></p></p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>format</code> - an image format from <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, <a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a> or
+               <a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+<dd><code>size</code> - an output-compatible size</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stall duration <code>&gt;=</code> 0 in nanoseconds</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>format</code> or <code>size</code> was not supported</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>size</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>CaptureRequest.SENSOR_FRAME_DURATION</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getOutputStallDuration-java.lang.Class-android.util.Size-">getOutputStallDuration<a class="headerlink" href="#getOutputStallDuration-java.lang.Class-android.util.Size-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;&lt;T&gt;&nbsp;long&nbsp;getOutputStallDuration(<a href="https://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass,
+                                                <a href="https://developer.android.com/reference/android/util/Size.html?is-external=true" title="class or interface in android.util">Size</a>&nbsp;size)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Get the stall duration for the class/size combination (in nanoseconds).
+
+ <p>This assumes a the <code>klass</code> is set up to use <a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true#PRIVATE" title="class or interface in android.graphics"><code>ImageFormat.PRIVATE</code></a>.
+ For user-defined formats, use <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputMinFrameDuration-int-android.util.Size-"><code>getOutputMinFrameDuration(int, Size)</code></a>.
+
+ <p><code>klass</code> should be one of the ones with a non-empty array returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(Class)</code></a>.
+
+ <p><code>size</code> should be one of the ones returned by
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(Class)</code></a>.
+
+ <p>See <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputStallDuration-int-android.util.Size-"><code>getOutputStallDuration(int, Size)</code></a> for a definition of a
+ <em>stall duration</em>.</p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - Class type</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>klass</code> - a class which is supported by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#isOutputSupportedFor-java.lang.Class-"><code>isOutputSupportedFor(Class)</code></a> and has a
+          non-empty array returned by <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html#getOutputSizes-java.lang.Class-"><code>getOutputSizes(Class)</code></a></dd>
+<dd><code>size</code> - an output-compatible size</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a minimum frame duration <code>&gt;=</code> 0 in nanoseconds</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>klass</code> or <code>size</code> was not supported</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>size</code> or <code>klass</code> was <code>null</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../com/iristick/smartglass/support/camera2/CaptureRequest.html#SENSOR_FRAME_DURATION"><code>CaptureRequest.SENSOR_FRAME_DURATION</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/ImageFormat.html?is-external=true" title="class or interface in android.graphics"><code>ImageFormat</code></a>, 
+<a href="https://developer.android.com/reference/android/graphics/PixelFormat.html?is-external=true" title="class or interface in android.graphics"><code>PixelFormat</code></a>, 
+<a href="../../../../../../com/iristick/smartglass/support/camera2/CameraFormat.html" title="class in com.iristick.smartglass.support.camera2"><code>CameraFormat</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="equals-java.lang.Object-">equals<a class="headerlink" href="#equals-java.lang.Object-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;boolean&nbsp;equals(<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Check if this <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a> is equal to another
+ <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a>.
+
+ <p>Two vectors are only equal if and only if each of the respective elements is equal.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if the objects were equal, <code>false</code> otherwise</dd>
+</dl>
+
+
+
+
+
+<h3 id="toString--">toString<a class="headerlink" href="#toString--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">Return this <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a> as a string representation.
+
+ <p><code>"StreamConfigurationMap(Outputs([w:%d, h:%d, format:%s(%d), min_duration:%d,
+ stall:%d], ... [w:%d, h:%d, format:%s(%d), min_duration:%d, stall:%d]), Inputs([w:%d, h:%d,
+ format:%s(%d)], ... [w:%d, h:%d, format:%s(%d)]), ValidOutputFormatsForInput(
+ [in:%d, out:%d, ... %d], ... [in:%d, out:%d, ... %d]), HighSpeedVideoConfigurations(
+ [w:%d, h:%d, min_fps:%d, max_fps:%d], ... [w:%d, h:%d, min_fps:%d, max_fps:%d]))"</code>.
+
+ <p><code>Outputs([w:%d, h:%d, format:%s(%d), min_duration:%d, stall:%d], ...
+ [w:%d, h:%d, format:%s(%d), min_duration:%d, stall:%d])</code>, where
+ <code>[w:%d, h:%d, format:%s(%d), min_duration:%d, stall:%d]</code> represents an output
+ configuration's width, height, format, minimal frame duration in nanoseconds, and stall
+ duration in nanoseconds.
+
+ <p><code>Inputs([w:%d, h:%d, format:%s(%d)], ... [w:%d, h:%d, format:%s(%d)])</code>, where
+ <code>[w:%d, h:%d, format:%s(%d)]</code> represents an input configuration's width, height, and
+ format.
+
+ <p><code>ValidOutputFormatsForInput([in:%s(%d), out:%s(%d), ... %s(%d)],
+ ... [in:%s(%d), out:%s(%d), ... %s(%d)])</code>, where <code>[in:%s(%d), out:%s(%d), ... %s(%d)]</code>
+ represents an input format and its valid output formats.
+
+ <p><code>HighSpeedVideoConfigurations([w:%d, h:%d, min_fps:%d, max_fps:%d],
+ ... [w:%d, h:%d, min_fps:%d, max_fps:%d])</code>, where
+ <code>[w:%d, h:%d, min_fps:%d, max_fps:%d]</code> represents a high speed video output
+ configuration's width, height, minimal frame rate, and maximal frame rate.</p></p></p></p></p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>string representation of <a href="../../../../../../com/iristick/smartglass/support/camera2/params/StreamConfigurationMap.html" title="class in com.iristick.smartglass.support.camera2.params"><code>StreamConfigurationMap</code></a></dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="RggbChannelVector.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                RggbChannelVector
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="TonemapCurve.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                TonemapCurve
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2286 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/core/camera/CaptureSession.Listener.html">
+      
+      <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>CaptureSession.Listener - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##CaptureSession.Listener" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              CaptureSession.Listener
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" checked>
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CaptureSession.Listener
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="CaptureSession.Listener.html" class="md-nav__link md-nav__link--active">
+        CaptureSession.Listener
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##ERROR_UNKNOWN" class="md-nav__link">
+    ERROR_UNKNOWN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##ERROR_INVALID_OUTPUTS" class="md-nav__link">
+    ERROR_INVALID_OUTPUTS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##onConfigured-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onConfigured
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-" class="md-nav__link">
+    onConfigureFailed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onClosed-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onClosed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onActive-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onActive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onCaptureQueueEmpty-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onCaptureQueueEmpty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onReady-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onReady
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/camera2/TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##ERROR_UNKNOWN" class="md-nav__link">
+    ERROR_UNKNOWN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##ERROR_INVALID_OUTPUTS" class="md-nav__link">
+    ERROR_INVALID_OUTPUTS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##onConfigured-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onConfigured
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-" class="md-nav__link">
+    onConfigureFailed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onClosed-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onClosed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onActive-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onActive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onCaptureQueueEmpty-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onCaptureQueueEmpty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##onReady-com.iristick.smartglass.core.camera.CaptureSession-" class="md-nav__link">
+    onReady
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.core.camera</div>
+<h1 id="CaptureSession.Listener">Interface CaptureSession.Listener<a class="headerlink" href="#CaptureSession.Listener" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<div class="description">
+
+
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a></dd>
+</dl>
+<hr/>
+
+<pre>public static interface <span class="typeNameLabel">CaptureSession.Listener</span></pre>
+<div class="block"><p>Listener interface for receiving updates about the state of a capture session.
+
+ <p>An instance must be provided to the <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.core.camera.CaptureSession.Listener, android.os.Handler)</code></a>
+ method to create a capture session.
+
+ <p>Events about the progress of specific <a href="../../../../../com/iristick/smartglass/core/camera/CaptureRequest.html" title="class in com.iristick.smartglass.core.camera"><code>CaptureRequests</code></a> are provided
+ through <a href="../../../../../com/iristick/smartglass/core/camera/CaptureListener.html" title="interface in com.iristick.smartglass.core.camera"><code>CaptureListeners</code></a> given to the
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#capture-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>capture</code></a> or <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>captureBurst</code></a> methods.</p></p></p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-"><code>CameraDevice.createCaptureSession(java.util.List&lt;android.view.Surface&gt;, com.iristick.smartglass.core.camera.CaptureSession.Listener, android.os.Handler)</code></a></dd>
+</dl>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="field.summary">Field Summary<a class="headerlink" href="#field.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Field Summary table, listing fields, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#ERROR_INVALID_OUTPUTS">ERROR_INVALID_OUTPUTS</a></span></code>
+<div class="block">An error code that can be reported by <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a>
+ indicating that the output surfaces passed through
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-"><code>CameraDevice.createCaptureSession()</code></a>
+ could not be used.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#ERROR_UNKNOWN">ERROR_UNKNOWN</a></span></code>
+<div class="block">An error code that can be reported by <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a>
+ indicating an unknown error has happened.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onActive-com.iristick.smartglass.core.camera.CaptureSession-">onActive</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</code>
+<div class="block">This method is called when the session actively starts processing capture requests.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onCaptureQueueEmpty-com.iristick.smartglass.core.camera.CaptureSession-">onCaptureQueueEmpty</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</code>
+<div class="block">This method is called when camera device's input capture queue becomes empty,
+ and is ready to accept the next request.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onClosed-com.iristick.smartglass.core.camera.CaptureSession-">onClosed</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</code>
+<div class="block">This method is called when the session is closed and all remaining capture requests
+ are done.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigured-com.iristick.smartglass.core.camera.CaptureSession-">onConfigured</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</code>
+<div class="block">This method is called when the camera device has finished configuring itself, and the
+ session can start processing capture requests.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-">onConfigureFailed</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session,
+                 int&nbsp;error)</code>
+<div class="block">This method is called if the session cannot be configured as requested.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onReady-com.iristick.smartglass.core.camera.CaptureSession-">onReady</a></span>(<a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</code>
+<div class="block">This method is called every time the session has no more capture requests to process.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="field.detail">Field Detail<a class="headerlink" href="#field.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="ERROR_UNKNOWN">ERROR_UNKNOWN<a class="headerlink" href="#ERROR_UNKNOWN" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int ERROR_UNKNOWN</pre>
+<div class="block"><p>An error code that can be reported by <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a>
+ indicating an unknown error has happened.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="ERROR_INVALID_OUTPUTS">ERROR_INVALID_OUTPUTS<a class="headerlink" href="#ERROR_INVALID_OUTPUTS" title="Permanent link">&para;</a></h3>
+<pre>static final&nbsp;int ERROR_INVALID_OUTPUTS</pre>
+<div class="block"><p>An error code that can be reported by <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a>
+ indicating that the output surfaces passed through
+ <a href="../../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-"><code>CameraDevice.createCaptureSession()</code></a>
+ could not be used.</p></div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(CaptureSession, int)</code></a></dd>
+</dl>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="onConfigured-com.iristick.smartglass.core.camera.CaptureSession-">onConfigured<a class="headerlink" href="#onConfigured-com.iristick.smartglass.core.camera.CaptureSession-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onConfigured(@NonNull
+                  <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</pre>
+<div class="block"><p>This method is called when the camera device has finished configuring itself, and the
+ session can start processing capture requests.
+
+ <p>If the camera device configuration fails, then <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-"><code>onConfigureFailed(com.iristick.smartglass.core.camera.CaptureSession, int)</code></a> will
+ be invoked instead of this callback.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The ready-to-use capture session.</dd>
+</dl>
+
+
+
+
+
+<h3 id="onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-">onConfigureFailed<a class="headerlink" href="#onConfigureFailed-com.iristick.smartglass.core.camera.CaptureSession-int-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onConfigureFailed(@NonNull
+                       <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session,
+                       int&nbsp;error)</pre>
+<div class="block"><p>This method is called if the session cannot be configured as requested.
+
+ <p>This can happen if the set of requested outputs contains unsupported sizes,
+ or too many outputs are requested at once.
+
+ <p>The session is considered to be closed, and all methods called on it after this
+ callback is invoked will have no effect.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The capture session.</dd>
+<dd><code>error</code> - The error code, one of the <code>ERROR_*</code> values.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#ERROR_UNKNOWN"><code>ERROR_UNKNOWN</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="onClosed-com.iristick.smartglass.core.camera.CaptureSession-">onClosed<a class="headerlink" href="#onClosed-com.iristick.smartglass.core.camera.CaptureSession-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onClosed(@NonNull
+              <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</pre>
+<div class="block"><p>This method is called when the session is closed and all remaining capture requests
+ are done.
+
+ <p>A session is closed when a new session is created by the parent camera device,
+ or when the parent camera device is closed (either by the user closing the device,
+ or due to a camera device disconnection or fatal error).</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The capture session.</dd>
+</dl>
+
+
+
+
+
+<h3 id="onActive-com.iristick.smartglass.core.camera.CaptureSession-">onActive<a class="headerlink" href="#onActive-com.iristick.smartglass.core.camera.CaptureSession-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onActive(@NonNull
+              <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</pre>
+<div class="block"><p>This method is called when the session actively starts processing capture requests.
+
+ <p>If the session runs out of capture requests to process and calls <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onReady-com.iristick.smartglass.core.camera.CaptureSession-"><code>onReady(com.iristick.smartglass.core.camera.CaptureSession)</code></a>,
+ then this callback will be invoked again once new requests are submitted for capture.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The capture session.</dd>
+</dl>
+
+
+
+
+
+<h3 id="onCaptureQueueEmpty-com.iristick.smartglass.core.camera.CaptureSession-">onCaptureQueueEmpty<a class="headerlink" href="#onCaptureQueueEmpty-com.iristick.smartglass.core.camera.CaptureSession-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onCaptureQueueEmpty(@NonNull
+                         <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</pre>
+<div class="block"><p>This method is called when camera device's input capture queue becomes empty,
+ and is ready to accept the next request.
+
+ <p>Pending capture requests exist in one of two queues: the in-flight queue where
+ requests are already in different stages of processing pipeline, and an input queue
+ where requests wait to enter the in-flight queue.  The input queue is needed because
+ more requests may be submitted than the current camera device pipeline depth.
+
+ This callback is fired when the input queue becomes empty, and the camera device may
+ have to fall back to the repeating request if set, or completely skip the next frame
+ from the sensor.  This can cause glitches to camera preview output, for example.
+ This callback will only fire after requests queued by <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#capture-com.iristick.smartglass.core.camera.CaptureRequest-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>capture()</code></a> or
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html#captureBurst-java.util.List-com.iristick.smartglass.core.camera.CaptureListener-android.os.Handler-"><code>captureBurst()</code></a>, not after a repeating request or burst enters
+ the in-flight queue.  For example, in the common case of a repeating request and a
+ single-shot JPEG capture, this callback only fires when the JPEG request has entered
+ the in-flight queue for capture.
+
+ This callback is not fired when the session is first created.  It is different from
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onReady-com.iristick.smartglass.core.camera.CaptureSession-"><code>onReady(com.iristick.smartglass.core.camera.CaptureSession)</code></a>, which is fired when all requests in both queues have been processed.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The capture session.</dd>
+</dl>
+
+
+
+
+
+<h3 id="onReady-com.iristick.smartglass.core.camera.CaptureSession-">onReady<a class="headerlink" href="#onReady-com.iristick.smartglass.core.camera.CaptureSession-" title="Permanent link">&para;</a></h3>
+<pre>void&nbsp;onReady(@NonNull
+             <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.html" title="class in com.iristick.smartglass.core.camera">CaptureSession</a>&nbsp;session)</pre>
+<div class="block"><p>This method is called every time the session has no more capture requests to process.
+
+ <p>During the creation of a new session, this callback is invoked right after
+ <a href="../../../../../com/iristick/smartglass/core/camera/CaptureSession.Listener.html#onConfigured-com.iristick.smartglass.core.camera.CaptureSession-"><code>onConfigured(com.iristick.smartglass.core.camera.CaptureSession)</code></a>.
+
+ <p>Otherwise, this callback will be invoked any time the session finishes processing
+ all of its active capture requests, and no repeating request or burst is set up.</p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>session</code> - The capture session.</dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="CaptureSession.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CaptureSession
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../DisplayListener.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                DisplayListener
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

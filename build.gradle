@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.1'
+    }
+}
+
+project.ext {
+    /* Android SDK dependencies */
+    minSdkVersion = 24
+    targetSdkVersion = 30
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        ivy { url new File(rootProject.projectDir, "libs").toURI().toString() }
+    }
+}

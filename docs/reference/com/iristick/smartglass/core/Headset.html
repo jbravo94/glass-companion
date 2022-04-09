@@ -1,0 +1,3606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/core/Headset.html">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Headset - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##Headset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Headset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" >
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Headset
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Headset.html" class="md-nav__link md-nav__link--active">
+        Headset
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##INTERACTION_MODE_PHONE" class="md-nav__link">
+    INTERACTION_MODE_PHONE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##INTERACTION_MODE_HUD" class="md-nav__link">
+    INTERACTION_MODE_HUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_OVERRIDE_NAVIGATION" class="md-nav__link">
+    TOUCHPAD_FLAG_OVERRIDE_NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION" class="md-nav__link">
+    TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_OVERRIDE_ALL" class="md-nav__link">
+    TOUCHPAD_FLAG_OVERRIDE_ALL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_GO_BACK" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_GO_BACK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_UI_OPTIMIZATION" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_UI_OPTIMIZATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##Headset--" class="md-nav__link">
+    Headset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getSerialNumber--" class="md-nav__link">
+    getSerialNumber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInteractionMode--" class="md-nav__link">
+    getInteractionMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-android.os.Handler-" class="md-nav__link">
+    registerInteractionModeListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-" class="md-nav__link">
+    unregisterInteractionModeListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" class="md-nav__link">
+    openDisplay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" class="md-nav__link">
+    openDisplaySurface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##closeDisplay--" class="md-nav__link">
+    closeDisplay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getCameraIdList--" class="md-nav__link">
+    getCameraIdList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##findCamera-int-" class="md-nav__link">
+    findCamera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getCameraCharacteristics-java.lang.String-" class="md-nav__link">
+    getCameraCharacteristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-" class="md-nav__link">
+    openCamera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setTorchMode-boolean-" class="md-nav__link">
+    setTorchMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setLaserPointer-boolean-" class="md-nav__link">
+    setLaserPointer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getDefaultSensor-int-" class="md-nav__link">
+    getDefaultSensor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getSensorList-int-" class="md-nav__link">
+    getSensorList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerSensorListener-com.iristick.smartglass.core.SensorEventListener-com.iristick.smartglass.core.Sensor-int-android.os.Handler-" class="md-nav__link">
+    registerSensorListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterSensorListener-com.iristick.smartglass.core.SensorEventListener-" class="md-nav__link">
+    unregisterSensorListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-" class="md-nav__link">
+    registerTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-" class="md-nav__link">
+    registerTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-" class="md-nav__link">
+    unregisterTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##configureVoiceCommands-int-" class="md-nav__link">
+    configureVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" class="md-nav__link">
+    registerVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterVoiceCommands-com.iristick.smartglass.core.VoiceEvent.Callback-" class="md-nav__link">
+    unregisterVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##startVoice-com.iristick.smartglass.core.VoiceGrammar-" class="md-nav__link">
+    startVoice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##stopVoice-com.iristick.smartglass.core.VoiceGrammar-" class="md-nav__link">
+    stopVoice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##stopVoiceAll--" class="md-nav__link">
+    stopVoiceAll
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceGrammar.Builder.html" class="md-nav__link">
+        VoiceGrammar.Builder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##nested.class.summary" class="md-nav__link">
+    Nested Class Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.summary" class="md-nav__link">
+    Field Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##field.detail" class="md-nav__link">
+    Field Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##INTERACTION_MODE_PHONE" class="md-nav__link">
+    INTERACTION_MODE_PHONE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##INTERACTION_MODE_HUD" class="md-nav__link">
+    INTERACTION_MODE_HUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_OVERRIDE_NAVIGATION" class="md-nav__link">
+    TOUCHPAD_FLAG_OVERRIDE_NAVIGATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION" class="md-nav__link">
+    TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##TOUCHPAD_FLAG_OVERRIDE_ALL" class="md-nav__link">
+    TOUCHPAD_FLAG_OVERRIDE_ALL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_GO_BACK" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_GO_BACK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_UI_OPTIMIZATION" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_UI_OPTIMIZATION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP" class="md-nav__link">
+    VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##Headset--" class="md-nav__link">
+    Headset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##getSerialNumber--" class="md-nav__link">
+    getSerialNumber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getInteractionMode--" class="md-nav__link">
+    getInteractionMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-android.os.Handler-" class="md-nav__link">
+    registerInteractionModeListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-" class="md-nav__link">
+    unregisterInteractionModeListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" class="md-nav__link">
+    openDisplay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" class="md-nav__link">
+    openDisplaySurface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##closeDisplay--" class="md-nav__link">
+    closeDisplay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getCameraIdList--" class="md-nav__link">
+    getCameraIdList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##findCamera-int-" class="md-nav__link">
+    findCamera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getCameraCharacteristics-java.lang.String-" class="md-nav__link">
+    getCameraCharacteristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-" class="md-nav__link">
+    openCamera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setTorchMode-boolean-" class="md-nav__link">
+    setTorchMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setLaserPointer-boolean-" class="md-nav__link">
+    setLaserPointer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getDefaultSensor-int-" class="md-nav__link">
+    getDefaultSensor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##getSensorList-int-" class="md-nav__link">
+    getSensorList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerSensorListener-com.iristick.smartglass.core.SensorEventListener-com.iristick.smartglass.core.Sensor-int-android.os.Handler-" class="md-nav__link">
+    registerSensorListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterSensorListener-com.iristick.smartglass.core.SensorEventListener-" class="md-nav__link">
+    unregisterSensorListener
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-" class="md-nav__link">
+    registerTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-" class="md-nav__link">
+    registerTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-" class="md-nav__link">
+    unregisterTouchEventCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##configureVoiceCommands-int-" class="md-nav__link">
+    configureVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" class="md-nav__link">
+    registerVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##unregisterVoiceCommands-com.iristick.smartglass.core.VoiceEvent.Callback-" class="md-nav__link">
+    unregisterVoiceCommands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##startVoice-com.iristick.smartglass.core.VoiceGrammar-" class="md-nav__link">
+    startVoice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##stopVoice-com.iristick.smartglass.core.VoiceGrammar-" class="md-nav__link">
+    stopVoice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##stopVoiceAll--" class="md-nav__link">
+    stopVoiceAll
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.core</div>
+<h1 id="Headset">Class Headset<a class="headerlink" href="#Headset" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.iristick.smartglass.core.Headset</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+
+
+<hr/>
+
+<pre>public abstract class <span class="typeNameLabel">Headset</span>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block"><p>This class provides access to all extended functionality available on one headset.</p></div>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="nested.class.summary">Nested Class Summary<a class="headerlink" href="#nested.class.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Nested Class Summary table, listing nested classes, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static interface&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.InteractionModeListener.html" title="interface in com.iristick.smartglass.core">Headset.InteractionModeListener</a></span></code>&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="field.summary">Field Summary<a class="headerlink" href="#field.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Field Summary table, listing fields, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#INTERACTION_MODE_HUD">INTERACTION_MODE_HUD</a></span></code>
+<div class="block">The pocket unit is inside its pouch.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#INTERACTION_MODE_PHONE">INTERACTION_MODE_PHONE</a></span></code>
+<div class="block">The pocket unit is outside its pouch.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION">TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable automatic UI optimizations when the user touches the touchpad.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_ALL">TOUCHPAD_FLAG_OVERRIDE_ALL</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable any standard behavior of the touchpad.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_NAVIGATION">TOUCHPAD_FLAG_OVERRIDE_NAVIGATION</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable the standard navigation system.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY">VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the interaction system
+ from automatically discovering voice commands.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND">VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for the
+ "Iristick suspend" action.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP">VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for the
+ "Iristick wake up" action.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_GO_BACK">VOICE_FLAG_INHIBIT_GO_BACK</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for
+ the "go back" action.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_UI_OPTIMIZATION">VOICE_FLAG_INHIBIT_UI_OPTIMIZATION</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to
+ disable automatic UI optimizations when the user uses voice commands.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK">VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK</a></span></code>
+<div class="block">Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the visual feedback.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="constructor.summary">Constructor Summary<a class="headerlink" href="#constructor.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Constructor Summary table, listing constructors, and an explanation">
+
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#Headset--">Headset</a></span>()</code>&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#closeDisplay--">closeDisplay</a></span>()</code>
+<div class="block">Close the connection to the display.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-">configureVoiceCommands</a></span>(int&nbsp;flags)</code>
+<div class="block">Configures the voice commands of the interaction system provided by the Iristick Services.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-">findCamera</a></span>(int&nbsp;type)</code>
+<div class="block">Find a camera with a specific type tag.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.html" title="class in com.iristick.smartglass.core.camera">CameraCharacteristics</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraCharacteristics-java.lang.String-">getCameraCharacteristics</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cameraId)</code>
+<div class="block">Queries the capabilities of a camera.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--">getCameraIdList</a></span>()</code>
+<div class="block">Returns the list of currently connected camera devices by identifier, including
+ cameras that may be in use by other camera API clients.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code><a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getDefaultSensor-int-">getDefaultSensor</a></span>(int&nbsp;type)</code>
+<div class="block">Gets the default sensor for a given type.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>abstract int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getInteractionMode--">getInteractionMode</a></span>()</code>
+<div class="block">Get the current interaction mode with this headset.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getSensorList-int-">getSensorList</a></span>(int&nbsp;type)</code>
+<div class="block">Gets the list of available sensors of a certain type.</div>
+</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code>abstract <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#getSerialNumber--">getSerialNumber</a></span>()</code>
+<div class="block">Get the serial number of this headset.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-">openCamera</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cameraId,
+          <a href="../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html" title="interface in com.iristick.smartglass.core.camera">CameraDevice.Listener</a>&nbsp;listener,
+          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Opens a connection to a camera with the given ID.</div>
+</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-">openDisplay</a></span>(<a href="../../../../com/iristick/smartglass/core/DisplayListener.html" title="interface in com.iristick.smartglass.core">DisplayListener</a>&nbsp;listener,
+           <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Open a connection to the display.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-">openDisplaySurface</a></span>(<a href="../../../../com/iristick/smartglass/core/DisplayListener.html" title="interface in com.iristick.smartglass.core">DisplayListener</a>&nbsp;listener,
+                  <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Open a connection to the display.</div>
+</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#registerInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-android.os.Handler-">registerInteractionModeListener</a></span>(<a href="../../../../com/iristick/smartglass/core/Headset.InteractionModeListener.html" title="interface in com.iristick.smartglass.core">Headset.InteractionModeListener</a>&nbsp;listener,
+                               <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Register a listener for interaction mode changes.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#registerSensorListener-com.iristick.smartglass.core.SensorEventListener-com.iristick.smartglass.core.Sensor-int-android.os.Handler-">registerSensorListener</a></span>(<a href="../../../../com/iristick/smartglass/core/SensorEventListener.html" title="interface in com.iristick.smartglass.core">SensorEventListener</a>&nbsp;listener,
+                      <a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a>&nbsp;sensor,
+                      int&nbsp;rateUs,
+                      <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Registers a listener for a sensor.</div>
+</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-">registerTouchEventCallback</a></span>(<a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback,
+                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Registers a callback for touchpad events.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-">registerTouchEventCallback</a></span>(<a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback,
+                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler,
+                          int&nbsp;flags)</code>
+<div class="block">Registers a callback for touchpad events.</div>
+</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-">registerVoiceCommands</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;commands,
+                     <a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback,
+                     <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>startVoice(VoiceGrammar)</code></a> with a <a href="../../../../com/iristick/smartglass/core/VoiceCommandDispatcher.html" title="interface in com.iristick.smartglass.core"><code>VoiceCommandDispatcher</code></a> instead.</span></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#setLaserPointer-boolean-">setLaserPointer</a></span>(boolean&nbsp;enable)</code>
+<div class="block">Set the headset's laser pointer.</div>
+</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#setTorchMode-boolean-">setTorchMode</a></span>(boolean&nbsp;enable)</code>
+<div class="block">Set the flash unit's torch mode.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>abstract boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-">startVoice</a></span>(<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a>&nbsp;grammar)</code>
+<div class="block">Starts listening for voice commands for the given grammar.</div>
+</td>
+</tr>
+<tr class="altColor" id="i20">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoice-com.iristick.smartglass.core.VoiceGrammar-">stopVoice</a></span>(<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a>&nbsp;grammar)</code>
+<div class="block">Stop listening for voice commands for the given grammar.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i21">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoiceAll--">stopVoiceAll</a></span>()</code>
+<div class="block">Stop listening for voice commands for every currently still active grammar.</div>
+</td>
+</tr>
+<tr class="altColor" id="i22">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#unregisterInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-">unregisterInteractionModeListener</a></span>(<a href="../../../../com/iristick/smartglass/core/Headset.InteractionModeListener.html" title="interface in com.iristick.smartglass.core">Headset.InteractionModeListener</a>&nbsp;listener)</code>
+<div class="block">Unregister an interaction mode listener.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i23">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#unregisterSensorListener-com.iristick.smartglass.core.SensorEventListener-">unregisterSensorListener</a></span>(<a href="../../../../com/iristick/smartglass/core/SensorEventListener.html" title="interface in com.iristick.smartglass.core">SensorEventListener</a>&nbsp;listener)</code>
+<div class="block">Unregisters a listener for all sensors.</div>
+</td>
+</tr>
+<tr class="altColor" id="i24">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#unregisterTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-">unregisterTouchEventCallback</a></span>(<a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback)</code>
+<div class="block">Unregisters a callback for touchpad events.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i25">
+<td class="colFirst"><code>abstract void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/Headset.html#unregisterVoiceCommands-com.iristick.smartglass.core.VoiceEvent.Callback-">unregisterVoiceCommands</a></span>(<a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>stopVoice(VoiceGrammar)</code></a> with a <a href="../../../../com/iristick/smartglass/core/VoiceCommandDispatcher.html" title="interface in com.iristick.smartglass.core"><code>VoiceCommandDispatcher</code></a> instead.</span></div>
+</div>
+</td>
+</tr>
+</table></div></div>
+
+
+<h2 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a><a class="headerlink" href="#methods.inherited.from.class.java.lang.Object" title="Permanent link">&para;</a></h2>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code>
+
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="field.detail">Field Detail<a class="headerlink" href="#field.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="INTERACTION_MODE_PHONE">INTERACTION_MODE_PHONE<a class="headerlink" href="#INTERACTION_MODE_PHONE" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int INTERACTION_MODE_PHONE</pre>
+<div class="block"><p>The pocket unit is outside its pouch.
+ Interaction is primary done on the phone screen.</p></div>
+
+
+
+
+
+
+<h3 id="INTERACTION_MODE_HUD">INTERACTION_MODE_HUD<a class="headerlink" href="#INTERACTION_MODE_HUD" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int INTERACTION_MODE_HUD</pre>
+<div class="block"><p>The pocket unit is inside its pouch.
+ The user does not see the phone screen, hence interaction only happens through the heads-up
+ display.</p></div>
+
+
+
+
+
+
+<h3 id="TOUCHPAD_FLAG_OVERRIDE_NAVIGATION">TOUCHPAD_FLAG_OVERRIDE_NAVIGATION<a class="headerlink" href="#TOUCHPAD_FLAG_OVERRIDE_NAVIGATION" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TOUCHPAD_FLAG_OVERRIDE_NAVIGATION</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable the standard navigation system.  You will probably want to set this flag,
+ as the navigation system would otherwise interfere with your handling of the touch events.
+
+ <p>Note that the swipe down gesture is still handled by the Iristick Services and will
+ trigger a "go back" action, as if the user pressed the "back" button in the navigation bar.
+ Use the <a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_ALL"><code>TOUCHPAD_FLAG_OVERRIDE_ALL</code></a> flag if you do not want that.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This flag does not automatically disable the voice commands of the
+ navigation system.  See <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> for more information.</p></div></p></p></div>
+
+
+
+
+
+
+<h3 id="TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION">TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION<a class="headerlink" href="#TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable automatic UI optimizations when the user touches the touchpad.
+
+ <p>Note that the standard navigation system itself is still enabled. Use the
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_NAVIGATION"><code>TOUCHPAD_FLAG_OVERRIDE_NAVIGATION</code></a> if you do not want that.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This does not influence the voice-based behavior of the UI
+ optimizations.  See <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> for more information.</p></div></p></p></div>
+
+
+
+
+
+
+<h3 id="TOUCHPAD_FLAG_OVERRIDE_ALL">TOUCHPAD_FLAG_OVERRIDE_ALL<a class="headerlink" href="#TOUCHPAD_FLAG_OVERRIDE_ALL" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int TOUCHPAD_FLAG_OVERRIDE_ALL</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to
+ disable any standard behavior of the touchpad.  This effectively pauses the standard
+ navigation system, including the swipe down gesture.  Use this flag if you want full
+ control over the touchpad in your app.
+
+ <p>Implies <a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_NAVIGATION"><code>TOUCHPAD_FLAG_OVERRIDE_NAVIGATION</code></a> and <a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION"><code>TOUCHPAD_FLAG_INHIBIT_UI_OPTIMIZATION</code></a>.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This flag does not automatically disable the voice commands of the
+ navigation system.  See <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> for more information.</p></div></p></p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY">VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY<a class="headerlink" href="#VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the interaction system
+ from automatically discovering voice commands.
+
+ <p>The interaction system can discover voice commands depending on your currently visible
+ views. This includes commands for buttons, checkboxes and other interactive views.
+
+ <p>Note that the voice command for the "go back" action is still handled by the Iristick
+ Services. Use the <a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_GO_BACK"><code>VOICE_FLAG_INHIBIT_GO_BACK</code></a> flag if you want this action disabled
+ as well.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This does not influence the touchpad-based behavior of the
+ interaction system.  See <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a>
+ for more information.</p></div></p></p></p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_GO_BACK">VOICE_FLAG_INHIBIT_GO_BACK<a class="headerlink" href="#VOICE_FLAG_INHIBIT_GO_BACK" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_GO_BACK</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for
+ the "go back" action.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This does not influence the touchpad-based behavior of the
+ interaction system.
+ See <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> for more
+ information.</p></div></p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK">VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK<a class="headerlink" href="#VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the visual feedback.</p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_UI_OPTIMIZATION">VOICE_FLAG_INHIBIT_UI_OPTIMIZATION<a class="headerlink" href="#VOICE_FLAG_INHIBIT_UI_OPTIMIZATION" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_UI_OPTIMIZATION</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to
+ disable automatic UI optimizations when the user uses voice commands.
+
+ <p>Note that the standard navigation system itself is still enabled. Use the
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY"><code>VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY</code></a> if you do not want that.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This does not influence the touchpad-based behavior of the UI
+ optimizations.
+ See <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> for more
+ information.</p></div></p></p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND">VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND<a class="headerlink" href="#VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for the
+ "Iristick suspend" action. This action will turn off the display and put the phone in sleep
+ mode, as if the user had pressed the power button.
+
+ <p>If set, the user will no longer be able to turn off the display through a voice command.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> You will likely want to set this together with
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP"><code>VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP</code></a>.</p></div></p></p></div>
+
+
+
+
+
+
+<h3 id="VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP">VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP<a class="headerlink" href="#VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP" title="Permanent link">&para;</a></h3>
+<pre>public static final&nbsp;int VOICE_FLAG_INHIBIT_DISPLAY_WAKEUP</pre>
+<div class="block"><p>Flag for <a href="../../../../com/iristick/smartglass/core/Headset.html#configureVoiceCommands-int-"><code>configureVoiceCommands(int)</code></a> to disable the voice command for the
+ "Iristick wake up" action. This action will take the phone out of sleep mode, re-enable
+ the display and unlock the screen lock.
+
+ <p>If set, the user will no longer be able to turn on the display through a voice command.
+ The user can still unlock their phone with the touchpad.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> Voice commands can not unlock secure screen locks (e.g. PIN number
+ or password).
+ These screen locks must be unlocked with the touchpad of the Iristick smart glasses or with
+ the phone.</p></div>
+<div class="admonition note"><p class="admonition-title">Note</p><p> You will likely want to set this together with
+ <a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND"><code>VOICE_FLAG_INHIBIT_DISPLAY_SUSPEND</code></a>.</p></div></p></p></div>
+
+
+
+
+
+
+
+
+<h2 id="constructor.detail">Constructor Detail<a class="headerlink" href="#constructor.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="Headset--">Headset<a class="headerlink" href="#Headset--" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;Headset()</pre>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="getSerialNumber--">getSerialNumber<a class="headerlink" href="#getSerialNumber--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSerialNumber()</pre>
+<div class="block">Get the serial number of this headset.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The serial number.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.1</dd>
+</dl>
+
+
+
+
+
+<h3 id="getInteractionMode--">getInteractionMode<a class="headerlink" href="#getInteractionMode--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+public abstract&nbsp;int&nbsp;getInteractionMode()</pre>
+<div class="block"><p>Get the current interaction mode with this headset.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The current interaction mode.</dd>
+</dl>
+
+
+
+
+
+<h3 id="registerInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-android.os.Handler-">registerInteractionModeListener<a class="headerlink" href="#registerInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;registerInteractionModeListener(@NonNull
+                                                     <a href="../../../../com/iristick/smartglass/core/Headset.InteractionModeListener.html" title="interface in com.iristick.smartglass.core">Headset.InteractionModeListener</a>&nbsp;listener,
+                                                     @Nullable
+                                                     <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Register a listener for interaction mode changes.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener which is invoked when interaction mode changes.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                 <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+</dl>
+
+
+
+
+
+<h3 id="unregisterInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-">unregisterInteractionModeListener<a class="headerlink" href="#unregisterInteractionModeListener-com.iristick.smartglass.core.Headset.InteractionModeListener-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;unregisterInteractionModeListener(@NonNull
+                                                       <a href="../../../../com/iristick/smartglass/core/Headset.InteractionModeListener.html" title="interface in com.iristick.smartglass.core">Headset.InteractionModeListener</a>&nbsp;listener)</pre>
+<div class="block"><p>Unregister an interaction mode listener.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener to unregister.</dd>
+</dl>
+
+
+
+
+
+<h3 id="openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-">openDisplay<a class="headerlink" href="#openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;openDisplay(@NonNull
+                                 <a href="../../../../com/iristick/smartglass/core/DisplayListener.html" title="interface in com.iristick.smartglass.core">DisplayListener</a>&nbsp;listener,
+                                 @Nullable
+                                 <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Open a connection to the display.
+
+ <p>Once the display is successfully opened, <a href="../../../../com/iristick/smartglass/core/DisplayListener.html#onDisplayOpened-android.view.Display-"><code>DisplayListener.onDisplayOpened(Display)</code></a>
+ will be invoked with the newly opened <a href="https://developer.android.com/reference/android/view/Display.html?is-external=true" title="class or interface in android.view"><code>Display</code></a>.  Standard UI may then be shown by
+ extending the <a href="https://developer.android.com/reference/android/app/Presentation.html?is-external=true" title="class or interface in android.app"><code>Presentation</code></a> class.
+
+ <p>If you do not need to show standard UI elements, but instead want to draw directly to
+ the display, consider calling <a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-"><code>openDisplaySurface()</code></a> instead.
+
+ <p>If opening the display fails for any reason, then the listener's
+ <a href="../../../../com/iristick/smartglass/core/DisplayListener.html#onDisplayClosed-int-"><code>onDisplayClosed</code></a> method will be called instead of
+ <code>onDisplayOpened</code>.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This method must not be called again until <code>onDisplayClosed()</code>
+ or <a href="../../../../com/iristick/smartglass/core/Headset.html#closeDisplay--"><code>closeDisplay()</code></a> has been called.
+ It is also mutually exclusive with <code>openDisplaySurface()</code>.</p></div>
+<div class="admonition note"><p class="admonition-title">Note</p><p> While the display is opened, the interaction system provided by the
+ Iristick Services is disabled. Likewise, automatically discovered voice commands are disabled
+ as well. Interactions that trigger the "go back" action are <em>not</em> disabled.</p></div></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener which is invoked once the display is opened.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                 <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>Android API level 19</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-"><code>openDisplaySurface(DisplayListener, Handler)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-">openDisplaySurface<a class="headerlink" href="#openDisplaySurface-com.iristick.smartglass.core.DisplayListener-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;openDisplaySurface(@NonNull
+                                        <a href="../../../../com/iristick/smartglass/core/DisplayListener.html" title="interface in com.iristick.smartglass.core">DisplayListener</a>&nbsp;listener,
+                                        @Nullable
+                                        <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Open a connection to the display.
+
+ <p>Unlike <a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-"><code>openDisplay()</code></a>, this method provides a
+ <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a> to draw content on the screen, instead of a <a href="https://developer.android.com/reference/android/view/Display.html?is-external=true" title="class or interface in android.view"><code>Display</code></a> object.
+
+ <p>Once the display is successfully opened,
+ <a href="../../../../com/iristick/smartglass/core/DisplayListener.html#onDisplaySurfaceOpened-android.view.Surface-int-int-int-"><code>DisplayListener.onDisplaySurfaceOpened(Surface, int, int, int)</code></a>
+ will be invoked with the newly opened <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true" title="class or interface in android.view"><code>Surface</code></a>.  A canvas for drawing on the display
+ may be obtained with <a href="https://developer.android.com/reference/android/view/Surface.html?is-external=true#lockCanvas-android.graphics.Rect-" title="class or interface in android.view"><code>lockCanvas()</code></a>.
+
+ <p>If opening the display fails for any reason, then the listener's
+ <a href="../../../../com/iristick/smartglass/core/DisplayListener.html#onDisplayClosed-int-"><code>onDisplayClosed</code></a> method will be called instead of
+ <code>onDisplayOpened</code>.
+
+ <div class="admonition note"><p class="admonition-title">Note</p><p> This method must not be called again until <code>onDisplayClosed()</code>
+ or <a href="../../../../com/iristick/smartglass/core/Headset.html#closeDisplay--"><code>closeDisplay()</code></a> has been called.
+ It is also mutually exclusive with <code>openDisplay()</code>.</p></div>
+<div class="admonition note"><p class="admonition-title">Note</p><p> While the display is opened, the interaction system provided by the
+ Iristick Services is disabled. Likewise, automatically discovered voice commands are disabled
+ as well. Interactions that trigger the "go back" action are <em>not</em> disabled.</p></div></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener which is invoked once the display is opened.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                 <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#openDisplay-com.iristick.smartglass.core.DisplayListener-android.os.Handler-"><code>openDisplay(DisplayListener, Handler)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="closeDisplay--">closeDisplay<a class="headerlink" href="#closeDisplay--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;closeDisplay()</pre>
+<div class="block"><p>Close the connection to the display.
+
+ <p>Once the display has fully shut down, the <a href="../../../../com/iristick/smartglass/core/DisplayListener.html#onDisplayClosed-int-"><code>DisplayListener.onDisplayClosed(int)</code></a> callback
+ will be called.  The display may however be re-opened right after a call to
+ <code>closeDisplay()</code> without having to wait for the <code>onDisplayClosed()</code> callback.
+
+ <p>Calling this method multiple times, or when the display is already closed, does not have
+ any effect.</p></p></p></div>
+
+
+
+
+
+<h3 id="getCameraIdList--">getCameraIdList<a class="headerlink" href="#getCameraIdList--" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getCameraIdList()</pre>
+<div class="block"><p>Returns the list of currently connected camera devices by identifier, including
+ cameras that may be in use by other camera API clients.
+
+ <div class="admonition attention"><p class="admonition-title">Attention</p><p> The returned identifiers are not part of the stable API.
+ They may vary across versions of the Iristick Services, device models or even <code>Headset</code>
+ objects.  You should always discover the camera identifiers of a connected headset using this
+ method or <a href="../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>findCamera(int)</code></a>.</p></div></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The list of currently connected cameras.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>findCamera(int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="findCamera-int-">findCamera<a class="headerlink" href="#findCamera-int-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @Nullable
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;findCamera(int&nbsp;type)</pre>
+<div class="block">Find a camera with a specific type tag.
+
+ <p>If multiple cameras are available with the <code>type</code> tag, one of them will be returned.
+
+ <div class="admonition attention"><p class="admonition-title">Attention</p><p> The returned identifier is not part of the stable API.
+ It may vary across versions of the Iristick Services, device models or even <code>Headset</code>
+ objects.  You should always discover the camera identifiers of a connected headset using this
+ method or <a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>getCameraIdList()</code></a>.</p></div></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - The desired camera type (one of the <code>TYPE_*</code> constants in
+             <a href="../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.html" title="class in com.iristick.smartglass.core.camera"><code>CameraCharacteristics</code></a>).</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The id of the camera or <code>null</code> if no camera of the desired type is available on
+         this headset.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>1.2</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.html#TYPES"><code>CameraCharacteristics.TYPES</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="getCameraCharacteristics-java.lang.String-">getCameraCharacteristics<a class="headerlink" href="#getCameraCharacteristics-java.lang.String-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/camera/CameraCharacteristics.html" title="class in com.iristick.smartglass.core.camera">CameraCharacteristics</a>&nbsp;getCameraCharacteristics(@NonNull
+                                                                                      <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cameraId)</pre>
+<div class="block"><p>Queries the capabilities of a camera.
+ These capabilities are immutable for a given camera.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>cameraId</code> - The id of the camera to query.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The properties of the given camera.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>cameraId</code> does not match any known camera.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>getCameraIdList()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-">openCamera<a class="headerlink" href="#openCamera-java.lang.String-com.iristick.smartglass.core.camera.CameraDevice.Listener-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;openCamera(@NonNull
+                                <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cameraId,
+                                @NonNull
+                                <a href="../../../../com/iristick/smartglass/core/camera/CameraDevice.Listener.html" title="interface in com.iristick.smartglass.core.camera">CameraDevice.Listener</a>&nbsp;listener,
+                                @Nullable
+                                <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Opens a connection to a camera with the given ID.
+
+ <p>Use <a href="../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>findCamera(int)</code></a> or <a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>getCameraIdList()</code></a> to find available camera devices.
+ Note that even if an id is listed, open may fail if the headset
+ is disconnected between the calls to <code>findCamera</code>/<code>getCameraIdList</code> and
+ <code>openCamera</code>.
+
+ <p>Once the camera is successfully opened, <code>CameraDevice.Listener#onOpened(CameraDevice)</code> will
+ be invoked with the newly opened <a href="../../../../com/iristick/smartglass/core/camera/CameraDevice.html" title="class in com.iristick.smartglass.core.camera"><code>CameraDevice</code></a>.  The camera can then be set up
+ for operation by calling <a href="../../../../com/iristick/smartglass/core/camera/CameraDevice.html#createCaptureSession-java.util.List-com.iristick.smartglass.core.camera.CaptureSession.Listener-android.os.Handler-"><code>createCaptureSession</code></a>.
+
+ <p>If the headset becomes disconnected during initialization
+ after this function call returns,
+ <code>onDisconnected</code> will be called with a
+ <code>CameraDevice</code> object in the disconnected state (and
+ <code>onOpened</code> will be skipped).
+
+ <p>If opening the camera fails for any other reason, then the camera listener's
+ <code>onError</code> method will be called instead of <code>onOpened</code>.
+
+ <p>Requires the <a href="https://developer.android.com/reference/android/Manifest.permission.html?is-external=true#CAMERA" title="class or interface in android"><code>CAMERA</code></a> permission.
+
+ <div class="admonition attention"><p class="admonition-title">Attention</p><p> Camera identifiers are not part of the stable API.
+ They may vary across versions of the Iristick Services, device models or even <code>Headset</code>
+ objects.  You should always discover the camera identifiers of a connected headset using
+ <code>#findCamera</code> or <code>#getCameraIdList</code>.</p></div></p></p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>cameraId</code> - The unique identifier of the camera device to open.</dd>
+<dd><code>listener</code> - The listener which is invoked once the camera is opened.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+             <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>cameraId</code> or <code>listener</code> is <code>null</code>.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>cameraId</code> does not match any available camera.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/SecurityException.html?is-external=true" title="class or interface in java.lang">SecurityException</a></code> - if the application does not have permission to access the camera.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#findCamera-int-"><code>findCamera(int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#getCameraIdList--"><code>getCameraIdList()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="setTorchMode-boolean-">setTorchMode<a class="headerlink" href="#setTorchMode-boolean-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;setTorchMode(boolean&nbsp;enable)</pre>
+<div class="block">Set the flash unit's torch mode.
+
+ <p>Note that the application does not have the exclusive ownership of the flash unit.
+ Other applications are free to call <code>setTorchMode</code> to turn the torch mode on or off.
+ If the latest application that turned on the torch mode exits, the torch mode will be
+ turned off.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>enable</code> - The desired state of the torch mode.  Set to <code>true</code> to turn on the
+               torch mode.  Set to <code>false</code> to turn off the torch mode.</dd>
+</dl>
+
+
+
+
+
+<h3 id="setLaserPointer-boolean-">setLaserPointer<a class="headerlink" href="#setLaserPointer-boolean-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;setLaserPointer(boolean&nbsp;enable)</pre>
+<div class="block">Set the headset's laser pointer.
+
+ <p>Note that the application does not have the exclusive ownership of the laser unit.
+ Other applications are free to call <code>setLaserPointer</code> to turn the laser mode on or off.
+ If the latest application that turned on the laser pointer exits, the laser pointer will be
+ turned off.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>enable</code> - The desired state of the laser pointer.  Set to <code>true</code> to turn on the
+               laser pointer.  Set to <code>false</code> to turn off the laser pointer.</dd>
+</dl>
+
+
+
+
+
+<h3 id="getDefaultSensor-int-">getDefaultSensor<a class="headerlink" href="#getDefaultSensor-int-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @Nullable
+public&nbsp;<a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a>&nbsp;getDefaultSensor(int&nbsp;type)</pre>
+<div class="block"><p>Gets the default sensor for a given type.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - Type of sensor requested (see <code>TYPE_*</code> constants in <a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core"><code>Sensor</code></a>).</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The default sensor matching the requested type if one exists, or <code>null</code> otherwise.</dd>
+</dl>
+
+
+
+
+
+<h3 id="getSensorList-int-">getSensorList<a class="headerlink" href="#getSensorList-int-" title="Permanent link">&para;</a></h3>
+<pre>@CheckResult
+ @NonNull
+public abstract&nbsp;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a>&gt;&nbsp;getSensorList(int&nbsp;type)</pre>
+<div class="block"><p>Gets the list of available sensors of a certain type.
+
+ <p>Make multiple calls to get sensors of different types or use <a href="../../../../com/iristick/smartglass/core/Sensor.html#TYPE_ALL"><code>Sensor.TYPE_ALL</code></a>
+ to get all sensors.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>type</code> - Type of sensors requested (see <code>TYPE_*</code> constants in <a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core"><code>Sensor</code></a>).</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A list of sensors matching the requested type.</dd>
+</dl>
+
+
+
+
+
+<h3 id="registerSensorListener-com.iristick.smartglass.core.SensorEventListener-com.iristick.smartglass.core.Sensor-int-android.os.Handler-">registerSensorListener<a class="headerlink" href="#registerSensorListener-com.iristick.smartglass.core.SensorEventListener-com.iristick.smartglass.core.Sensor-int-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;boolean&nbsp;registerSensorListener(@NonNull
+                                      <a href="../../../../com/iristick/smartglass/core/SensorEventListener.html" title="interface in com.iristick.smartglass.core">SensorEventListener</a>&nbsp;listener,
+                                      @NonNull
+                                      <a href="../../../../com/iristick/smartglass/core/Sensor.html" title="class in com.iristick.smartglass.core">Sensor</a>&nbsp;sensor,
+                                      int&nbsp;rateUs,
+                                      @Nullable
+                                      <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Registers a listener for a sensor.
+ Events are delivered in continuous mode as soon as they are available.
+
+ <p>Calling this method is equivalent to calling
+ <pre>sensor.registerListener(listener, rateUs, handler)</pre></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener.</dd>
+<dd><code>sensor</code> - The target sensor.</dd>
+<dd><code>rateUs</code> - The rate sensor events are delivered at.  This is only a hint to the
+                    system.  Events may be received faster or slower than the specified rate.
+                    Usually, events are received faster.  The rate is specified in
+                    microseconds.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                    <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if the sensor has been successfully enabled.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Sensor.html#registerListener-com.iristick.smartglass.core.SensorEventListener-int-android.os.Handler-"><code>Sensor.registerListener(SensorEventListener, int, Handler)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="unregisterSensorListener-com.iristick.smartglass.core.SensorEventListener-">unregisterSensorListener<a class="headerlink" href="#unregisterSensorListener-com.iristick.smartglass.core.SensorEventListener-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;unregisterSensorListener(@NonNull
+                                              <a href="../../../../com/iristick/smartglass/core/SensorEventListener.html" title="interface in com.iristick.smartglass.core">SensorEventListener</a>&nbsp;listener)</pre>
+<div class="block"><p>Unregisters a listener for all sensors.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>listener</code> - The listener to unregister.</dd>
+</dl>
+
+
+
+
+
+<h3 id="registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-">registerTouchEventCallback<a class="headerlink" href="#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;registerTouchEventCallback(@NonNull
+                                                <a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback,
+                                                @Nullable
+                                                <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler,
+                                                int&nbsp;flags)</pre>
+<div class="block"><p>Registers a callback for touchpad events.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callback</code> - The callback to register.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                    <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dd><code>flags</code> - Combination of flag values to modify the standard touchpad behavior.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_NAVIGATION"><code>TOUCHPAD_FLAG_OVERRIDE_NAVIGATION</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#TOUCHPAD_FLAG_OVERRIDE_ALL"><code>TOUCHPAD_FLAG_OVERRIDE_ALL</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-">registerTouchEventCallback<a class="headerlink" href="#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;void&nbsp;registerTouchEventCallback(@NonNull
+                                       <a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback,
+                                       @Nullable
+                                       <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><p>Registers a callback for touchpad events.
+
+ <p>The navigation system provided by the Iristick Services will be paused while the
+ callback is registered, except for the swipe down gesture which will trigger a "back" action.
+ Use <a href="../../../../com/iristick/smartglass/core/Headset.html#registerTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-android.os.Handler-int-"><code>registerTouchEventCallback(TouchEvent.Callback, Handler, int)</code></a> to customize this
+ behavior.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callback</code> - The callback to register.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                    <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+</dl>
+
+
+
+
+
+<h3 id="unregisterTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-">unregisterTouchEventCallback<a class="headerlink" href="#unregisterTouchEventCallback-com.iristick.smartglass.core.TouchEvent.Callback-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;unregisterTouchEventCallback(@NonNull
+                                                  <a href="../../../../com/iristick/smartglass/core/TouchEvent.Callback.html" title="interface in com.iristick.smartglass.core">TouchEvent.Callback</a>&nbsp;callback)</pre>
+<div class="block"><p>Unregisters a callback for touchpad events.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callback</code> - The callback to unregister.</dd>
+</dl>
+
+
+
+
+
+<h3 id="configureVoiceCommands-int-">configureVoiceCommands<a class="headerlink" href="#configureVoiceCommands-int-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;configureVoiceCommands(int&nbsp;flags)</pre>
+<div class="block"><p>Configures the voice commands of the interaction system provided by the Iristick Services.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>flags</code> - Combination of flag values to modify the standard voice interaction behavior.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY"><code>VOICE_FLAG_INHIBIT_COMMAND_DISCOVERY</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_GO_BACK"><code>VOICE_FLAG_INHIBIT_GO_BACK</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK"><code>VOICE_FLAG_INHIBIT_VISUAL_FEEDBACK</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-">registerVoiceCommands<a class="headerlink" href="#registerVoiceCommands-java.lang.String:A-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre><a href="https://developer.android.com/reference/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public abstract&nbsp;boolean&nbsp;registerVoiceCommands(@NonNull
+                                                          <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;commands,
+                                                          @NonNull
+                                                          <a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback,
+                                                          @Nullable
+                                                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>startVoice(VoiceGrammar)</code></a> with a <a href="../../../../com/iristick/smartglass/core/VoiceCommandDispatcher.html" title="interface in com.iristick.smartglass.core"><code>VoiceCommandDispatcher</code></a> instead.</span></div>
+<div class="block"><p>Registers a callback for voice commands.
+
+ <p>The commands are assumed to be in the current locale if supported by the voice recognition
+ engine or English otherwise. Special characters, such as punctuation, are
+ ignored. One command may consist of multiple words, separated by spaces.
+
+ <p>When multiple callback are registered for the same voice command(s), they are all
+ notified when the user utters that voice command.
+
+ <p>When the same callback is registered again with a different set of commands, the new
+ commands overwrite the previous commands.
+
+ <p>To preserve resources, it is recommended to register as few callbacks as possible and to
+ group commands together if they do not need to be disabled separately.</p></p></p></p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>commands</code> - A list of commands for the voice recognition service to recognize.</dd>
+<dd><code>callback</code> - The callback to register.</dd>
+<dd><code>handler</code> - The handler on which the listener should be invoked, or
+                    <code>null</code> to use the current thread's <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>looper</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if the callback registration was successful,
+         <code>false</code> otherwise.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>commands</code> or <code>callback</code> is <code>null</code>.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>commands</code> is empty or contains no valid commands.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/OutOfMemoryError.html?is-external=true" title="class or interface in java.lang">OutOfMemoryError</a></code> - if the callback could not be registered due to exhausted resources.</dd>
+</dl>
+
+
+
+
+
+<h3 id="unregisterVoiceCommands-com.iristick.smartglass.core.VoiceEvent.Callback-">unregisterVoiceCommands<a class="headerlink" href="#unregisterVoiceCommands-com.iristick.smartglass.core.VoiceEvent.Callback-" title="Permanent link">&para;</a></h3>
+<pre><a href="https://developer.android.com/reference/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public abstract&nbsp;void&nbsp;unregisterVoiceCommands(@NonNull
+                                                         <a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>stopVoice(VoiceGrammar)</code></a> with a <a href="../../../../com/iristick/smartglass/core/VoiceCommandDispatcher.html" title="interface in com.iristick.smartglass.core"><code>VoiceCommandDispatcher</code></a> instead.</span></div>
+<div class="block"><p>Unregisters a callback for voice commands.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callback</code> - The callback to unregister.</dd>
+</dl>
+
+
+
+
+
+<h3 id="startVoice-com.iristick.smartglass.core.VoiceGrammar-">startVoice<a class="headerlink" href="#startVoice-com.iristick.smartglass.core.VoiceGrammar-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;boolean&nbsp;startVoice(@NonNull
+                                   <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a>&nbsp;grammar)</pre>
+<div class="block">Starts listening for voice commands for the given grammar.
+
+ <p>This operation is a no-op if the grammar is already in use for voice recognition by this
+ headset.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>grammar</code> - The grammar for the voice recognition engine to recognize.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if the callback registration was successful,
+         <code>false</code> otherwise.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>grammar</code> is <code>null</code>.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the grammar is invalid.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the grammar is already <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html#release--"><code>released</code></a>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>stopVoice(VoiceGrammar)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoiceAll--"><code>stopVoiceAll()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="stopVoice-com.iristick.smartglass.core.VoiceGrammar-">stopVoice<a class="headerlink" href="#stopVoice-com.iristick.smartglass.core.VoiceGrammar-" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;stopVoice(@NonNull
+                               <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a>&nbsp;grammar)</pre>
+<div class="block">Stop listening for voice commands for the given grammar.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>grammar</code> - The grammar to stop listening for.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>startVoice(VoiceGrammar)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoiceAll--"><code>stopVoiceAll()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="stopVoiceAll--">stopVoiceAll<a class="headerlink" href="#stopVoiceAll--" title="Permanent link">&para;</a></h3>
+<pre>public abstract&nbsp;void&nbsp;stopVoiceAll()</pre>
+<div class="block">Stop listening for voice commands for every currently still active grammar.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>startVoice(VoiceGrammar)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/Headset.html#stopVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>stopVoice(VoiceGrammar)</code></a></dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="DisplayListener.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                DisplayListener
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="Headset.InteractionModeListener.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Headset.InteractionModeListener
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

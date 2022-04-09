@@ -1,0 +1,2990 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://developer.iristick.com/1.3.2/reference/com/iristick/smartglass/core/VoiceGrammar.Builder.html">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>VoiceGrammar.Builder - Iristick SDK 1.3.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="##VoiceGrammar.Builder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-header-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Iristick SDK 1.3.2
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              VoiceGrammar.Builder
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developer.iristick.com/1.3.2/" title="Iristick SDK 1.3.2" class="md-nav__button md-logo" aria-label="Iristick SDK 1.3.2">
+      
+  <img src="../../../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Iristick SDK 1.3.2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip" title="Download SDK" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.12 5l.81-1h12l.94 1M12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5m8.54-12.27l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6 3 6.5V19a2 2 0 002 2h14a2 2 0 002-2V6.5c0-.5-.17-.93-.46-1.27z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download SDK
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/phone-setup.html" class="md-nav__link">
+        Phone setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/development-environment.html" class="md-nav__link">
+        Development environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/using-api.html" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        API Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          API Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/display.html" class="md-nav__link">
+        Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/cameras.html" class="md-nav__link">
+        Cameras
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/barcode.html" class="md-nav__link">
+        Barcode scanning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/touchpad.html" class="md-nav__link">
+        Touchpad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/sensors.html" class="md-nav__link">
+        Sensors
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../guides/voice.html" class="md-nav__link">
+        Voice
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        API Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      
+      <label class="md-nav__link" for="nav-4-1">
+        core
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="core" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-1">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2" >
+      
+      <label class="md-nav__link" for="nav-4-1-2">
+        camera
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-1-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/Barcode.html" class="md-nav__link">
+        Barcode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraCharacteristics.StreamConfigurationMap.html" class="md-nav__link">
+        CameraCharacteristics.StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CameraDevice.Listener.html" class="md-nav__link">
+        CameraDevice.Listener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureAdapter.html" class="md-nav__link">
+        CaptureAdapter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener.html" class="md-nav__link">
+        CaptureListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureListener2.html" class="md-nav__link">
+        CaptureListener2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.html" class="md-nav__link">
+        CaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera/CaptureSession.Listener.html" class="md-nav__link">
+        CaptureSession.Listener
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DisplayListener.html" class="md-nav__link">
+        DisplayListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Headset.html" class="md-nav__link">
+        Headset
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Headset.InteractionModeListener.html" class="md-nav__link">
+        Headset.InteractionModeListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Intents.html" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InteractionRule.html" class="md-nav__link">
+        InteractionRule
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InteractionRule.Key.html" class="md-nav__link">
+        InteractionRule.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickBinding.html" class="md-nav__link">
+        IristickBinding
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection.html" class="md-nav__link">
+        IristickConnection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickConnection2.html" class="md-nav__link">
+        IristickConnection2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IristickManager.html" class="md-nav__link">
+        IristickManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.html" class="md-nav__link">
+        PocketUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PocketUnit.BatteryCallback.html" class="md-nav__link">
+        PocketUnit.BatteryCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sensor.html" class="md-nav__link">
+        Sensor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEvent.html" class="md-nav__link">
+        SensorEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SensorEventListener.html" class="md-nav__link">
+        SensorEventListener
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.html" class="md-nav__link">
+        TouchEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TouchEvent.Callback.html" class="md-nav__link">
+        TouchEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.html" class="md-nav__link">
+        VoiceCommandDispatcher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceCommandDispatcher.Builder.html" class="md-nav__link">
+        VoiceCommandDispatcher.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.html" class="md-nav__link">
+        VoiceEvent
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceEvent.Callback.html" class="md-nav__link">
+        VoiceEvent.Callback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VoiceGrammar.html" class="md-nav__link">
+        VoiceGrammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          VoiceGrammar.Builder
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="VoiceGrammar.Builder.html" class="md-nav__link md-nav__link--active">
+        VoiceGrammar.Builder
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##Builder--" class="md-nav__link">
+    Builder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##create--" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##create-android.content.Context-" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-java.lang.String-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-java.lang.String-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-int-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushSequentialGroup--" class="md-nav__link">
+    pushSequentialGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushSequentialGroup-int-int-" class="md-nav__link">
+    pushSequentialGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushAlternativeGroup--" class="md-nav__link">
+    pushAlternativeGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushAlternativeGroup-int-int-" class="md-nav__link">
+    pushAlternativeGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##popGroup--" class="md-nav__link">
+    popGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##popToRootGroup--" class="md-nav__link">
+    popToRootGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setCallback-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" class="md-nav__link">
+    setCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##build--" class="md-nav__link">
+    build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+      
+      <label class="md-nav__link" for="nav-4-2">
+        support
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="support" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-2">
+          <span class="md-nav__icon md-icon"></span>
+          support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+      
+      <label class="md-nav__link" for="nav-4-2-1">
+        app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="app" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudActivity.html" class="md-nav__link">
+        HudActivity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/HudPresentation.html" class="md-nav__link">
+        HudPresentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickApp.html" class="md-nav__link">
+        IristickApp
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/app/IristickConfiguration.html" class="md-nav__link">
+        IristickConfiguration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2">
+        camera2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="camera2" data-md-level="3">
+        <label class="md-nav__title" for="nav-4-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          camera2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+      
+      <label class="md-nav__link" for="nav-4-2-2-2">
+        params
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="params" data-md-level="4">
+        <label class="md-nav__title" for="nav-4-2-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          params
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/package-summary.html" class="md-nav__link">
+        Package summary
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/BlackLevelPattern.html" class="md-nav__link">
+        BlackLevelPattern
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/ColorSpaceTransform.html" class="md-nav__link">
+        ColorSpaceTransform
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/Face.html" class="md-nav__link">
+        Face
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/InputConfiguration.html" class="md-nav__link">
+        InputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/LensShadingMap.html" class="md-nav__link">
+        LensShadingMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/MeteringRectangle.html" class="md-nav__link">
+        MeteringRectangle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/OutputConfiguration.html" class="md-nav__link">
+        OutputConfiguration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/RggbChannelVector.html" class="md-nav__link">
+        RggbChannelVector
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/StreamConfigurationMap.html" class="md-nav__link">
+        StreamConfigurationMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/params/TonemapCurve.html" class="md-nav__link">
+        TonemapCurve
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraAccessException.html" class="md-nav__link">
+        CameraAccessException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.html" class="md-nav__link">
+        CameraCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.CaptureCallback.html" class="md-nav__link">
+        CameraCaptureSession.CaptureCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCaptureSession.StateCallback.html" class="md-nav__link">
+        CameraCaptureSession.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.html" class="md-nav__link">
+        CameraCharacteristics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraCharacteristics.Key.html" class="md-nav__link">
+        CameraCharacteristics.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraConstrainedHighSpeedCaptureSession.html" class="md-nav__link">
+        CameraConstrainedHighSpeedCaptureSession
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.html" class="md-nav__link">
+        CameraDevice
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraDevice.StateCallback.html" class="md-nav__link">
+        CameraDevice.StateCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraFormat.html" class="md-nav__link">
+        CameraFormat
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.html" class="md-nav__link">
+        CameraManager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.AvailabilityCallback.html" class="md-nav__link">
+        CameraManager.AvailabilityCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.HeadsetCallback.html" class="md-nav__link">
+        CameraManager.HeadsetCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraManager.TorchCallback.html" class="md-nav__link">
+        CameraManager.TorchCallback
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CameraMetadata.html" class="md-nav__link">
+        CameraMetadata
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureFailure.html" class="md-nav__link">
+        CaptureFailure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.html" class="md-nav__link">
+        CaptureRequest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Builder.html" class="md-nav__link">
+        CaptureRequest.Builder
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureRequest.Key.html" class="md-nav__link">
+        CaptureRequest.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.html" class="md-nav__link">
+        CaptureResult
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/CaptureResult.Key.html" class="md-nav__link">
+        CaptureResult.Key
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/DngCreator.html" class="md-nav__link">
+        DngCreator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/camera2/TotalCaptureResult.html" class="md-nav__link">
+        TotalCaptureResult
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Release notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release notes" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.3.html" class="md-nav__link">
+        Release 1.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.2.html" class="md-nav__link">
+        Release 1.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release-notes/1.1.html" class="md-nav__link">
+        Release 1.1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.summary" class="md-nav__link">
+    Constructor Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.summary" class="md-nav__link">
+    Method Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##methods.inherited.from.class.java.lang.Object" class="md-nav__link">
+    Methods inherited from class java.lang.Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##constructor.detail" class="md-nav__link">
+    Constructor Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##Builder--" class="md-nav__link">
+    Builder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="##method.detail" class="md-nav__link">
+    Method Detail
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="##create--" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##create-android.content.Context-" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-java.lang.String-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-java.lang.String-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addToken-int-int-" class="md-nav__link">
+    addToken
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-java.util.List-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##addTokens-int-int-int-" class="md-nav__link">
+    addTokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushSequentialGroup--" class="md-nav__link">
+    pushSequentialGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushSequentialGroup-int-int-" class="md-nav__link">
+    pushSequentialGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushAlternativeGroup--" class="md-nav__link">
+    pushAlternativeGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##pushAlternativeGroup-int-int-" class="md-nav__link">
+    pushAlternativeGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##popGroup--" class="md-nav__link">
+    popGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##popToRootGroup--" class="md-nav__link">
+    popToRootGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##setCallback-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" class="md-nav__link">
+    setCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="##build--" class="md-nav__link">
+    build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="header">
+<div class="subTitle">com.iristick.smartglass.core</div>
+<h1 id="VoiceGrammar.Builder">Class VoiceGrammar.Builder<a class="headerlink" href="#VoiceGrammar.Builder" title="Permanent link">&para;</a></h1>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>com.iristick.smartglass.core.VoiceGrammar.Builder</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+
+
+<dl>
+<dt>Enclosing interface:</dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a></dd>
+</dl>
+<hr/>
+
+<pre>public abstract static class <span class="typeNameLabel">VoiceGrammar.Builder</span>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block"><p>This class allows to construct immutable voice command grammar objects.
+
+ <p>To obtain a builder instance, use the <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create--"><code>create()</code></a> method.
+
+ <p>Builder instances are single-use only. Any attempt to further modify the builder after
+ <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#build--"><code>build()</code></a> has built a grammar object will result in an <a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang"><code>IllegalStateException</code></a>.</p></p></p></div>
+
+
+</div>
+<div class="summary">
+
+
+
+
+
+<h2 id="constructor.summary">Constructor Summary<a class="headerlink" href="#constructor.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Constructor Summary table, listing constructors, and an explanation">
+
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#Builder--">Builder</a></span>()</code>&nbsp;</td>
+</tr>
+</table></div></div>
+
+
+
+
+
+<h2 id="method.summary">Method Summary<a class="headerlink" href="#method.summary" title="Permanent link">&para;</a></h2>
+<div class_="md-typeset__scrollwrap"><div class_="md-typeset__table"><table summary="Method Summary table, listing methods, and an explanation">
+
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor" id="i0">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-int-">addToken</a></span>(int&nbsp;token)</code>
+<div class="block">Add a token to the group at the top of the grammar stack.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i1">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-int-int-">addToken</a></span>(int&nbsp;token,
+        int&nbsp;tag)</code>
+<div class="block">Add a token to the group at the top of the grammar stack and associate it
+ with the given tag.</div>
+</td>
+</tr>
+<tr class="altColor" id="i2">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-">addToken</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;token)</code>
+<div class="block">Add a token to the group at the top of the grammar stack.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i3">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-">addToken</a></span>(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;token,
+        int&nbsp;tag)</code>
+<div class="block">Add a token to the group at the top of the grammar stack and associate it
+ with the given tag.</div>
+</td>
+</tr>
+<tr class="altColor" id="i4">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-int-">addTokens</a></span>(int&nbsp;tokens)</code>
+<div class="block">Utility method to add all tokens from a string array resource.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i5">
+<td class="colFirst"><code><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-int-int-">addTokens</a></span>(int&nbsp;tokens,
+         int&nbsp;firstTag)</code>
+<div class="block">Utility method to add all tokens from a string array resource and associate each token
+ with a tag.</div>
+</td>
+</tr>
+<tr class="altColor" id="i6">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-int-int-int-">addTokens</a></span>(int&nbsp;tokens,
+         int&nbsp;firstTag,
+         int&nbsp;tagIncrement)</code>
+<div class="block">Utility method to add all tokens from a string array resource and associate each token
+ with a tag.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i7">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-java.util.List-">addTokens</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens)</code>
+<div class="block">Utility method to add all tokens from a list.</div>
+</td>
+</tr>
+<tr class="altColor" id="i8">
+<td class="colFirst"><code><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-java.util.List-int-">addTokens</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens,
+         int&nbsp;firstTag)</code>
+<div class="block">Utility method to add all tokens from a list and associate each token with a tag.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i9">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addTokens-java.util.List-int-int-">addTokens</a></span>(<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens,
+         int&nbsp;firstTag,
+         int&nbsp;tagIncrement)</code>
+<div class="block">Utility method to add all tokens from a list and associate each token with a tag.</div>
+</td>
+</tr>
+<tr class="altColor" id="i10">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#build--">build</a></span>()</code>
+<div class="block">Builds the grammar according to the recorded instructions.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i11">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create--">create</a></span>()</code>
+<div class="block">Creates a new empty builder instance.</div>
+</td>
+</tr>
+<tr class="altColor" id="i12">
+<td class="colFirst"><code>static <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-">create</a></span>(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Creates a new empty builder instance.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i13">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--">popGroup</a></span>()</code>
+<div class="block">Pops the top-most group from the grammar stack.</div>
+</td>
+</tr>
+<tr class="altColor" id="i14">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popToRootGroup--">popToRootGroup</a></span>()</code>
+<div class="block">Repeatedly call <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a> until only the root sequential group remains at the
+ top of the stack.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i15">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup--">pushAlternativeGroup</a></span>()</code>
+<div class="block">Pushes a new alternative group onto the grammar stack.</div>
+</td>
+</tr>
+<tr class="altColor" id="i16">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup-int-int-">pushAlternativeGroup</a></span>(int&nbsp;repeatMin,
+                    int&nbsp;repeatMax)</code>
+<div class="block">Pushes a new alternative group onto the grammar stack.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i17">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup--">pushSequentialGroup</a></span>()</code>
+<div class="block">Pushes a new sequential group onto the grammar stack.</div>
+</td>
+</tr>
+<tr class="altColor" id="i18">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup-int-int-">pushSequentialGroup</a></span>(int&nbsp;repeatMin,
+                   int&nbsp;repeatMax)</code>
+<div class="block">Pushes a new sequential group onto the grammar stack.</div>
+</td>
+</tr>
+<tr class="rowColor" id="i19">
+<td class="colFirst"><code>abstract <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#setCallback-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-">setCallback</a></span>(<a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback,
+           <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</code>
+<div class="block">Set the callback to be invoked for this grammar.</div>
+</td>
+</tr>
+</table></div></div>
+
+
+<h2 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a><a class="headerlink" href="#methods.inherited.from.class.java.lang.Object" title="Permanent link">&para;</a></h2>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code>
+
+
+
+
+
+</div>
+<div class="details">
+
+
+
+
+
+<h2 id="constructor.detail">Constructor Detail<a class="headerlink" href="#constructor.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="Builder--">Builder<a class="headerlink" href="#Builder--" title="Permanent link">&para;</a></h3>
+<pre>public&nbsp;Builder()</pre>
+
+
+
+
+
+
+
+<h2 id="method.detail">Method Detail<a class="headerlink" href="#method.detail" title="Permanent link">&para;</a></h2>
+
+
+
+<h3 id="create--">create<a class="headerlink" href="#create--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+ @CheckResult
+public static&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;create()</pre>
+<div class="block">Creates a new empty builder instance.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A new builder instance for building VoiceGrammar objects.</dd>
+</dl>
+
+
+
+
+
+<h3 id="create-android.content.Context-">create<a class="headerlink" href="#create-android.content.Context-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+ @CheckResult
+public static&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;create(@Nullable
+                                                                 <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Creates a new empty builder instance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - Context object. If not <code>null</code>, this builder supports the
+                convenience methods with resource identifiers.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A new builder instance for building VoiceGrammar objects.</dd>
+</dl>
+
+
+
+
+
+<h3 id="addToken-java.lang.String-">addToken<a class="headerlink" href="#addToken-java.lang.String-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addToken(@NonNull
+                                                       <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;token)</pre>
+<div class="block">Add a token to the group at the top of the grammar stack.
+
+ <p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>token</code> - String containing a single token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addToken-int-">addToken<a class="headerlink" href="#addToken-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addToken(@StringRes
+                                                       int&nbsp;token)</pre>
+<div class="block">Add a token to the group at the top of the grammar stack.
+
+ <p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>token</code> - String resource containing a single token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the builder was initialized without valid context.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-"><code>create(Context)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addToken-java.lang.String-int-">addToken<a class="headerlink" href="#addToken-java.lang.String-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addToken(@NonNull
+                                                       <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;token,
+                                                       int&nbsp;tag)</pre>
+<div class="block">Add a token to the group at the top of the grammar stack and associate it
+ with the given tag.
+
+ <p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>token</code> - String containing a single token.</dd>
+<dd><code>tag</code> - Numeric tag for this token.
+            When the recognition engine has recognized this token, this tag is part of
+            the <a href="../../../../com/iristick/smartglass/core/VoiceEvent.html#getTags--"><code>VoiceEvent.getTags()</code></a> list of tags} of the voice event.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-"><code>addToken(String)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addToken-int-int-">addToken<a class="headerlink" href="#addToken-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addToken(@StringRes
+                                                       int&nbsp;token,
+                                                       int&nbsp;tag)</pre>
+<div class="block">Add a token to the group at the top of the grammar stack and associate it
+ with the given tag.
+
+ <p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>token</code> - String resource containing a single token.</dd>
+<dd><code>tag</code> - Numeric tag for this token.
+            When the recognition engine has recognized this token, this tag is part of
+            the <a href="../../../../com/iristick/smartglass/core/VoiceEvent.html#getTags--"><code>VoiceEvent.getTags()</code></a> list of tags} of the voice event.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the builder was initialized without valid context.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-"><code>create(Context)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-java.util.List-">addTokens<a class="headerlink" href="#addTokens-java.util.List-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@NonNull
+                                                        <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens)</pre>
+<div class="block">Utility method to add all tokens from a list.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ for (String token : tokens) {
+     builder.addToken(token);
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - List of tokens.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the list contains <code>null</code>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-"><code>addToken(String)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-java.util.List-int-">addTokens<a class="headerlink" href="#addTokens-java.util.List-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@NonNull
+                                               <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens,
+                                               int&nbsp;firstTag)</pre>
+<div class="block">Utility method to add all tokens from a list and associate each token with a tag.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ int tag = firstTag;
+ for (String token : tokens) {
+     builder.addToken(token, tag);
+     ++tag;
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - List of tokens</dd>
+<dd><code>firstTag</code> - Numeric tag of the first token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the list contains <code>null</code>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-java.util.List-int-int-">addTokens<a class="headerlink" href="#addTokens-java.util.List-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@NonNull
+                                                        <a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;tokens,
+                                                        int&nbsp;firstTag,
+                                                        int&nbsp;tagIncrement)</pre>
+<div class="block">Utility method to add all tokens from a list and associate each token with a tag.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ int tag = firstTag;
+ for (String token : tokens) {
+     builder.addToken(token, tag);
+     tag += tagIncrement;
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - List of tokens</dd>
+<dd><code>firstTag</code> - Numeric tag of the first token.</dd>
+<dd><code>tagIncrement</code> - Increment of the tag associated with each token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the list contains <code>null</code>.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-int-">addTokens<a class="headerlink" href="#addTokens-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@ArrayRes
+                                                        int&nbsp;tokens)</pre>
+<div class="block">Utility method to add all tokens from a string array resource.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ String[] resolvedTokens = context.getResources().getStringArray(tokens);
+ for (String token : resolvedTokens) {
+     builder.addToken(token);
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - String array resource containing a list of tokens.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the builder was initialized without valid context.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-"><code>addToken(String)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-"><code>create(Context)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-int-int-">addTokens<a class="headerlink" href="#addTokens-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@ArrayRes
+                                               int&nbsp;tokens,
+                                               int&nbsp;firstTag)</pre>
+<div class="block">Utility method to add all tokens from a string array resource and associate each token
+ with a tag.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ String[] resolvedTokens = context.getResources().getStringArray(tokens);
+ int tag = firstTag;
+ for (String token : resolvedTokens) {
+     builder.addToken(token, tag);
+     ++tag;
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - String array resource containing a list of tokens.</dd>
+<dd><code>firstTag</code> - Numeric tag of the first token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the builder was initialized without valid context.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-"><code>create(Context)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="addTokens-int-int-int-">addTokens<a class="headerlink" href="#addTokens-int-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;addTokens(@ArrayRes
+                                                        int&nbsp;tokens,
+                                                        int&nbsp;firstTag,
+                                                        int&nbsp;tagIncrement)</pre>
+<div class="block">Utility method to add all tokens from a string array resource and associate each token
+ with a tag.
+
+ <p>This method is equivalent to
+ <pre>
+ <code>
+ String[] resolvedTokens = context.getResources().getStringArray(tokens);
+ int tag = firstTag;
+ for (String token : resolvedTokens) {
+     builder.addToken(token, tag);
+     tag += tagIncrement;
+ }
+ </code>
+ </pre>
+<p>Tokens are assumed to be in the currently configured locale, or in English if
+ that locale is not supported.  Special characters, such as punctuation, are
+ ignored.  A token may consist of multiple words, separated by spaces.</p></p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>tokens</code> - String array resource containing a list of tokens.</dd>
+<dd><code>firstTag</code> - Numeric tag of the first token.</dd>
+<dd><code>tagIncrement</code> - Increment of the tag associated with each token.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This builder instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the builder was initialized without valid context.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#addToken-java.lang.String-int-"><code>addToken(String, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#create-android.content.Context-"><code>create(Context)</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="pushSequentialGroup--">pushSequentialGroup<a class="headerlink" href="#pushSequentialGroup--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;pushSequentialGroup()</pre>
+<div class="block">Pushes a new sequential group onto the grammar stack.
+
+ Patterns in a sequential group must be uttered one after the other
+ in order of appearance.
+
+ This is equivalent to:
+ <pre>
+ <code>
+     builder.pushSequentialGroup(1, 1);
+ </code>
+ </pre></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup-int-int-"><code>pushSequentialGroup(int, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="pushSequentialGroup-int-int-">pushSequentialGroup<a class="headerlink" href="#pushSequentialGroup-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;pushSequentialGroup(int&nbsp;repeatMin,
+                                                                  int&nbsp;repeatMax)</pre>
+<div class="block">Pushes a new sequential group onto the grammar stack. The entire group
+ must be uttered between <code>repeatMin</code> and <code>repeatMax</code> (inclusive) times.
+
+ Patterns in a sequential group must be uttered one after the other
+ in order of appearance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>repeatMin</code> - Minimum number of repetitions of the group.
+                  This must be a positive value.</dd>
+<dd><code>repeatMax</code> - Maximum number of repetitions of the group.
+                  This value must be at least <code>repeatMin</code> for a bounded maximum
+                  number of repetitions or <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html#REPEAT_UNBOUNDED"><code>VoiceGrammar.REPEAT_UNBOUNDED</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup-int-int-"><code>pushSequentialGroup(int, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="pushAlternativeGroup--">pushAlternativeGroup<a class="headerlink" href="#pushAlternativeGroup--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;pushAlternativeGroup()</pre>
+<div class="block">Pushes a new alternative group onto the grammar stack.
+
+ <p>Patterns in an alternative group provide options.
+ Exactly one of the members of the group must be uttered.
+
+ This is equivalent to:
+ <pre>
+ <code>
+     builder.pushAlternativeGroup(1, 1);
+ </code>
+ </pre></p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup-int-int-"><code>pushAlternativeGroup(int, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="pushAlternativeGroup-int-int-">pushAlternativeGroup<a class="headerlink" href="#pushAlternativeGroup-int-int-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;pushAlternativeGroup(int&nbsp;repeatMin,
+                                                                   int&nbsp;repeatMax)</pre>
+<div class="block">Pushes a new alternative group onto the grammar stack. The entire group
+ must be uttered between <code>repeatMin</code> and <code>repeatMax</code> (inclusive) times.
+
+ <p>Patterns in an alternative group provide options.
+ Exactly one of the members of the group must be uttered.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>repeatMin</code> - Minimum number of repetitions of the group.
+                  This must be a positive value.</dd>
+<dd><code>repeatMax</code> - Maximum number of repetitions of the group.
+                  This value must be at least <code>repeatMin</code> for a bounded maximum
+                  number of repetitions or <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html#REPEAT_UNBOUNDED"><code>VoiceGrammar.REPEAT_UNBOUNDED</code></a>.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup-int-int-"><code>pushAlternativeGroup(int, int)</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="popGroup--">popGroup<a class="headerlink" href="#popGroup--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;popGroup()</pre>
+<div class="block">Pops the top-most group from the grammar stack.
+
+ <p>This operation fails if the root sequential group is at the top of the stack.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup--"><code>pushSequentialGroup()</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup--"><code>pushAlternativeGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="popToRootGroup--">popToRootGroup<a class="headerlink" href="#popToRootGroup--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;popToRootGroup()</pre>
+<div class="block">Repeatedly call <a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#popGroup--"><code>popGroup()</code></a> until only the root sequential group remains at the
+ top of the stack.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushSequentialGroup--"><code>pushSequentialGroup()</code></a>, 
+<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html#pushAlternativeGroup--"><code>pushAlternativeGroup()</code></a></dd>
+</dl>
+
+
+
+
+
+<h3 id="setCallback-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-">setCallback<a class="headerlink" href="#setCallback-com.iristick.smartglass.core.VoiceEvent.Callback-android.os.Handler-" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.Builder.html" title="class in com.iristick.smartglass.core">VoiceGrammar.Builder</a>&nbsp;setCallback(@NonNull
+                                                          <a href="../../../../com/iristick/smartglass/core/VoiceEvent.Callback.html" title="interface in com.iristick.smartglass.core">VoiceEvent.Callback</a>&nbsp;callback,
+                                                          @Nullable
+                                                          <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os">Handler</a>&nbsp;handler)</pre>
+<div class="block">Set the callback to be invoked for this grammar.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>callback</code> - The callback to invoke when a matching voice command is recognized.</dd>
+<dd><code>handler</code> - Handler on which the callback is invoked. If <code>null</code>, the main looper
+                callback is used.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>This instance for method chaining.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+</dl>
+
+
+
+
+
+<h3 id="build--">build<a class="headerlink" href="#build--" title="Permanent link">&para;</a></h3>
+<pre>@NonNull
+ @CheckResult
+public abstract&nbsp;<a href="../../../../com/iristick/smartglass/core/VoiceGrammar.html" title="interface in com.iristick.smartglass.core">VoiceGrammar</a>&nbsp;build()</pre>
+<div class="block">Builds the grammar according to the recorded instructions.
+
+ <p>Builders are single-use only.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A finished grammar object.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if a VoiceGrammar was already built from this builder.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the grammar is empty.</dd>
+<dd><code><a href="https://developer.android.com/reference/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if no callback was set.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../com/iristick/smartglass/core/Headset.html#startVoice-com.iristick.smartglass.core.VoiceGrammar-"><code>Headset.startVoice(VoiceGrammar)</code></a></dd>
+</dl>
+
+
+
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="VoiceGrammar.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VoiceGrammar
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../support/app/package-summary.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Package summary
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022, <a href="https://iristick.com/">Iristick NV</a>
+          </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+
+<script src="../../../../../assets/javascripts/iframe-worker.min.js"></script>
+<script src="../../../../../search/search_index.js"></script>
+
+
+      <script>
+        app = initialize({
+          base: "../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

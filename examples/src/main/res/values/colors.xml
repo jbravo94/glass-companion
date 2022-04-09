@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3e606f</color>
+    <color name="primary_dark">#113644</color>
+    <color name="accent">#2ae3ac</color>
+
+    <color name="touchpad_drawing_background">#ff444444</color>
+    <color name="touchpad_drawing_pencil">#80ffffff</color>
+    <color name="touchpad_drawing_line">#40ffffff</color>
+</resources>

@@ -1,0 +1,47 @@
+/* Javadoc */
+ul.inheritance {
+  margin: 0;
+  padding: 0;
+}
+ul.inheritance li {
+  display: inline;
+  list-style: none;
+}
+ul.inheritance li ul.inheritance {
+  margin-left: 15px;
+  padding-left: 15px;
+  padding-top: 1px;
+}
+.subTitle {
+  font-weight: 300;
+  color: rgba(0, 0, 0, .54);
+}
+div.details > h2 {
+  margin-top: 8rem;
+}
+div.details > h3 {
+  margin-top: 6.4rem;
+}
+div.details > h2 + h3 {
+  margin-top: 1.6rem;
+}
+div.details > div.block {
+  margin: 1em 0;
+}
+div.details dl {
+  margin: 0;
+}
+div.details dt {
+  margin-top: 1em;
+}
+div.details dd {
+  margin: 0 0 0 1.875em;
+}
+.deprecatedLabel, .descfrmTypeLabel, .memberNameLabel, .memberNameLink,
+.overrideSpecifyLabel, .packageHierarchyLabel, .paramLabel, .returnLabel,
+.seeLabel, .simpleTagLabel, .throwsLabel, .typeNameLabel, .typeNameLink {
+  font-weight: 300;
+}
+.deprecationComment, .emphasizedPhrase, .interfaceName {
+  font-style: italic;
+}
