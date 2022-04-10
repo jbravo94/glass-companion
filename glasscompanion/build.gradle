@@ -17,7 +17,7 @@ android {
 
 android {
     defaultConfig {
-        applicationId "com.iristick.smartglass.examples"
+        applicationId "com.iristick.smartglass.glasscompanion"
     }
 }
 

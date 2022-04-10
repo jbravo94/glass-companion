@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.iristick.smartglass.core.Headset;
+import com.iristick.smartglass.core.TouchEvent;
 import com.iristick.smartglass.core.VoiceCommandDispatcher;
 import com.iristick.smartglass.examples.BaseActivity;
 import com.iristick.smartglass.examples.R;
@@ -22,7 +24,7 @@ import com.iristick.smartglass.support.app.IristickApp;
  *
  * Most functionality is implemented in {@link CameraFragment}.
  */
-public class CameraActivity extends BaseActivity {
+public class CameraActivity extends BaseActivity implements TouchEvent.Callback {
 
     /* Voice commands */
     private VoiceCommandDispatcher mVoiceCommandDispatcher;
@@ -73,6 +75,12 @@ public class CameraActivity extends BaseActivity {
         super.onResume();
         /* Start listening for voice commands. */
         IristickApp.startVoice(mVoiceCommandDispatcher);
+
+        Headset headset = IristickApp.getHeadset();
+
+        if (headset != null) {
+            headset.registerTouchEventCallback(this, null, Headset.TOUCHPAD_FLAG_OVERRIDE_ALL);
+        }
         /*if (server != null) {
             server.start();
         }*/
@@ -83,6 +91,13 @@ public class CameraActivity extends BaseActivity {
         /* Always stop voice commands in onPause. */
         IristickApp.stopVoice(mVoiceCommandDispatcher);
         super.onPause();
+
+        Headset headset = IristickApp.getHeadset();
+
+        if (headset != null) {
+            headset.unregisterTouchEventCallback(this);
+        }
+
         /*if (server != null) {
             server.interrupt();
         }*/
@@ -122,5 +137,18 @@ public class CameraActivity extends BaseActivity {
         if (fragment == null)
             return;
         fragment.resetSettings();
+    }
+
+    @Override
+    public void onTouchEvent(@NonNull TouchEvent event) {
+        switch (event.getGestureCode()) {
+            case TouchEvent.GESTURE_LONG_TAP:
+                break;
+            case TouchEvent.GESTURE_TAP:
+                triggerAF();
+                break;
+            case TouchEvent.GESTURE_DOUBLE_TAP:
+                break;
+        }
     }
 }

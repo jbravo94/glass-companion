@@ -10,11 +10,12 @@
 * `adb -d tcpip 5555`
 * `adb connect 10.0.0.10:5555`
 
-## Camera information
+## Camera G1/G2 information
 * https://iristick.com/uploads/files/IRI-spec-sheet-Iristick.G2-92021-US-industry_2021-10-27-085217_smgt.pdf
 * https://de.wikipedia.org/wiki/Bildaufl%C3%B6sungen_in_der_Digitalfotografie
 * Camera 0 16MP 4:3 4619×3464
 * Camera 1 5MP 4:3 2582×1936
+* Display 428 × 240
 
 ## Foundation
 * https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip
@@ -28,4 +29,4 @@
 * Fix browser refresh
 * Add zoom buttons and reset button in App
 * Use touch pad to turn light on and trigger focus
-* Rename Project and merge READMEs
+* On First Permission App crashes
