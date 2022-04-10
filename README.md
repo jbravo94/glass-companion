@@ -28,5 +28,5 @@
 * Make reconnections possile and many connections
 * Fix browser refresh
 * Add zoom buttons and reset button in App
-* Use touch pad to turn light on and trigger focus
 * On First Permission App crashes
+* Show IP on device

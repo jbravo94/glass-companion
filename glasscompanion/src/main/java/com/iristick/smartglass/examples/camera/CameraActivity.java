@@ -31,6 +31,8 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
 
     private Thread server;
 
+    private boolean torchEnabled = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +150,12 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
                 triggerAF();
                 break;
             case TouchEvent.GESTURE_DOUBLE_TAP:
+                Headset headset = IristickApp.getHeadset();
+
+                if (headset != null) {
+                    torchEnabled = !torchEnabled;
+                    headset.setTorchMode(torchEnabled);
+                }
                 break;
         }
     }
