@@ -24,6 +24,9 @@
 * https://github.com/joshdickson/MJPG-Server/blob/master/src/mpegtest/MJPG.java
 * http://mjpeg.sanford.io/count.mjpeg
 
+## License
+* https://opensource.org/licenses/BSD-3-Clause
+
 ## TODOs
 * Make reconnections possile and many connections
 * Fix browser refresh
