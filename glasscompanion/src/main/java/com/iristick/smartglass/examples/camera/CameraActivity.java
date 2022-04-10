@@ -1,8 +1,13 @@
 package com.iristick.smartglass.examples.camera;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.DhcpInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,6 +39,9 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
 
     private boolean torchEnabled = false;
 
+    private AlertDialog.Builder builder;
+    private static final String INFO_TEMPLATE = "If your phone is on the same Network/Wifi, open your browser with URL %s to view the camera video stream.";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +58,12 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
                 .add(R.string.camera_voice_zoom_in, () -> zoom1(2.0f))
                 .add(R.string.camera_voice_zoom_out, () -> zoom1(0.5f))
                 .build();
+
+        builder = new AlertDialog.Builder(this);
+
+        // https://www.javatpoint.com/android-alert-dialog-example
+        builder.setTitle("Video Remote View")
+                .setNegativeButton("Ok", (dialog, id) -> dialog.cancel());
 
         startServer();
     }
@@ -187,24 +201,74 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
                 break;
             case TouchEvent.GESTURE_TAP:
                 triggerAF1();
-                triggerAF0();
                 break;
             case TouchEvent.GESTURE_DOUBLE_TAP:
-                Headset headset = IristickApp.getHeadset();
-
-                if (headset != null) {
-                    torchEnabled = !torchEnabled;
-                    headset.setTorchMode(torchEnabled);
-                }
+                toggleLight();
                 break;
             case TouchEvent.GESTURE_SWIPE_FORWARD:
-                zoom1(2.0f);
-                zoom0(2.0f);
+                zoomIn();
                 break;
             case TouchEvent.GESTURE_SWIPE_BACKWARD:
-                zoom1(0.5f);
-                zoom0(0.5f);
+                zoomOut();
                 break;
         }
+    }
+
+    private void toggleLight() {
+        Headset headset = IristickApp.getHeadset();
+
+        if (headset != null) {
+            torchEnabled = !torchEnabled;
+            headset.setTorchMode(torchEnabled);
+        }
+    }
+
+    private void zoomIn() {
+        zoom0(2.0f);
+        zoom1(2.0f);
+    }
+
+    private void zoomOut() {
+        zoom0(0.5f);
+        zoom1(0.5f);
+    }
+
+    private void resetZoom() {
+        resetSettings0();
+        resetSettings1();
+    }
+
+    public void onClickZoomIn(View view) {
+        zoomIn();
+    }
+
+    public void onClickZoomOut(View view) {
+        zoomOut();
+    }
+
+    public void onClickToggleLight(View view) {
+        toggleLight();
+    }
+
+    public void onClickResetZoom(View view) {
+        resetZoom();
+    }
+
+    // http://www.java2s.com/example/android/java.net/convert-int-to-ip-address-and-return-string.html
+    private String intToIp(int ip) {
+        return (ip & 0xFF) + "." + ((ip >> 8) & 0xFF) + "." + ((ip >> 16) & 0xFF) + "." + ((ip >> 24) & 0xFF);
+    }
+
+    public void onClickShowInfo(View view) {
+
+        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+
+        DhcpInfo dhcpInfo = wifiManager.getDhcpInfo();
+
+        builder.setMessage(String.format(INFO_TEMPLATE, "http://" + intToIp(dhcpInfo.ipAddress) + ":" + Server.SERVER_PORT + "/"));
+
+        AlertDialog alert = builder.create();
+
+        alert.show();
     }
 }

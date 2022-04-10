@@ -17,6 +17,8 @@ public class Server implements Runnable {
 
     private boolean serverWillBeStopped = false;
 
+    public static final int SERVER_PORT = 8080;
+
     private HttpServer server = null;
 
     public Server(CameraFragment camera0, CameraFragment camera1) {
@@ -28,7 +30,7 @@ public class Server implements Runnable {
     public void run() {
 
         try {
-            server = HttpServer.create(new InetSocketAddress(8080),0);
+            server = HttpServer.create(new InetSocketAddress(SERVER_PORT),0);
         } catch (IOException e) {
             e.printStackTrace();
         }

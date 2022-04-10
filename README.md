@@ -35,8 +35,3 @@ the best solution is to go back to exit the camera preview, which closes existin
 
 ## License
 * https://opensource.org/licenses/BSD-3-Clause
-
-## TODOs
-* Add zoom buttons and reset button in App
-* On First Permission App crashes
-* Show IP on device
