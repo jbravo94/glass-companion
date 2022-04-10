@@ -4,6 +4,15 @@
 * Start App
 * Navigate to Camera
 * Open Browser with http://phone-ip:8080
+* Single Tap trigger an autofocus
+* Swiping zooms forth and back by factor 2
+* Double tap activated the LED
+
+### Notes
+* The http server will be stopped when the preview screen is left, app is minimized or closed
+* Only on connection with the browser is possible
+Hint: If somebody cannot connect because of a unknown connection left open e.g. tab or other browser,
+the best solution is to go back to exit the camera preview, which closes existing connections, reopen the preview and try to reconnect.
 
 ## Development
 * https://developer.iristick.com/1.3.2/getting-started/development-environment/
@@ -28,8 +37,6 @@
 * https://opensource.org/licenses/BSD-3-Clause
 
 ## TODOs
-* Make reconnections possile and many connections
-* Fix browser refresh
 * Add zoom buttons and reset button in App
 * On First Permission App crashes
 * Show IP on device

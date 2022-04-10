@@ -12,8 +12,12 @@ import java.net.InetSocketAddress;
 
 public class Server implements Runnable {
 
-    private CameraFragment camera0;
-    private CameraFragment camera1;
+    private final CameraFragment camera0;
+    private final CameraFragment camera1;
+
+    private boolean serverWillBeStopped = false;
+
+    private HttpServer server = null;
 
     public Server(CameraFragment camera0, CameraFragment camera1) {
         this.camera0 = camera0;
@@ -22,7 +26,6 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
-        HttpServer server = null;
 
         try {
             server = HttpServer.create(new InetSocketAddress(8080),0);
@@ -39,6 +42,20 @@ public class Server implements Runnable {
         server.start();
     }
 
+    public void stopServer() {
+        if (server != null) {
+            serverWillBeStopped = true;
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            server.stop(0);
+        }
+    }
+
     class RootHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException
@@ -52,26 +69,26 @@ public class Server implements Runnable {
     }
 
     class CameraHandler implements HttpHandler {
-        private int cameraIndex;
+        private final int cameraIndex;
 
         public CameraHandler(int cameraIndex) {
             this.cameraIndex = cameraIndex;
         }
 
         @Override
-        public void handle(HttpExchange t) throws IOException
+        public void handle(HttpExchange httpExchange) throws IOException
         {
             byte[] response = ("<!DOCTYPE html><html><body><img src=\"./stream" + cameraIndex + "\"></body></html>").getBytes();
-            t.sendResponseHeaders(200, response.length);
-            OutputStream os = t.getResponseBody();
-            os.write(response);
-            os.close();
+            httpExchange.sendResponseHeaders(200, response.length);
+            OutputStream outputStream = httpExchange.getResponseBody();
+            outputStream.write(response);
+            outputStream.close();
         }
     }
 
     class StreamHandler implements HttpHandler {
 
-        private CameraFragment cameraFragment;
+        private final CameraFragment cameraFragment;
 
         StreamHandler(CameraFragment cameraFragment) {
             this.cameraFragment = cameraFragment;
@@ -84,35 +101,37 @@ public class Server implements Runnable {
                 "Content-Length: ";
 
         @Override
-        public void handle(HttpExchange t) throws IOException {
+        public void handle(HttpExchange httpExchange) throws IOException {
 
-            Headers h = t.getResponseHeaders();
-            h.set("Cache-Control", "no-cache, private");
-            h.set("Content-Type", "multipart/x-mixed-replace;boundary=" + BOUNDARY);
-            t.sendResponseHeaders(200, 0);
-            OutputStream os = t.getResponseBody();
+            Headers headers = httpExchange.getResponseHeaders();
+            headers.set("Cache-Control", "no-cache, private");
+            headers.set("Content-Type", "multipart/x-mixed-replace;boundary=" + BOUNDARY);
+            httpExchange.sendResponseHeaders(200, 0);
 
-            while (true) {
+            try (OutputStream outputStream = httpExchange.getResponseBody()) {
 
-                byte[] img = cameraFragment.getLastImage();
+                while (!serverWillBeStopped && !Thread.interrupted()) {
 
-                if (img == null) {
-                    continue;
+                    byte[] image = cameraFragment.getLastImage();
+
+                    if (image == null) {
+                        continue;
+                    }
+
+                    outputStream.write((HEAD + image.length + NL + NL).getBytes());
+
+                    outputStream.write(image);
+
+                    outputStream.write((NL).getBytes());
+
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
 
-                os.write((HEAD + img.length + NL + NL).getBytes());
-
-                os.write(img);
-
-                os.write((NL).getBytes());
-
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
             }
-            //os.close();
         }
     }
 }

@@ -29,7 +29,8 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
     /* Voice commands */
     private VoiceCommandDispatcher mVoiceCommandDispatcher;
 
-    private Thread server;
+    private Server server;
+    private Thread serverThread;
 
     private boolean torchEnabled = false;
 
@@ -44,14 +45,36 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
 
         /* Create the dispatcher for voice commands. */
         mVoiceCommandDispatcher = VoiceCommandDispatcher.Builder.create(this)
-                .add(R.string.camera_voice_focus, this::triggerAF)
-                .add(R.string.camera_voice_reset, this::resetSettings)
-                .add(R.string.camera_voice_zoom_in, () -> zoom(2.0f))
-                .add(R.string.camera_voice_zoom_out, () -> zoom(0.5f))
+                .add(R.string.camera_voice_focus, this::triggerAF1)
+                .add(R.string.camera_voice_reset, this::resetSettings1)
+                .add(R.string.camera_voice_zoom_in, () -> zoom1(2.0f))
+                .add(R.string.camera_voice_zoom_out, () -> zoom1(0.5f))
                 .build();
 
-        server = new Thread(new Server(getCameraFragment0(), getCameraFragment1()));
-        server.start();
+        startServer();
+    }
+
+    private void startServer() {
+        server = new Server(getCameraFragment0(), getCameraFragment1());
+        serverThread = new Thread(server);
+        serverThread.start();
+    }
+
+    private void stopServer() {
+        if (server != null) {
+            server.stopServer();
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if (serverThread != null) {
+                serverThread.interrupt();
+                serverThread = null;
+            }
+        }
     }
 
     @Override
@@ -83,9 +106,10 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
         if (headset != null) {
             headset.registerTouchEventCallback(this, null, Headset.TOUCHPAD_FLAG_OVERRIDE_ALL);
         }
-        /*if (server != null) {
-            server.start();
-        }*/
+
+        if (serverThread == null) {
+            startServer();
+        }
     }
 
     @Override
@@ -100,42 +124,57 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
             headset.unregisterTouchEventCallback(this);
         }
 
-        /*if (server != null) {
-            server.interrupt();
-        }*/
+        stopServer();
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Utility methods
 
-    private CameraFragment getCameraFragment() {
-        return (CameraFragment) getSupportFragmentManager().findFragmentById(R.id.camera1);
-    }
-
     private CameraFragment getCameraFragment1() {
-        return getCameraFragment();
+        return (CameraFragment) getSupportFragmentManager().findFragmentById(R.id.camera1);
     }
 
     private CameraFragment getCameraFragment0() {
         return (CameraFragment) getSupportFragmentManager().findFragmentById(R.id.camera0);
     }
 
-    private void triggerAF() {
-        CameraFragment fragment = getCameraFragment();
+    private void triggerAF1() {
+        CameraFragment fragment = getCameraFragment1();
         if (fragment == null)
             return;
         fragment.triggerAF();
     }
 
-    private void zoom(float factor) {
-        CameraFragment fragment = getCameraFragment();
+    private void triggerAF0() {
+        CameraFragment fragment = getCameraFragment0();
+        if (fragment == null)
+            return;
+        fragment.triggerAF();
+    }
+
+    private void zoom1(float factor) {
+        CameraFragment fragment = getCameraFragment1();
         if (fragment == null)
             return;
         fragment.zoom(factor);
     }
 
-    private void resetSettings() {
-        CameraFragment fragment = getCameraFragment();
+    private void zoom0(float factor) {
+        CameraFragment fragment = getCameraFragment0();
+        if (fragment == null)
+            return;
+        fragment.zoom(factor);
+    }
+
+    private void resetSettings1() {
+        CameraFragment fragment = getCameraFragment1();
+        if (fragment == null)
+            return;
+        fragment.resetSettings();
+    }
+
+    private void resetSettings0() {
+        CameraFragment fragment = getCameraFragment0();
         if (fragment == null)
             return;
         fragment.resetSettings();
@@ -147,7 +186,8 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
             case TouchEvent.GESTURE_LONG_TAP:
                 break;
             case TouchEvent.GESTURE_TAP:
-                triggerAF();
+                triggerAF1();
+                triggerAF0();
                 break;
             case TouchEvent.GESTURE_DOUBLE_TAP:
                 Headset headset = IristickApp.getHeadset();
@@ -156,6 +196,14 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
                     torchEnabled = !torchEnabled;
                     headset.setTorchMode(torchEnabled);
                 }
+                break;
+            case TouchEvent.GESTURE_SWIPE_FORWARD:
+                zoom1(2.0f);
+                zoom0(2.0f);
+                break;
+            case TouchEvent.GESTURE_SWIPE_BACKWARD:
+                zoom1(0.5f);
+                zoom0(0.5f);
                 break;
         }
     }
