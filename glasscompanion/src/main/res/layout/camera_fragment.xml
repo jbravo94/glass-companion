@@ -6,7 +6,7 @@
     android:background="@android:color/black"
     tools:context=".camera.CameraFragment">
 
-    <com.iristick.smartglass.examples.camera.CameraPreview
+    <dev.heinzl.glasscompanion.camera.CameraPreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

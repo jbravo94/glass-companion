@@ -1,4 +1,4 @@
-package com.iristick.smartglass.examples.camera;
+package dev.heinzl.glasscompanion.camera;
 
 import android.Manifest;
 import android.content.Context;
@@ -28,12 +28,11 @@ import com.iristick.smartglass.core.camera.CameraCharacteristics;
 import com.iristick.smartglass.core.camera.CameraDevice;
 import com.iristick.smartglass.core.camera.CaptureRequest;
 import com.iristick.smartglass.core.camera.CaptureSession;
-import com.iristick.smartglass.examples.R;
+import dev.heinzl.glasscompanion.R;
 import com.iristick.smartglass.support.app.IristickApp;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.locks.ReentrantLock;

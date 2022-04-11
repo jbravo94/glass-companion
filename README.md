@@ -7,6 +7,7 @@
 * Single Tap trigger an autofocus
 * Swiping zooms forth and back by factor 2
 * Double tap activated the LED
+* Pinch to zoom, pan to move and tap to autofocus on the previews to interact with the cameras
 
 ### Notes
 * The http server will be stopped when the preview screen is left, app is minimized or closed
@@ -29,9 +30,10 @@ the best solution is to go back to exit the camera preview, which closes existin
 ## Foundation
 * https://developer.iristick.com/1.3.2/iristick-sdk-1.3.2.zip
 * https://medium.com/hacktive-devs/creating-a-local-http-server-on-android-49831fbad9ca
+* http://www.java2s.com/Code/Jar/h/Downloadhttp221jar.htm
 * https://github.com/FriesW/java-mjpeg-streamer/blob/master/Java/src/com/github/friesw/mjpegstreamer/MjpegStreamer.java
 * https://github.com/joshdickson/MJPG-Server/blob/master/src/mpegtest/MJPG.java
 * http://mjpeg.sanford.io/count.mjpeg
 
 ## License
-* https://opensource.org/licenses/BSD-3-Clause
+* Code changes are licensed under BSD mentioned in LICENSE.md file (https://opensource.org/licenses/BSD-3-Clause)

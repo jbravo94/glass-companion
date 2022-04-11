@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/camera0"
-        android:name="com.iristick.smartglass.examples.camera.CameraFragment"
+        android:name="dev.heinzl.glasscompanion.camera.CameraFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -45,7 +45,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="onClickToggleLight"
-            android:text="☼"
+            android:text="★"
             android:textSize="34sp" />
 
         <Button
@@ -71,7 +71,7 @@
 
     <fragment
         android:id="@+id/camera1"
-        android:name="com.iristick.smartglass.examples.camera.CameraFragment"
+        android:name="dev.heinzl.glasscompanion.camera.CameraFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

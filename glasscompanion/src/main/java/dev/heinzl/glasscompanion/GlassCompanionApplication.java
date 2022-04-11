@@ -1,10 +1,10 @@
-package com.iristick.smartglass.examples;
+package dev.heinzl.glasscompanion;
 
 import android.app.Application;
 
 import com.iristick.smartglass.support.app.IristickApp;
 
-public class ExampleApplication extends Application {
+public class GlassCompanionApplication extends Application {
 
     @Override
     public void onCreate() {

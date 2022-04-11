@@ -1,6 +1,6 @@
-package com.iristick.smartglass.examples.server;
+package dev.heinzl.glasscompanion.server;
 
-import com.iristick.smartglass.examples.camera.CameraFragment;
+import dev.heinzl.glasscompanion.camera.CameraFragment;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -62,7 +62,7 @@ public class Server implements Runnable {
         @Override
         public void handle(HttpExchange t) throws IOException
         {
-            byte[] response = "<!DOCTYPE html><html><body><a href=\"./camera0\">Front Camera</a><br/><a href=\"./camera1\">Side Camera</a></body></html>".getBytes();
+            byte[] response = "<!DOCTYPE html><html><body><div style=\"text-align: center;\"><h1>Glass Companion</h1><a href=\"./camera0\"><h2>Front Camera</h2></a><a href=\"./camera1\"><h2>Side Camera</h2></a></div></body></html>".getBytes();
             t.sendResponseHeaders(200, response.length);
             OutputStream os = t.getResponseBody();
             os.write(response);
@@ -80,7 +80,7 @@ public class Server implements Runnable {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException
         {
-            byte[] response = ("<!DOCTYPE html><html><body><img src=\"./stream" + cameraIndex + "\"></body></html>").getBytes();
+            byte[] response = ("<!DOCTYPE html><html><body><div style=\"text-align: center;\"><img src=\"./stream" + cameraIndex + "\"></div></body></html>").getBytes();
             httpExchange.sendResponseHeaders(200, response.length);
             OutputStream outputStream = httpExchange.getResponseBody();
             outputStream.write(response);

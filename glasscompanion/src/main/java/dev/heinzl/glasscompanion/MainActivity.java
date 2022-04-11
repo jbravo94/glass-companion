@@ -1,4 +1,4 @@
-package com.iristick.smartglass.examples;
+package dev.heinzl.glasscompanion;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.iristick.smartglass.core.IristickBinding;
 import com.iristick.smartglass.core.IristickConnection;
@@ -28,7 +27,7 @@ public class MainActivity extends BaseActivity {
 
         ListView list = findViewById(R.id.list);
         list.setAdapter(mAdapter);
-        list.setOnItemClickListener((parent, view, position, id) -> launchExample(Example.values()[position]));
+        list.setOnItemClickListener((parent, view, position, id) -> launchExample(GlassCompanion.values()[position]));
     }
 
     @Override
@@ -48,20 +47,19 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.error_layout).setVisibility(View.VISIBLE);
     }
 
-    private void launchExample(Example example) {
+    private void launchExample(GlassCompanion example) {
         startActivity(new Intent(this, example.activity));
     }
 
     private final ListAdapter mAdapter = new BaseAdapter() {
         @Override
         public int getCount() {
-            // Show only Camera element which is second ENUM
-            return 1;
+            return GlassCompanion.values().length;
         }
 
         @Override
-        public Example getItem(int position) {
-            return Example.values()[position];
+        public GlassCompanion getItem(int position) {
+            return GlassCompanion.values()[position];
         }
 
         @Override
@@ -74,7 +72,7 @@ public class MainActivity extends BaseActivity {
             if (view == null)
                 view = LayoutInflater.from(MainActivity.this)
                         .inflate(R.layout.main_item, parent, false);
-            Example example = getItem(position);
+            GlassCompanion example = getItem(position);
             ((TextView) view.findViewById(R.id.title)).setText(example.title);
             ((TextView) view.findViewById(R.id.description)).setText(example.description);
             return view;

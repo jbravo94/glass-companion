@@ -1,4 +1,4 @@
-package com.iristick.smartglass.examples.camera;
+package dev.heinzl.glasscompanion.camera;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -15,9 +15,9 @@ import androidx.annotation.NonNull;
 import com.iristick.smartglass.core.Headset;
 import com.iristick.smartglass.core.TouchEvent;
 import com.iristick.smartglass.core.VoiceCommandDispatcher;
-import com.iristick.smartglass.examples.BaseActivity;
-import com.iristick.smartglass.examples.R;
-import com.iristick.smartglass.examples.server.Server;
+import dev.heinzl.glasscompanion.BaseActivity;
+import dev.heinzl.glasscompanion.R;
+import dev.heinzl.glasscompanion.server.Server;
 import com.iristick.smartglass.support.app.IristickApp;
 
 /**
@@ -261,6 +261,7 @@ public class CameraActivity extends BaseActivity implements TouchEvent.Callback 
 
     public void onClickShowInfo(View view) {
 
+        // https://stackoverflow.com/questions/19493293/how-to-query-router-to-find-dhcp-lease-info
         WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
         DhcpInfo dhcpInfo = wifiManager.getDhcpInfo();

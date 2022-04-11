@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.iristick.smartglass.examples" >
+    package="dev.heinzl.glasscompanion" >
 
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
-        android:name=".ExampleApplication"
+        android:name="dev.heinzl.glasscompanion.GlassCompanionApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Iristick">
 
-        <activity android:name=".MainActivity"
+        <activity android:name="dev.heinzl.glasscompanion.MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,24 +23,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".camera.CameraActivity"
+        <activity android:name="dev.heinzl.glasscompanion.camera.CameraActivity"
             android:theme="@style/Theme.Iristick.NoActionBar"
             android:screenOrientation="landscape" />
 
-        <activity android:name=".barcode.BarcodeActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.barcode.BarcodeActivity" />
 
-        <activity android:name=".barcode.ContinuousBarcodeActivity"
+        <activity android:name="dev.heinzl.glasscompanion.barcode.ContinuousBarcodeActivity"
             android:theme="@style/Theme.Iristick.NoActionBar"/>
 
-        <activity android:name=".displaypresentation.DisplayPresentationActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.displaypresentation.DisplayPresentationActivity" />
 
-        <activity android:name=".displaysurface.DisplaySurfaceActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.displaysurface.DisplaySurfaceActivity" />
 
-        <activity android:name=".sensorsreadout.SensorsReadoutActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.sensorsreadout.SensorsReadoutActivity" />
 
-        <activity android:name=".touchpad.TouchpadActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.touchpad.TouchpadActivity" />
 
-        <activity android:name=".voicegrammar.VoiceGrammarActivity" />
+        <activity android:name="dev.heinzl.glasscompanion.voicegrammar.VoiceGrammarActivity" />
 
     </application>
 

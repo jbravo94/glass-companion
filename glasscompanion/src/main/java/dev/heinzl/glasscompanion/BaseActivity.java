@@ -1,4 +1,4 @@
-package com.iristick.smartglass.examples;
+package dev.heinzl.glasscompanion;
 
 import android.content.Context;
 
