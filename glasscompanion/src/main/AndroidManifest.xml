@@ -27,21 +27,6 @@
             android:theme="@style/Theme.Iristick.NoActionBar"
             android:screenOrientation="landscape" />
 
-        <activity android:name="dev.heinzl.glasscompanion.barcode.BarcodeActivity" />
-
-        <activity android:name="dev.heinzl.glasscompanion.barcode.ContinuousBarcodeActivity"
-            android:theme="@style/Theme.Iristick.NoActionBar"/>
-
-        <activity android:name="dev.heinzl.glasscompanion.displaypresentation.DisplayPresentationActivity" />
-
-        <activity android:name="dev.heinzl.glasscompanion.displaysurface.DisplaySurfaceActivity" />
-
-        <activity android:name="dev.heinzl.glasscompanion.sensorsreadout.SensorsReadoutActivity" />
-
-        <activity android:name="dev.heinzl.glasscompanion.touchpad.TouchpadActivity" />
-
-        <activity android:name="dev.heinzl.glasscompanion.voicegrammar.VoiceGrammarActivity" />
-
     </application>
 
 </manifest>
