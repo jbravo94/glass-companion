@@ -1,12 +1,23 @@
 # README
 
 ## Introduction
+
+Smart Glass Companion uses the Iristick SDK Examples code 
+The app includes an embedded HTTP server which serves the camera sources as video stream.
+It provides trackpad features to enable zoom, auto-focus and flash-light as well as from the app via buttons or touchscreen interaction.
+Overall, the app provides the basis to access the camera simply from a computer in the same network.
+
+An showcase of the prototype can be viewed on YouTube by clicking on the image or here https://youtu.be/meil9QvhVjo:
+
+[![20220413_012616_2](https://user-images.githubusercontent.com/26746017/164999309-1faf4f0f-649e-4166-ad7f-58d83795b867.jpg)](https://youtu.be/meil9QvhVjo "Smart Glass Companion")
+
+## Quickstart
 * Start App
 * Navigate to Camera
 * Open Browser with http://phone-ip:8080
 * Single Tap trigger an autofocus
 * Swiping zooms forth and back by factor 2
-* Double tap activated the LED
+* Double tap activates the LED
 * Pinch to zoom, pan to move and tap to autofocus on the previews to interact with the cameras
 
 ### Notes
@@ -14,6 +25,14 @@
 * Only on connection with the browser is possible
 Hint: If somebody cannot connect because of a unknown connection left open e.g. tab or other browser,
 the best solution is to go back to exit the camera preview, which closes existing connections, reopen the preview and try to reconnect.
+
+## Used Technologies
+
+* Java and Android SDK
+* Iristick SDK
+* Sun's Httpserver
+* MJPEG stream capabilities from HTTP protocol
+* ReentrantLock to handle concurrent access of image frames because image capture rate and http stream rate happen asynchronously
 
 ## Development
 * https://developer.iristick.com/1.3.2/getting-started/development-environment/
