@@ -80,7 +80,7 @@ public class Server implements Runnable {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException
         {
-            byte[] response = ("<!DOCTYPE html><html><body><div style=\"text-align: center;\"><img src=\"./stream" + cameraIndex + "\"></div></body></html>").getBytes();
+            byte[] response = ("<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"20\"></head><body><div style=\"text-align: center;\"><img src=\"./stream" + cameraIndex + "\"></div></body></html>").getBytes();
             httpExchange.sendResponseHeaders(200, response.length);
             OutputStream outputStream = httpExchange.getResponseBody();
             outputStream.write(response);
@@ -99,6 +99,7 @@ public class Server implements Runnable {
         private static final String NL = "\r\n";
         private static final String BOUNDARY = "--boundary";
         private static final String HEAD = BOUNDARY + NL +
+                "Connection: keep-alive" + NL +
                 "Content-Type: image/jpeg" + NL +
                 "Content-Length: ";
 
@@ -127,7 +128,7 @@ public class Server implements Runnable {
                     outputStream.write((NL).getBytes());
 
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(20);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

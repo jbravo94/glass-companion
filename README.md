@@ -54,5 +54,10 @@ the best solution is to go back to exit the camera preview, which closes existin
 * https://github.com/joshdickson/MJPG-Server/blob/master/src/mpegtest/MJPG.java
 * http://mjpeg.sanford.io/count.mjpeg
 
+## Release
+* Increase version code in `AndroidManifest.xml` if needed
+* Open Android Studio and select `Build -> Generate Signed Bundle / APK -> Android App Bundle` and follow next steps
+* Locate apk under generated `release` folder
+
 ## License
 * Code changes are licensed under BSD mentioned in LICENSE.md file (https://opensource.org/licenses/BSD-3-Clause)
